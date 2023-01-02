@@ -30,11 +30,8 @@ ln -s /bin/true /sbin/initctl
 apt-get upgrade -y
 
 #パッケージをインストール
-add-apt-repository ppa:xtradeb/apps
 apt-get update
-apt-get install -y $(cat ./package.list)
-sudo apt update
-apt-get install -y ./deb/*.deb
+apt-get install -y $(cat /root/package.list)
 
 #カーネルをインストール
 apt-get install -y --no-install-recommends linux-generic
@@ -44,10 +41,10 @@ apt-get install -y --no-install-recommends linux-generic
 #ようこそ！操作へ
 echo "操作が必要な項目があります。"
 
-apt-get install $(cat ./installer.list)
+apt-get install $(cat /root/installer.list)
 
 #OS固有パッケージアンインストール
-apt-get purge -y $(cat ./remove.list)
+apt-get purge -y $(cat /root/remove.list)
 apt-get autoremove -y
 
 

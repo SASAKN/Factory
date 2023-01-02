@@ -1,8 +1,34 @@
 #!/bin/bash
 
 #設定を読み込む
-sudo chmod 775 ./config.sh
-command ./config.sh
+
+#基本的に変更しない（スクリプト保存場所の設定）
+script_dir="$(dirname "$(readlink -f "$0")")"
+
+#ベースのOSリポジトリー
+os_repository="http://ftp.riken.go.jp/Linux/ubuntu"
+
+#ベースのコードネーム
+os_codename="jammy"
+
+#OSの名前
+os_name="HoneyLinux"
+
+#OSのCPU
+os_arch="amd64"
+
+#OSのインストールラベル
+os_label1="HoneyLinuxを試します"
+os_label2="HoneyLinuxをインストールします"
+os_label3="ディスクをチェックします"
+os_label4="メモリーをテスト(レガシー)"
+os_label5="メモリーをテスト(UEFI)"
+
+#ビルド番号
+buildid="A1"
+
+#設定の名前
+setting_name="honey"
 
 #必要なディレクトリー作成
 cd ${script_dir}
@@ -11,8 +37,15 @@ mkdir out
 mkdir chroot
 
 #依存関係のインストール
-sudo chmod 775 ./deps.sh
-command ./deps.sh
+sudo apt-get install \
+    bash \
+    binutils \
+    debootstrap \
+    squashfs-tools \
+    xorriso \
+    grub-pc-bin \
+    grub-efi-amd64-bin \
+    mtools
 
 #ベースを作る
 cd ${script_dir}
@@ -23,20 +56,18 @@ sudo debootstrap \
    chroot \
    $os_repository
 
+#設定ファイルのコピー
+sudo cp -a ${script_dir}/setting/${setting_name}/file/ ${script_dir}/chroot/root/file/
+sudo cp -a ${script_dir}/setting/${setting_name}/copyfs/ ${script_dir}/chroot/root/copyfs/
+sudo cp ${script_dir}/setting/${setting_name}/chroot.sh ${script_dir}/chroot/root/chroot.sh
+sudo cp ${script_dir}/setting/${setting_name}/final.sh ${script_dir}/chroot/root/final.sh
+sudo cp ${script_dir}/setting/${setting_name}/package.list ${script_dir}/chroot/root/package.list
+sudo cp ${script_dir}/setting/${setting_name}/installer.list ${script_dir}/chroot/root/instller.list
+sudo cp ${script_dir}/setting/${setting_name}/remove.list ${script_dir}/chroot/root/remove.list
+
 #ファイルシステムのマウント
 sudo mount --bind /dev chroot/dev
 sudo mount --bind /run chroot/run
-
-#設定ファイルのコピー
-cd ${script_dir}/setting/${setting_name}/
-sudo cp -a file/ ${script_dir}/chroot/root/file/
-sudo cp -a copyfs/ ${script_dir}/chroot/root/copyfs/
-sudo cp -a deb/ ${script_dir}/chroot/root/deb/
-
-#スクリプトのコピー
-cd ${script_dir}/setting/${setting_name}/
-sudo ln -f ./chroot.sh chroot/root/chroot.sh
-sudo ln -f ./final.sh chroot/root/final.sh
 
 #スクリプト実行
 cd ${script_dir}
