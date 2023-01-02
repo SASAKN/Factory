@@ -31,7 +31,41 @@ apt-get upgrade -y
 
 #パッケージをインストール
 apt-get update
-apt-get install -y $(cat /root/package.list)
+apt-get install -y sudo \
+    ubuntu-standard \
+    casper \
+    firefox-esr \
+    discover \
+    laptop-detect \
+    os-prober \
+    network-manager \
+    resolvconf \
+    net-tools \
+    wireless-tools \
+    wpagui \
+    locales \
+    grub-common \
+    grub-gfxpayload-lists \
+    grub-pc \
+    grub-pc-bin \
+    grub2-common \
+    task-kde-desktop \
+    task-japanese \
+    task-japanese-desktop \
+    fcitx \
+    fcitx-mozc \
+    ffmpeg \
+    xdg-utils \
+    open-vm-tools \
+    build-essential \
+    gparted \
+    alsa-utils \
+    bluetooth \
+    btrfs-progs \
+    clamtk \
+    curl \
+    flatpak \
+    gdebi
 
 #カーネルをインストール
 apt-get install -y --no-install-recommends linux-generic
@@ -41,10 +75,14 @@ apt-get install -y --no-install-recommends linux-generic
 #ようこそ！操作へ
 echo "操作が必要な項目があります。"
 
-apt-get install $(cat /root/installer.list)
-
+apt-get install -y \
+   ubiquity \
+   ubiquity-casper \
+   ubiquity-frontend-gtk \
+   ubiquity-slideshow-ubuntu \
+   ubiquity-ubuntu-artwork
 #OS固有パッケージアンインストール
-apt-get purge -y $(cat /root/remove.list)
+apt-get purge -y 
 apt-get autoremove -y
 
 

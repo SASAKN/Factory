@@ -61,9 +61,6 @@ sudo cp -a ${script_dir}/setting/${setting_name}/file/ ${script_dir}/chroot/root
 sudo cp -a ${script_dir}/setting/${setting_name}/copyfs/ ${script_dir}/chroot/root/copyfs/
 sudo cp ${script_dir}/setting/${setting_name}/chroot.sh ${script_dir}/chroot/root/chroot.sh
 sudo cp ${script_dir}/setting/${setting_name}/final.sh ${script_dir}/chroot/root/final.sh
-sudo cp ${script_dir}/setting/${setting_name}/package.list ${script_dir}/chroot/root/package.list
-sudo cp ${script_dir}/setting/${setting_name}/installer.list ${script_dir}/chroot/root/instller.list
-sudo cp ${script_dir}/setting/${setting_name}/remove.list ${script_dir}/chroot/root/remove.list
 
 #ファイルシステムのマウント
 sudo mount --bind /dev chroot/dev
