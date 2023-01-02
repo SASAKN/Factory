@@ -29,11 +29,6 @@ dpkg-divert --local --rename --add /sbin/initctl
 ln -s /bin/true /sbin/initctl
 apt-get upgrade -y
 
-#CodiumSetup
-wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | sudo apt-key add -
-echo 'deb https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/repos/debs/ vscodium main' | sudo tee --append /etc/apt/sources.list.d/vscodium.list
-apt update
-
 #パッケージをインストール
 add-apt-repository ppa:xtradeb/apps
 apt-get update

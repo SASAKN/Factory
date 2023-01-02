@@ -1,6 +1,7 @@
 sudo
 ubuntu-standard
 casper
+firefox-esr
 discover
 laptop-detect
 os-prober
@@ -27,7 +28,6 @@ ffmpeg
 xdg-user-discover
 open-vm-tools
 build-essential
-codium
 gparted
 alsa-utils
 bluetooth
