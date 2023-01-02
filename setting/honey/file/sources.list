@@ -1,0 +1,15 @@
+deb http://ftp.riken.go.jp/Linux/ubuntu/ jammy main
+deb http://ftp.riken.go.jp/Linux/ubuntu/ jammy universe
+deb http://ftp.riken.go.jp/Linux/ubuntu/ jammy multiverse
+
+deb http://ftp.riken.go.jp/Linux/ubuntu/ jammy-updates main
+deb http://ftp.riken.go.jp/Linux/ubuntu/ jammy-updates universe
+deb http://ftp.riken.go.jp/Linux/ubuntu/ jammy-updates multiverse
+
+deb http://ftp.riken.go.jp/Linux/ubuntu/ jammy-backports main
+deb http://ftp.riken.go.jp/Linux/ubuntu/ jammy-backports universe
+deb http://ftp.riken.go.jp/Linux/ubuntu/ jammy-backports multiverse
+
+deb http://ftp.riken.go.jp/Linux/ubuntu/ jammy-security main
+deb http://ftp.riken.go.jp/Linux/ubuntu/ jammy-security universe
+deb http://ftp.riken.go.jp/Linux/ubuntu/ jammy-security multiverse
