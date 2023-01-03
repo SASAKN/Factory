@@ -9,8 +9,12 @@ export HOME=/root
 export LC_ALL=C
 cd $HOME
 
+sleep -s 5
+
 #変数の設定
 hostname="honey-linux"
+
+sleep -s 5
 
 #hostname設定
 echo $hostname > /etc/hostname
@@ -33,50 +37,32 @@ apt-get update
 #systemdインストール
 # we need to install systemd first, to configure machine id
 apt-get update
+#Must!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 chown root:root /
 apt-get install -y libterm-readline-gnu-perl systemd-sysv
-#configure machine id
 dbus-uuidgen > /etc/machine-id
 ln -fs /etc/machine-id /var/lib/dbus/machine-id
-# don't understand why, but multiple sources indicate this
 dpkg-divert --local --rename --add /sbin/initctl
 ln -s /bin/true /sbin/initctl
+
 #パッケージをインストール
 apt-get update
 echo "現在、パッケージをインストールしています。"
-apt-get install -y \
-    sudo \
-    ubuntu-standard \
-    casper \
-    discover \
-    laptop-detect \
-    os-prober \
-    network-manager \
-    resolvconf \
-    net-tools \
-    wireless-tools \
-    wpagui \
-    locales \
-    grub-common \
-    grub-gfxpayload-lists \
-    grub-pc \
-    grub-pc-bin \
-    grub2-common
+apt-get install $(cat /root/deps.list)
+sleep -s 5
 
 #カーネルをインストール
 echo "Linuxカーネルをインストールしています。"
 apt install -y --no-install-recommends linux-generic-hwe-22.04
 
-#Ubiquityインストール
-echo "操作が必要な項目があります。"
-echo "Ubiquityをインストールしています。"
-apt-get install -y \
-   ubiquity \
-   ubiquity-casper \
-   ubiquity-frontend-gtk \
-   ubiquity-slideshow-ubuntu \
-   ubiquity-ubuntu-artwork
-
+#インストーラーをインストール
+apt install -y \
+    ubiquity \
+    ubiquity-casper \
+    ubiquity-frontend-gtk \
+    ubiquity-frontend-kde \
+    ubiquity-slideshow-ubuntu \
+    ubiquity-ubuntu-artwork
 #デスクトップ環境を整備
 echo "デスクトップ環境をインストールしています。"
 apt-get install -y \
@@ -102,6 +88,7 @@ apt-get install -y \
     task-japanese-desktop \
     fcitx \
     fcitx-mozc
+
 apt install -y --no-install-recommends `check-language-support -l ja`
 
 #Javaインストール
@@ -126,7 +113,7 @@ apt-get autoremove -y
 #ファイルのコピーと設定
 dpkg-reconfigure locales
 dpkg-reconfigure resolvconf
-cp -f /file/NetworkManager.conf /etc/NetworkManager/NetworkManager.conf
+cp -f /root/file/NetworkManager.conf /etc/NetworkManager/NetworkManager.conf
 dpkg-reconfigure network-manager
 
 #ファイナルステップを実行
