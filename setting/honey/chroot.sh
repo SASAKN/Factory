@@ -2,16 +2,22 @@
 #sudoコマンドを使用しないで中身を書かないと、OSの作成が、失敗します。
 
 #開始するための設定
+echo "Starting..."
 mount none -t proc /proc
 mount none -t sysfs /sys
 mount none -t devpts /dev/pts
 export HOME=/root
 export LC_ALL=C
+os_aptrepo="http://jp.archive.ubuntu.com/ubuntu"
+os_codename="jammy"
 cd $HOME
 
 sleep -s 5
 
+echo "Ready Go !"
+
 #変数の設定
+username="honeylinux"
 hostname="honey-linux"
 
 sleep -s 5
@@ -21,27 +27,30 @@ echo $hostname > /etc/hostname
 
 #リポジトリの追加
    cat <<EOF > /etc/apt/sources.list
-deb http://jp.archive.ubuntu.com/ubuntu jammy main restricted universe multiverse
-deb-src http://jp.archive.ubuntu.com/ubuntu jammy main restricted universe multiverse
+deb ${os_aptrepo} ${os_codename} main restricted universe multiverse
+deb-src ${os_aptrepo} ${os_codename} main restricted universe multiverse
 
-deb http://jp.archive.ubuntu.com/ubuntu jammy-security main restricted universe multiverse
-deb-src http://jp.archive.ubuntu.com/ubuntu jammy-security main restricted universe multiverse
+deb ${os_aptrepo} ${os_codename}-security main restricted universe multiverse
+deb-src ${os_aptrepo} ${os_codename}-security main restricted universe multiverse
 
-deb http://jp.archive.ubuntu.com/ubuntu jammy-updates main restricted universe multiverse
-deb-src http://jp.archive.ubuntu.com/ubuntu jammy-updates main restricted universe multiverse
+deb ${os_aptrepo} ${os_codename}-updates main restricted universe multiverse
+deb-src ${os_aptrepo} ${os_codename}-updates main restricted universe multiverse
 EOF
 
 #アップデート
 apt-get update
 
-#systemdインストール
-# we need to install systemd first, to configure machine id
-apt-get update
-#Must!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#ジャイアンを実行！
 chown root:root /
+
+#Systemdをインストール
 apt-get install -y libterm-readline-gnu-perl systemd-sysv
+
+#マシンIDを設定する。
 dbus-uuidgen > /etc/machine-id
 ln -fs /etc/machine-id /var/lib/dbus/machine-id
+
+#パッケージを使えるようにする。
 dpkg-divert --local --rename --add /sbin/initctl
 ln -s /bin/true /sbin/initctl
 
@@ -56,19 +65,11 @@ echo "Linuxカーネルをインストールしています。"
 apt install -y --no-install-recommends linux-generic-hwe-22.04
 
 #インストーラーをインストール
-apt install -y \
-    ubiquity \
-    ubiquity-casper \
-    ubiquity-frontend-gtk \
-    ubiquity-frontend-kde \
-    ubiquity-slideshow-ubuntu \
-    ubiquity-ubuntu-artwork
+apt install -y $(cat /root/installer.list)
+
 #デスクトップ環境を整備
 echo "デスクトップ環境をインストールしています。"
-apt-get install -y \
-    plymouth-theme-ubuntu-logo \
-    ubuntu-gnome-desktop \
-    ubuntu-gnome-wallpapers
+apt-get install -y $(cat /root/de.list)
 
 #便利なパッケージのインストール
 echo "便利なものをインストールしています。"
@@ -98,15 +99,6 @@ apt-get install -y \
     openjdk-8-jre
 
 #パッケージのアンインストール
-echo "いらないものをアンインストールしています。"
-apt-get purge -y \
-    transmission-gtk \
-    transmission-common \
-    gnome-mahjongg \
-    gnome-mines \
-    gnome-sudoku \
-    aisleriot \
-    hitori
 apt-get autoremove -y
 
 
