@@ -16,20 +16,31 @@ hostname="honey-linux"
 echo $hostname > /etc/hostname
 
 #リポジトリの追加
-cp -f file/sources.list /etc/apt/sources.list
+   cat <<EOF > /etc/apt/sources.list
+deb http://jp.archive.ubuntu.com/ubuntu jammy main restricted universe multiverse
+deb-src http://jp.archive.ubuntu.com/ubuntu jammy main restricted universe multiverse
+
+deb http://jp.archive.ubuntu.com/ubuntu jammy-security main restricted universe multiverse
+deb-src http://jp.archive.ubuntu.com/ubuntu jammy-security main restricted universe multiverse
+
+deb http://jp.archive.ubuntu.com/ubuntu jammy-updates main restricted universe multiverse
+deb-src http://jp.archive.ubuntu.com/ubuntu jammy-updates main restricted universe multiverse
+EOF
 
 #アップデート
 apt-get update
 
 #systemdインストール
-echo "Systemdをインストールします。"
+# we need to install systemd first, to configure machine id
+apt-get update
+chown root:root /
 apt-get install -y libterm-readline-gnu-perl systemd-sysv
-dbus-uuidgen >/etc/machine-id
+#configure machine id
+dbus-uuidgen > /etc/machine-id
 ln -fs /etc/machine-id /var/lib/dbus/machine-id
+# don't understand why, but multiple sources indicate this
 dpkg-divert --local --rename --add /sbin/initctl
 ln -s /bin/true /sbin/initctl
-apt-get -y upgrade
-
 #パッケージをインストール
 apt-get update
 echo "現在、パッケージをインストールしています。"

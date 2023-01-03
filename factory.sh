@@ -6,7 +6,7 @@
 script_dir="$(dirname "$(readlink -f "$0")")"
 
 #ベースのOSリポジトリー
-os_repository="http://ftp.riken.go.jp/Linux/ubuntu"
+os_repository="http://jp.archive.ubuntu.com/ubuntu"
 
 #ベースのコードネーム
 os_codename="jammy"
@@ -163,6 +163,7 @@ cat <<EOF >image/README.diskdefines
 EOF
 
 #UEFI GRUB image 作成
+cd ${script_dir}/image
 grub-mkstandalone \
    --format=x86_64-efi \
    --output=isolinux/bootx64.efi \
