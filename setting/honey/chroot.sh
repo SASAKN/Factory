@@ -22,19 +22,21 @@ cp -f file/sources.list /etc/apt/sources.list
 apt-get update
 
 #systemdインストール
+echo "Systemdをインストールします。"
 apt-get install -y libterm-readline-gnu-perl systemd-sysv
 dbus-uuidgen >/etc/machine-id
 ln -fs /etc/machine-id /var/lib/dbus/machine-id
 dpkg-divert --local --rename --add /sbin/initctl
 ln -s /bin/true /sbin/initctl
-apt-get upgrade -y
+apt-get -y upgrade
 
 #パッケージをインストール
 apt-get update
-apt-get install -y sudo \
+echo "現在、パッケージをインストールしています。"
+apt-get install -y \
+    sudo \
     ubuntu-standard \
     casper \
-    firefox-esr \
     discover \
     laptop-detect \
     os-prober \
@@ -48,41 +50,65 @@ apt-get install -y sudo \
     grub-gfxpayload-lists \
     grub-pc \
     grub-pc-bin \
-    grub2-common \
-    task-kde-desktop \
-    task-japanese \
-    task-japanese-desktop \
-    fcitx \
-    fcitx-mozc \
-    ffmpeg \
-    xdg-utils \
-    open-vm-tools \
-    build-essential \
-    gparted \
-    alsa-utils \
-    bluetooth \
-    btrfs-progs \
-    clamtk \
-    curl \
-    flatpak \
-    gdebi
+    grub2-common
 
 #カーネルをインストール
-apt-get install -y --no-install-recommends linux-generic
+echo "Linuxカーネルをインストールしています。"
+apt install -y --no-install-recommends linux-generic-hwe-22.04
 
 #Ubiquityインストール
-
-#ようこそ！操作へ
 echo "操作が必要な項目があります。"
-
+echo "Ubiquityをインストールしています。"
 apt-get install -y \
    ubiquity \
    ubiquity-casper \
    ubiquity-frontend-gtk \
    ubiquity-slideshow-ubuntu \
    ubiquity-ubuntu-artwork
-#OS固有パッケージアンインストール
-apt-get purge -y 
+
+#デスクトップ環境を整備
+echo "デスクトップ環境をインストールしています。"
+apt-get install -y \
+    plymouth-theme-ubuntu-logo \
+    ubuntu-gnome-desktop \
+    ubuntu-gnome-wallpapers
+
+#便利なパッケージのインストール
+echo "便利なものをインストールしています。"
+apt-get install -y \
+    clamav-daemon \
+    terminator \
+    apt-transport-https \
+    curl \
+    vim \
+    nano \
+    less
+
+#日本語環境の整備
+echo "日本語環境をインストールしています。"
+apt-get install -y \
+    task-japanese \
+    task-japanese-desktop \
+    fcitx \
+    fcitx-mozc
+apt install -y --no-install-recommends `check-language-support -l ja`
+
+#Javaインストール
+echo "Javaをインストールしています。"
+apt-get install -y \
+    openjdk-8-jdk \
+    openjdk-8-jre
+
+#パッケージのアンインストール
+echo "いらないものをアンインストールしています。"
+apt-get purge -y \
+    transmission-gtk \
+    transmission-common \
+    gnome-mahjongg \
+    gnome-mines \
+    gnome-sudoku \
+    aisleriot \
+    hitori
 apt-get autoremove -y
 
 
