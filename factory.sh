@@ -18,11 +18,11 @@ os_name="HoneyLinux"
 os_arch="amd64"
 
 #OSのインストールラベル
-os_label1="HoneyLinuxを試します"
-os_label2="HoneyLinuxをインストールします"
-os_label3="ディスクをチェックします"
-os_label4="メモリーをテスト(レガシー)"
-os_label5="メモリーをテスト(UEFI)"
+os_label1="Try Honey Dev"
+os_label2="Install Honey Dev"
+os_label3="Check Disk"
+os_label4="Memory Test (Legacy)"
+os_label5="Memory Test(UEFI)"
 
 #ビルド番号
 buildid="A1"
