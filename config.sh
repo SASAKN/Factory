@@ -8,7 +8,7 @@ os_repository="http://jp.archive.ubuntu.com/ubuntu"
 os_codename="jammy"
 
 #OSの名前
-os_name="HoneyLinux"
+os_name="Honey Linux"
 
 #OSのCPU
 os_arch="amd64"
