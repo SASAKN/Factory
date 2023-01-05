@@ -1,34 +1,10 @@
 #!/bin/bash
 
-#設定を読み込む
-
 #基本的に変更しない（スクリプト保存場所の設定）
 script_dir="$(dirname "$(readlink -f "$0")")"
 
-#ベースのOSリポジトリー
-os_repository="http://jp.archive.ubuntu.com/ubuntu"
-
-#ベースのコードネーム
-os_codename="jammy"
-
-#OSの名前
-os_name="HoneyLinux"
-
-#OSのCPU
-os_arch="amd64"
-
-#OSのインストールラベル
-os_label1="Try Honey Dev"
-os_label2="Install Honey Dev"
-os_label3="Check Disk"
-os_label4="Memory Test (Legacy)"
-os_label5="Memory Test(UEFI)"
-
-#ビルド番号
-buildid="A1"
-
-#設定の名前
-setting_name="honey"
+#設定をロードする。
+source ${script_dir}/config.sh
 
 #必要なディレクトリー作成
 cd ${script_dir}
@@ -37,15 +13,7 @@ mkdir out
 mkdir chroot
 
 #依存関係のインストール
-sudo apt-get install \
-    bash \
-    binutils \
-    debootstrap \
-    squashfs-tools \
-    xorriso \
-    grub-pc-bin \
-    grub-efi-amd64-bin \
-    mtools
+source ${script_dir}/deps.sh
 
 #ベースを作る
 cd ${script_dir}
