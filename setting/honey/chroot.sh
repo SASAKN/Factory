@@ -12,15 +12,11 @@ os_aptrepo="http://jp.archive.ubuntu.com/ubuntu"
 os_codename="jammy"
 cd $HOME
 
-sleep -s 5
-
 echo "Ready Go !"
 
 #変数の設定
 username="honeylinux"
 hostname="honey-linux"
-
-sleep -s 5
 
 #hostname設定
 echo $hostname > /etc/hostname
@@ -40,7 +36,7 @@ EOF
 #アップデート
 apt-get update
 
-#ジャイアンを実行！
+#バグ修正
 chown root:root /
 
 #Systemdをインストール
@@ -54,15 +50,14 @@ ln -fs /etc/machine-id /var/lib/dbus/machine-id
 dpkg-divert --local --rename --add /sbin/initctl
 ln -s /bin/true /sbin/initctl
 
+#カーネルをインストール
+echo "Linuxカーネルをインストールしています。"
+apt install -y --no-install-recommends linux-generic-hwe-22.04
+
 #パッケージをインストール
 apt-get update
 echo "現在、パッケージをインストールしています。"
 apt-get install $(cat /root/deps.list)
-sleep -s 5
-
-#カーネルをインストール
-echo "Linuxカーネルをインストールしています。"
-apt install -y --no-install-recommends linux-generic-hwe-22.04
 
 #インストーラーをインストール
 apt install -y $(cat /root/installer.list)
