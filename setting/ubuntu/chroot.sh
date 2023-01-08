@@ -50,10 +50,6 @@ ln -fs /etc/machine-id /var/lib/dbus/machine-id
 dpkg-divert --local --rename --add /sbin/initctl
 ln -s /bin/true /sbin/initctl
 
-#カーネルをインストール
-echo "Linuxカーネルをインストールしています。"
-apt-get install -y --no-install-recommends linux-generic-hwe-22.04
-
 #パッケージをインストール
 apt-get update
 echo "現在、パッケージをインストールしています。"
@@ -117,6 +113,10 @@ echo "Javaをインストールしています。"
 apt-get install -y \
     openjdk-8-jdk \
     openjdk-8-jre
+
+#カーネルをインストール
+echo "Linuxカーネルをインストールしています。"
+apt-get install -y --no-install-recommends linux-generic-hwe-22.04
 
 #パッケージのアンインストール
 apt-get autoremove -y
