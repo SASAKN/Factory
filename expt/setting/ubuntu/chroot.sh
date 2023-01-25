@@ -53,18 +53,39 @@ ln -s /bin/true /sbin/initctl
 #パッケージをインストール
 apt-get update
 echo "現在、パッケージをインストールしています。"
-apt-get install $(cat /root/deps.list)
-
-#カーネルをインストール
-echo "Linuxカーネルをインストールしています。"
-apt install -y --no-install-recommends linux-generic-hwe-22.04
+apt-get install -y \
+    sudo \
+    ubuntu-standard \
+    casper \
+    lupin-casper \
+    discover \
+    laptop-detect \
+    os-prober \
+    network-manager \
+    resolvconf \
+    net-tools \
+    wireless-tools \
+    wpagui \
+    locales \
+    grub-common \
+    grub-gfxpayload-lists \
+    grub-pc \
+    grub-pc-bin \
+    grub2-common
 
 #インストーラーをインストール
-apt install -y $(cat /root/installer.list)
+apt-get install -y \
+   ubiquity \
+   ubiquity-casper \
+   ubiquity-frontend-gtk \
+   ubiquity-slideshow-ubuntu \
+   ubiquity-ubuntu-artwork
 
 #デスクトップ環境を整備
-echo "デスクトップ環境をインストールしています。"
-apt-get install -y $(cat /root/de.list)
+apt-get install -y \
+    plymouth-theme-ubuntu-logo \
+    ubuntu-gnome-desktop \
+    ubuntu-gnome-wallpapers
 
 #便利なパッケージのインストール
 echo "便利なものをインストールしています。"
@@ -85,14 +106,21 @@ apt-get install -y \
     fcitx \
     fcitx-mozc
 
+apt install -y --no-install-recommends `check-language-support -l ja`
+
 #Javaインストール
 echo "Javaをインストールしています。"
 apt-get install -y \
     openjdk-8-jdk \
     openjdk-8-jre
 
+#カーネルをインストール
+echo "Linuxカーネルをインストールしています。"
+apt-get install -y --no-install-recommends linux-generic-hwe-22.04
+
 #パッケージのアンインストール
 apt-get autoremove -y
+
 
 #ファイルのコピーと設定
 dpkg-reconfigure locales

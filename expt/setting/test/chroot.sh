@@ -53,43 +53,7 @@ ln -s /bin/true /sbin/initctl
 #パッケージをインストール
 apt-get update
 echo "現在、パッケージをインストールしています。"
-apt-get install $(cat /root/deps.list)
-
-#カーネルをインストール
-echo "Linuxカーネルをインストールしています。"
-apt install -y --no-install-recommends linux-generic-hwe-22.04
-
-#インストーラーをインストール
-apt install -y $(cat /root/installer.list)
-
-#デスクトップ環境を整備
-echo "デスクトップ環境をインストールしています。"
-apt-get install -y $(cat /root/de.list)
-
-#便利なパッケージのインストール
-echo "便利なものをインストールしています。"
-apt-get install -y \
-    clamav-daemon \
-    terminator \
-    apt-transport-https \
-    curl \
-    vim \
-    nano \
-    less
-
-#日本語環境の整備
-echo "日本語環境をインストールしています。"
-apt-get install -y \
-    task-japanese \
-    task-japanese-desktop \
-    fcitx \
-    fcitx-mozc
-
-#Javaインストール
-echo "Javaをインストールしています。"
-apt-get install -y \
-    openjdk-8-jdk \
-    openjdk-8-jre
+apt-get install -y $(cat /root/deps.list)
 
 #パッケージのアンインストール
 apt-get autoremove -y

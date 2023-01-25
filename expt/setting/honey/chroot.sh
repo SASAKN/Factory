@@ -56,15 +56,10 @@ echo "現在、パッケージをインストールしています。"
 apt-get install $(cat /root/deps.list)
 
 #カーネルをインストール
-echo "Linuxカーネルをインストールしています。"
-apt install -y --no-install-recommends linux-generic-hwe-22.04
+echo "Linuxカーネルいるかなー？"
 
 #インストーラーをインストール
-apt install -y $(cat /root/installer.list)
-
-#デスクトップ環境を整備
-echo "デスクトップ環境をインストールしています。"
-apt-get install -y $(cat /root/de.list)
+apt --no-install-recommends --yes install /root/packages.list 
 
 #便利なパッケージのインストール
 echo "便利なものをインストールしています。"
