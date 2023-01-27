@@ -50,21 +50,16 @@ ln -fs /etc/machine-id /var/lib/dbus/machine-id
 dpkg-divert --local --rename --add /sbin/initctl
 ln -s /bin/true /sbin/initctl
 
-#パッケージをインストール
-apt-get update
-echo "現在、パッケージをインストールしています。"
-apt-get install $(cat /root/deps.list)
+#SharePackageをインストール
+apt --no-install-recommends --yes install $(cat /root/sharepackages.list) 
 
-#カーネルをインストール
-echo "Linuxカーネルいるかなー？"
-
-#インストーラーをインストール
-apt --no-install-recommends --yes install /root/packages.list 
+#OSのパッケージを追加
+apt --no-install-recommends --yes install $(cat /root/packages.list) 
 
 #便利なパッケージのインストール
 echo "便利なものをインストールしています。"
 apt-get install -y \
-    clamav-daemon \
+    clamav \
     terminator \
     apt-transport-https \
     curl \
