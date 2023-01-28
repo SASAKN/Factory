@@ -51,7 +51,6 @@ network-manager
 ppp
 pptp-linux
 resolvconf
-crda
 wireless-regdb
 wireless-tools
 wpasupplicant
