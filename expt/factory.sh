@@ -32,6 +32,7 @@ sudo cp ${script_dir}/setting/${setting_name}/final.sh ${script_dir}/chroot/root
 sudo cp ${script_dir}/setting/${setting_name}/deps.list ${script_dir}/chroot/root/deps.list
 sudo cp ${script_dir}/setting/${setting_name}/de.list ${script_dir}/chroot/root/de.list
 sudo cp ${script_dir}/setting/${setting_name}/installer.list ${script_dir}/chroot/root/installer.list
+sudo cp ${script_dir}/config.sh ${script_dir}/chroot/root/config.sh
 
 #ファイルシステムのマウント
 sudo mount --bind /dev chroot/dev
@@ -106,12 +107,10 @@ EOF
 #マニフェスト作成
 cd ${script_dir}
 sudo chroot chroot dpkg-query -W --showformat='${Package} ${Version}\n' | sudo tee image/casper/filesystem.manifest
-sudo cp -v image/casper/filesystem.manifest image/casper/filesystem.manifest-desktop
-sudo sed -i '/ubiquity/d' image/casper/filesystem.manifest-desktop
-sudo sed -i '/casper/d' image/casper/filesystem.manifest-desktop
-sudo sed -i '/discover/d' image/casper/filesystem.manifest-desktop
-sudo sed -i '/laptop-detect/d' image/casper/filesystem.manifest-desktop
-sudo sed -i '/os-prober/d' image/casper/filesystem.manifest-desktop
+sudo cp -v ${script_dir}/image/casper/filesystem.manifest image/casper/filesystem.manifest-desktop
+for package in $remove_package; do
+   sudo sed -i "/$package/d" image/casper/filesystem.manifest-desktop
+done
 
 #OSを圧縮
 sudo mksquashfs chroot image/casper/filesystem.squashfs

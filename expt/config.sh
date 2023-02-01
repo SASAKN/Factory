@@ -1,6 +1,4 @@
 #設定を読み込む
-
-
 #ベースのOSリポジトリー
 os_repository="http://jp.archive.ubuntu.com/ubuntu"
 
@@ -25,3 +23,18 @@ buildid="A1"
 
 #設定の名前
 setting_name="ubuntu"
+
+###Expt
+echo "これは、実験的な実装です。"
+
+#カーネルのパッケージ名
+kernel="linux-generic"
+
+#Live環境から離れた時の削除処理
+remove_package="
+    ubiquity \
+    casper \
+    discover \
+    laptop-detect \
+    os-prober \
+"
