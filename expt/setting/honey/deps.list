@@ -9,7 +9,6 @@ network-manager
 resolvconf
 net-tools
 wireless-tools
-open-vm-tools
 wpagui
 locales
 grub-common

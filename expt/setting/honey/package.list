@@ -1,6 +1,5 @@
 plymouth-theme-ubuntu-logo
 task-kde-desktop
-clamav
 xsnow
 apt-transport-https
 curl
@@ -9,3 +8,4 @@ nano
 less
 openjdk-8-jdk
 openjdk-8-jre
+open-vm-tools
