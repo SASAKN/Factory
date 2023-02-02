@@ -60,15 +60,15 @@ echo "Linuxカーネルをインストールしています。"
 apt-get install --yes --no-install-recommends $kernel
 
 #Install installer
-apt install --yes ubiquity \
-    ubiquity-casper \
-    ubiquity-frontend-gtk \
-    ubiquity-frontend-kde \
-    ubiquity-slideshow-ubuntu \
-    ubiquity-ubuntu-artwork
+apt-get install -y \
+   ubiquity \
+   ubiquity-casper \
+   ubiquity-frontend-gtk \
+   ubiquity-slideshow-ubuntu \
+   ubiquity-ubuntu-artwork
 
 #Install your operating system packages
-apt install -y $(cat /root/package.list)
+apt-get install -y $(cat /root/package.list)
 
 #Package  Uninstall
 apt-get autoremove -y
