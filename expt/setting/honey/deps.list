@@ -1,13 +1,3 @@
-binutils
-bzip2
-cpio
-gzip
-p7zip
-p7zip-full
-tar
-unzip
-xz-utils
-zip
 sudo
 ubuntu-minimal
 ubuntu-standard

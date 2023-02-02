@@ -57,15 +57,15 @@ apt-get install $(cat /root/deps.list)
 
 #Install Kernel
 echo "Linuxカーネルをインストールしています。"
-apt install --yes --no-install-recommends $kernel
+apt-get install --yes --no-install-recommends $kernel
 
 #Install installer
 apt install --yes ubiquity \
     ubiquity-casper \
     ubiquity-frontend-gtk \
     ubiquity-frontend-kde \
-    ubiuqity-slideshow-ubuntu \
-    ubiuqity-ubuntu-artwork
+    ubiquity-slideshow-ubuntu \
+    ubiquity-ubuntu-artwork
 
 #Install your operating system packages
 apt install -y $(cat /root/package.list)
@@ -87,12 +87,7 @@ DEBIAN_FRONTEND=noninteractive dpkg-reconfigure network-manager
 
 #ファイナルステップを実行
 bash /root/final.sh
-
-#実験的アップデートなどを処理
 apt-get update
-DEBIAN_FRONTEND=noninteractive apt-get upgrade --yes
-DEBIAN_FRONTEND=noninteractive apt-get full-upgrade --yes
-DEBIAN_FRONTEND=noninteractive apt-get dist-upgrade --yes
 
 #掃除
 truncate -s 0 /etc/machine-id
