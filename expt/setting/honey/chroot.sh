@@ -53,11 +53,11 @@ ln -s /bin/true /sbin/initctl
 
 #Install Deps Package
 apt-get update
-apt-get install $(cat /root/deps.list)
+apt-get install -y $(cat /root/deps.list)
 
 #Install Kernel
 echo "Linuxカーネルをインストールしています。"
-apt-get install --yes --no-install-recommends $kernel
+apt-get install -y --no-install-recommends $kernel
 
 #Install installer
 apt-get install -y \
@@ -76,14 +76,14 @@ apt-get autoremove -y
 #Make Setting
 
 #Locales
-DEBIAN_FRONTEND=noninteractive LANG=en_US.UTF-8 LC_ALL=C LANGUAGE=en_US.UTF-8 dpkg-reconfigure locales
+sudo dpkg-reconfigure locales
 
 #resolvconf
-DEBIAN_FRONTEND=noninteractive dpkg-reconfigure resolvconf
+dpkg-reconfigure resolvconf
 
 #NetworkManager
 cp -f /root/file/NetworkManager.conf /etc/NetworkManager/NetworkManager.conf
-DEBIAN_FRONTEND=noninteractive dpkg-reconfigure network-manager
+dpkg-reconfigure network-manager
 
 #ファイナルステップを実行
 bash /root/final.sh
