@@ -11,6 +11,11 @@ export LC_ALL=C
 os_aptrepo="http://jp.archive.ubuntu.com/ubuntu"
 os_codename="jammy"
 cd $HOME
+touch resolvconf
+touch locales
+touch network-manager
+touch keyboard-configuration
+touch console-setup
 
 echo "Ready Go !"
 
@@ -81,42 +86,15 @@ apt-get install -y \
    ubiquity-slideshow-ubuntu \
    ubiquity-ubuntu-artwork
 
-#デスクトップ環境を整備
-apt-get install -y \
-    plymouth-theme-ubuntu-logo \
-    ubuntu-gnome-desktop \
-    ubuntu-gnome-wallpapers
-
-#便利なパッケージのインストール
-echo "便利なものをインストールしています。"
-apt-get install -y \
-    clamav-daemon \
-    terminator \
-    apt-transport-https \
-    curl \
-    vim \
-    nano \
-    less
-
-#日本語環境の整備
-echo "日本語環境をインストールしています。"
-apt-get install -y \
-    task-japanese \
-    task-japanese-desktop \
-    fcitx \
-    fcitx-mozc
-
-apt install -y --no-install-recommends `check-language-support -l ja`
-
-#Javaインストール
-echo "Javaをインストールしています。"
-apt-get install -y \
-    openjdk-8-jdk \
-    openjdk-8-jre
-
+#設定を取得
+debconf-get-selections | grep keyboard-configuration >> keyboard-configuration
+debconf-get-selections | grep console-setup >> console-setup
 #カーネルをインストール
 echo "Linuxカーネルをインストールしています。"
-apt-get install -y --no-install-recommends linux-generic-hwe-22.04
+apt-get install -y --no-install-recommends linux-generic
+
+#Debconf収集
+apt-get install debconf-utils grep -y
 
 #パッケージのアンインストール
 apt-get autoremove -y
@@ -124,12 +102,15 @@ apt-get autoremove -y
 
 #ファイルのコピーと設定
 dpkg-reconfigure locales
+#設定を取得
+debconf-get-selections | grep locales >> locales
 dpkg-reconfigure resolvconf
+#設定を取得
+debconf-get-selections | grep resolvconf >> resolvconf
 cp -f /root/file/NetworkManager.conf /etc/NetworkManager/NetworkManager.conf
 dpkg-reconfigure network-manager
-
-#ファイナルステップを実行
-bash /root/final.sh
+#設定を取得
+debconf-get-selections | grep network-manager >> network-manager 
 
 #掃除
 truncate -s 0 /etc/machine-id
