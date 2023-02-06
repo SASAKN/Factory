@@ -59,6 +59,25 @@ apt-get install -y $(cat /root/deps.list)
 echo "Linuxカーネルをインストールしています。"
 apt-get install -y --no-install-recommends $kernel
 
+#================ Task Automation ================#
+
+#Install debcoonf-utils
+apt-get install -y debconf-utils
+
+#Setting Package Config Files
+#Keyboard-configuration
+echo '' | debconf-set-selections
+
+#console-setup
+echo '' | debconf-set-selections
+
+#Configure Package
+dpkg-reconfigure -f noninteractive keyboard-configuration
+dpkg-reconfigure -f noninteractive console-setup
+
+#Disable interactive terminal
+DEBIAN_FRONTEND=noninteractive
+
 #Install installer
 apt-get install -y \
    ubiquity \
@@ -73,17 +92,23 @@ apt-get install -y $(cat /root/package.list)
 #Package  Uninstall
 apt-get autoremove -y
 
-#Make Setting
 
-#Locales
-sudo dpkg-reconfigure locales
-
+#Write Setting Files
+#locales
+echo '' | debconf-set-selections
 #resolvconf
-dpkg-reconfigure resolvconf
-
-#NetworkManager
+echo '' | debconf-set-selections
+#networkmanager
 cp -f /root/file/NetworkManager.conf /etc/NetworkManager/NetworkManager.conf
-dpkg-reconfigure network-manager
+echo '' | debconf-set-selections
+
+#Make Setting
+#Locales
+dpkg-reconfigure -f noninteractive locales
+#resolvconf
+dpkg-reconfigure -f noninteractive resolvconf
+#NetworkManager
+dpkg-reconfigure -f noninteractive network-manager
 
 #ファイナルステップを実行
 bash /root/final.sh
