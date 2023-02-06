@@ -92,7 +92,6 @@ apt-get install -y $(cat /root/package.list)
 #Package  Uninstall
 apt-get autoremove -y
 
-
 #Write Setting Files
 #locales
 echo '' | debconf-set-selections
@@ -101,6 +100,8 @@ echo '' | debconf-set-selections
 #networkmanager
 cp -f /root/file/NetworkManager.conf /etc/NetworkManager/NetworkManager.conf
 echo '' | debconf-set-selections
+
+########今日は、ここで終わり。Debcoonf-utilsの処理までかけた。
 
 #Make Setting
 #Locales
