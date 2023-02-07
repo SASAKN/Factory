@@ -1,5 +1,5 @@
 #!/bin/bash
-#sudoコマンドを使用しないで中身を書かないと、OSの作成が、失敗します。
+#===========Do not write "sudo" in this script.===========#
 
 #Start Settings
 echo "Starting..."
@@ -14,9 +14,6 @@ cd $HOME
 
 #Loading Config File
 source /root/config.sh
-
-#Setting variable
-
 
 #Setting Hostname
 echo $hostname > /etc/hostname
