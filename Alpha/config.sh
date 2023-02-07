@@ -38,3 +38,5 @@ remove_package="
     laptop-detect \
     os-prober \
 "
+username="honeylinux"
+hostname="honey-linux"

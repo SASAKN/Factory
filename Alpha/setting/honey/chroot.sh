@@ -12,12 +12,11 @@ os_aptrepo="http://jp.archive.ubuntu.com/ubuntu"
 os_codename="jammy"
 cd $HOME
 
-#Loading COnfig File
+#Loading Config File
 source /root/config.sh
 
 #Setting variable
-username="honeylinux"
-hostname="honey-linux"
+
 
 #Setting Hostname
 echo $hostname > /etc/hostname
