@@ -101,7 +101,7 @@ echo '' | debconf-set-selections
 cp -f /root/file/NetworkManager.conf /etc/NetworkManager/NetworkManager.conf
 echo '' | debconf-set-selections
 
-########今日は、ここで終わり。Debcoonf-utilsの処理までかけた。
+########Feb 6 今日は、ここで終わり。Debcoonf-utilsの処理までかけた。
 
 #Make Setting
 #Locales
