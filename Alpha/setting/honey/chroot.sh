@@ -67,6 +67,9 @@ apt-get install -y debconf-utils
 #Disable interactive terminal
 DEBIAN_FRONTEND=noninteractive
 
+#Setting Package Config Files
+echo $(cat /root/debconf.config) | debconf-set-selections
+
 #Install installer
 apt-get install -y \
    ubiquity \
@@ -75,13 +78,7 @@ apt-get install -y \
    ubiquity-slideshow-ubuntu \
    ubiquity-ubuntu-artwork
 
-#Setting Package Config Files
-echo $(cat /root/debconf.config) | debconf-set-selections
-
 #Configure Package
-dpkg-reconfigure -f noninteractive keyboard-configuration
-dpkg-reconfigure -f noninteractive console-setup
-
 #Install your operating system packages
 apt-get install -y $(cat /root/package.list)
 
@@ -89,15 +86,8 @@ apt-get install -y $(cat /root/package.list)
 apt-get autoremove -y
 
 #Write Setting Files
-#locales
-echo '' | debconf-set-selections
-#resolvconf
-echo '' | debconf-set-selections
 #networkmanager
 cp -f /root/file/NetworkManager.conf /etc/NetworkManager/NetworkManager.conf
-echo '' | debconf-set-selections
-
-########Feb 6 今日は、ここで終わり。Debcoonf-utilsの処理までかけた。
 
 #Make Setting
 #Locales
@@ -106,6 +96,10 @@ dpkg-reconfigure -f noninteractive locales
 dpkg-reconfigure -f noninteractive resolvconf
 #NetworkManager
 dpkg-reconfigure -f noninteractive network-manager
+#keyboard-configuration
+dpkg-reconfigure -f noninteractive keyboard-configuration
+#console-setup
+dpkg-reconfigure -f noninteractive console-setup
 
 #ファイナルステップを実行
 bash /root/final.sh
