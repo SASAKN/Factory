@@ -76,11 +76,7 @@ apt-get install -y \
    ubiquity-ubuntu-artwork
 
 #Setting Package Config Files
-#Keyboard-configuration
-echo '' | debconf-set-selections
-
-#console-setup
-echo '' | debconf-set-selections
+echo $(cat /root/debconf.config) | debconf-set-selections
 
 #Configure Package
 dpkg-reconfigure -f noninteractive keyboard-configuration
