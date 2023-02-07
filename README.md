@@ -1,2 +1,2 @@
 # Factory
-Easy Build Tools
+## Factoryは、全自動のビルドツールです、
