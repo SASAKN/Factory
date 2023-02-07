@@ -64,17 +64,6 @@ apt-get install -y --no-install-recommends $kernel
 #Install debcoonf-utils
 apt-get install -y debconf-utils
 
-#Setting Package Config Files
-#Keyboard-configuration
-echo '' | debconf-set-selections
-
-#console-setup
-echo '' | debconf-set-selections
-
-#Configure Package
-dpkg-reconfigure -f noninteractive keyboard-configuration
-dpkg-reconfigure -f noninteractive console-setup
-
 #Disable interactive terminal
 DEBIAN_FRONTEND=noninteractive
 
@@ -85,6 +74,17 @@ apt-get install -y \
    ubiquity-frontend-gtk \
    ubiquity-slideshow-ubuntu \
    ubiquity-ubuntu-artwork
+
+#Setting Package Config Files
+#Keyboard-configuration
+echo '' | debconf-set-selections
+
+#console-setup
+echo '' | debconf-set-selections
+
+#Configure Package
+dpkg-reconfigure -f noninteractive keyboard-configuration
+dpkg-reconfigure -f noninteractive console-setup
 
 #Install your operating system packages
 apt-get install -y $(cat /root/package.list)
