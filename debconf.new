@@ -1,0 +1,676 @@
+ubiquity	passwd/user-password-again	password	
+user-setup	passwd/user-password-again	password	
+ubiquity	ubiquity/recovery_key	password	
+ubiquity	ubiquity/directory_passwd	password	
+ubiquity	ubiquity/crypto_key	password	
+ubiquity	passwd/root-password	password	
+user-setup	passwd/root-password	password	
+ubiquity	grub-installer/password-again	password	
+ubiquity	ubiquity/zfs_keystore_key	password	
+ubiquity	ubiquity/secureboot_key	password	
+ubiquity	grub-installer/password-crypted	password	
+ubiquity	passwd/user-password	password	
+user-setup	passwd/user-password	password	
+ubiquity	partman-crypto/passphrase	password	
+ubiquity	passwd/user-password-crypted	password	
+user-setup	passwd/user-password-crypted	password	
+ubiquity	passwd/root-password-crypted	password	
+user-setup	passwd/root-password-crypted	password	
+ubiquity	passwd/root-password-again	password	
+user-setup	passwd/root-password-again	password	
+ubiquity	partman-crypto/passphrase-again	password	
+ubiquity	grub-installer/password	password	
+ubiquity	partman-crypto/activate/passphrase-existing	password	
+ubiquity	localechooser/shortlist/el	select	
+ubiquity	partman-lvm/lvcreate_vgnames	select	
+keyboard-configuration	keyboard-configuration/altgr	select	The default for the keyboard layout
+ubiquity	ubiquity/install/apt_error_remove	error	
+console-setup	console-setup/fontface47	select	Fixed
+ubiquity	tzsetup/country/AQ	select	
+ubiquity	di-utils-reboot/really_reboot	boolean	false
+ubiquity	partman/alignment	select	optimal
+ubiquity	ubiquity/partman-skip-unmount	boolean	false
+shim-signed	shim/error/bad_secureboot_key	error	
+ubiquity	partman-target/mount_failed	boolean	true
+ubiquity	partman-crypto/keyfile-problem	error	
+ubiquity	ubiquity/install/copying_error/md5	select	
+console-setup	console-setup/codeset47	select	Guess optimal character set
+ubiquity	partman-ext3/bad_alignment	boolean	
+ubiquity	tzsetup/country/BR	select	America/Sao_Paulo
+ubiquity	ubiquity/automation_failure_command	string	
+ubiquity	grub-installer/grub_not_mature_on_this_platform	boolean	false
+ubiquity	apt-setup/enable-source-repositories	boolean	false
+keyboard-configuration	keyboard-configuration/optionscode	string	
+ubiquity	partman-crypto/luksformat_options	string	
+ubiquity	hw-detect/start_pcmcia	boolean	true
+ubiquity	ubiquity/poweroff	boolean	false
+ubiquity	partman-partitioning/unsupported_label	boolean	false
+ubiquity	localechooser/translation/warn-severe	boolean	false
+ubiquity	grub-installer/sataraid-error	error	
+ubiquity	localechooser/translation/warn-light	boolean	true
+ubiquity	netcfg/invalid_hostname	error	
+ubiquity	partman-lvm/badnamegiven	error	
+ubiquity	partman/active_partition	select	
+ubiquity	preseed/file/checksum	string	
+ubiquity	debian-installer/framebuffer	boolean	true
+ubiquity	partman-lvm/vgcreate_nameused	error	
+ufw	ufw/allow_custom_ports	string	
+ubiquity	partman-lvm/device_remove_lvm	boolean	false
+ubiquity	localechooser/countrylist/Antarctica	select	
+ubiquity	partman/exception_handler_note	note	
+ubiquity	ubiquity/use_zfs	boolean	false
+ubiquity	disk-detect/ibft/enable	boolean	false
+ubiquity	localechooser/countrylist/Asia	select	
+ubiquity	partman/automount	boolean	false
+base-passwd	base-passwd/user-change-home	boolean	true
+ubiquity	partman/confirm	boolean	false
+ubiquity	partman-auto/expert_recipe	string	
+ubiquity	partman/early_command	string	
+ubiquity	tzsetup/country/RU	select	Europe/Moscow
+ubiquity	netcfg/no_dhcp_client	error	
+ubiquity	tzsetup/country/FM	select	Pacific/Ponape
+ufw	ufw/enable	boolean	false
+ubiquity	partman-target/must_be_on_root	error	
+ubiquity	grub-installer/make_active	boolean	true
+ubiquity	partman-lvm/confirm	boolean	false
+ubiquity	partman-lvm/vgreduce_error	error	
+ubiquity	partman-basicfilesystems/mountpoint	select	
+ubiquity	localechooser/shortlist/zh_CN	select	
+ubiquity	partman-lvm/nopartitions	error	
+ubiquity	netcfg/get_ipaddress	string	
+ubiquity	partman-partitioning/bad_new_partition_size	error	
+ubiquity	partman-partitioning/default_label	string	
+ubiquity	apt-setup/mirror/error	select	Retry
+ubiquity	localechooser/shortlist/bo	select	
+ubiquity	tzsetup/detected	boolean	true
+base-passwd	base-passwd/group-move	boolean	true
+keyboard-configuration	keyboard-configuration/unsupported_config_layout	boolean	true
+ubiquity	netcfg/wireless_wep	string	
+ubiquity	partman-auto-lvm/no_pv_in_vg	error	
+tzdata	tzdata/Zones/Atlantic	select	
+ubiquity	clock-setup/ntp	boolean	true
+ubiquity	partman-basicfilesystems/no_mount_point	boolean	
+ubiquity	apt-setup/non-free	boolean	false
+ucf	ucf/show_diff	note	
+ubiquity	user-setup/encrypt-home-failed	error	
+user-setup	user-setup/encrypt-home-failed	error	
+ubiquity	partman-partitioning/small_new_size	error	
+ubiquity	partman-basicfilesystems/swap_check_failed	boolean	
+dash	dash/sh	boolean	true
+ubiquity	partman/boot_not_first_partition	boolean	
+base-passwd	base-passwd/user-change-shell	boolean	true
+ubiquity	user-setup/allow-password-weak	boolean	false
+user-setup	user-setup/allow-password-weak	boolean	false
+ubiquity	apt-setup/multiverse	boolean	true
+ubiquity	ubiquity/failure_command	string	
+shim-signed	shim/secureboot_key_again	string	
+ubiquity	ubiquity/install_oem	boolean	true
+ubiquity	mirror/suite	select	jammy
+console-setup	console-setup/fontsize-text47	select	8x16
+grub-pc	grub-efi/install_devices_empty	boolean	false
+ubiquity	tzsetup/country/ID	select	Asia/Jakarta
+ubiquity	localechooser/shortlist/zh_TW	select	
+libpam-modules	libpam-modules/deprecate-tally	error	
+keyboard-configuration	keyboard-configuration/variantcode	string	
+ubiquity	localechooser/shortlist/sv	select	
+ubiquity	localechooser/preferred-locale	select	
+ubiquity	ubiquity/custom_title_text	string	
+tzdata	tzdata/Areas	select	Etc
+grub-pc	grub2/update_nvram	boolean	true
+ubiquity	partman/unmount_active	boolean	
+tzdata	tzdata/Zones/Asia	select	
+ubiquity	debian-installer/terminal-plugin-unavailable	error	
+ubiquity	apt-setup/overlay_directory	string	/
+cryptsetup-initramfs	cryptsetup-initramfs/prerm_active_mappings	boolean	true
+ubiquity	grub-installer/with_other_os	boolean	true
+ubiquity	hw-detect/pcmcia_resources	string	
+ubiquity	partman-basicfilesystems/mountoptions	multiselect	
+ubiquity	partman-auto/automatically_partition	select	
+ubiquity	preseed/early_command	string	
+ubiquity	partman-lvm/commit_failed	error	
+ubiquity	partman-efi/too_small_efi	error	
+ubiquity	passwd/user-default-groups	string	adm cdrom dip lpadmin plugdev sambashare debian-tor libvirtd lxd
+user-setup	passwd/user-default-groups	string	adm cdrom dip lpadmin plugdev sambashare debian-tor libvirtd lxd
+ubiquity	partman-crypto/ivalgorithm	select	
+grub-pc	grub-pc/hidden_timeout	boolean	true
+ubiquity	ubiquity/hide_slideshow	boolean	false
+grub-pc	grub2/kfreebsd_cmdline	string	
+ubiquity	partman-basicfilesystems/specify_reserved	string	
+ubiquity	netcfg/invalid_pass	error	
+ubiquity	ubiquity/install/generate-blacklist	boolean	true
+ubiquity	partman-jfs/jfs_root	boolean	false
+ubiquity	ubiquity/install/broken_bluetooth_copy	error	
+discover	discover/install_hw_packages	multiselect	
+ubiquity	partman-auto-lvm/big_guided_size	error	
+keyboard-configuration	keyboard-configuration/compose	select	No compose key
+ubiquity	partman-auto/expert_recipe_file	string	
+ubiquity	apt-setup/overlay_host	string	ppa.launchpad.net
+shim-signed	shim/enable_secureboot	boolean	false
+ubiquity	partman-lvm/lvcreate_size	string	
+ubiquity	ubiquity/install/broken_active_directory	error	
+ubiquity	partman-crypto/plain_erase_failed	error	
+ubiquity	grub-installer/choose_bootdev	select	
+ubiquity	partman-crypto/install_udebs_failure	error	
+ubiquity	disk-detect/activate_dmraid	boolean	true
+ubiquity	partman-crypto/crypto_erase_failed	error	
+ubiquity	netcfg/dhcp_timeout	string	30
+ubiquity	partman-lvm/pvcreate_error	error	
+ubiquity	tzsetup/geoip_server	string	https://geoip.ubuntu.com/lookup
+ubiquity	partman-ext3/lazy_itable_init	boolean	false
+ubiquity	preseed/late_command	string	
+ubiquity	partman-partitioning/big_new_size	error	
+ubiquity	netcfg/bad_ipaddress	error	
+ubiquity	apt-setup/contrib	boolean	false
+ubiquity	partman-auto/disk	string	
+ubiquity	netcfg/hostname	string	
+keyboard-configuration	keyboard-configuration/toggle	select	No toggling
+ubiquity	ubiquity/use_nonfree	boolean	false
+keyboard-configuration	keyboard-configuration/unsupported_config_options	boolean	true
+shim-signed	shim/error/secureboot_key_mismatch	error	
+ubiquity	partman-auto/choose_recipe	select	
+libc6	libraries/restart-without-asking	boolean	false
+libc6:amd64	libraries/restart-without-asking	boolean	false
+libpam0g:amd64	libraries/restart-without-asking	boolean	false
+libssl3:amd64	libraries/restart-without-asking	boolean	false
+grub-pc	grub-efi/install_devices_failed	boolean	false
+ubiquity	partman-ext3/boot_not_bootable	boolean	
+ubiquity	mirror/protocol	select	http
+adduser	adduser/homedir-permission	boolean	false
+ubiquity	partman/installation_medium_mounted	note	
+ubiquity	preseed/url/checksum	string	
+ubiquity	base-installer/kernel/linux/link_in_boot	boolean	true
+grub-pc	grub-pc/postrm_purge_boot_grub	boolean	false
+ubiquity	partman-lvm/vgreduce_names	select	
+tzdata	tzdata/Zones/Pacific	select	
+ubiquity	partman-target/help	note	
+ubiquity	netcfg/get_gateway	string	
+ubiquity	mirror/noarch	error	
+ubiquity	apt-setup/cdrom/set-next	boolean	false
+ufw	ufw/allow_known_ports	multiselect	
+ubiquity	tzsetup/country/PG	select	
+ubiquity	tzsetup/country/CA	select	Canada/Eastern
+ubiquity	netcfg/choose_interface	select	
+ubiquity	partman/storage_device	select	
+ubiquity	mirror/country	string	
+ubiquity	netcfg/wireless_essid_again	string	
+ubiquity	partman-basicfilesystems/no_swap	boolean	false
+ubiquity	localechooser/countrylist/Indian_Ocean	select	
+ubiquity	partman-partitioning/impossible_resize	error	
+grub-pc	grub2/kfreebsd_cmdline_default	string	quiet splash
+ubiquity	partman-lvm/device_remove_lvm_span	error	
+ucf	ucf/changeprompt_threeway	select	keep_current
+ubiquity	localechooser/shortlist/fr	select	
+ubiquity	localechooser/shortlist/ta	select	
+ubiquity	partman-target/no_root	error	
+ubiquity	localechooser/shortlist/sr	select	
+ubiquity	ethdetect/module_select	select	no ethernet card
+ubiquity	ethdetect/prompt_missing_firmware	boolean	true
+ubiquity	partman-crypto/cipher	select	
+ubiquity	partman-target/same_label	error	
+ubiquity	mirror/http/mirror	select	CC.archive.ubuntu.com
+ubiquity	localechooser/help/locale	note	
+ubiquity	apt-setup/disable-cdrom-entries	boolean	false
+ubiquity	netcfg/use_vlan	boolean	false
+ubiquity	partman-crypto/confirm	boolean	false
+grub-pc	grub-pc/install_devices_failed	boolean	false
+ubiquity	user-setup/encrypt-home	boolean	false
+user-setup	user-setup/encrypt-home	boolean	false
+libc6	glibc/disable-screensaver	error	
+libc6:amd64	glibc/disable-screensaver	error	
+grub-pc	grub-pc/kopt_extracted	boolean	false
+base-passwd	base-passwd/user-change-gecos	boolean	true
+ubiquity	netcfg/invalid_wep	error	
+ubiquity	partman-auto/cap-ram-free-size	string	
+ubiquity	apt-setup/backports	boolean	true
+ubiquity	netcfg/no_ipv6_pointopoint	error	
+ubiquity	netcfg/do_not_use_netplan	boolean	false
+locales	locales/default_environment_locale	select	en_US.UTF-8
+ubiquity	ubiquity/partman-confirm	select	confirm
+ubiquity	debian-installer/add-kernel-opts	string	
+ubiquity	partman-lvm/lvdelete_lvnames	select	
+ubiquity	hw-detect/retry_params	string	
+ubiquity	mirror/http/proxy	string	
+ubiquity	ubiquity/show_shutdown_button	boolean	false
+ubiquity	tzsetup/country/CL	select	America/Santiago
+ubiquity	partman-crypto/activate/no_luks	error	
+ubiquity	passwd/username-bad	error	
+user-setup	passwd/username-bad	error	
+ubiquity	netcfg/wireless_show_essids	select	
+ubiquity	apt-setup/overlay	boolean	false
+ubiquity	partman-crypto/weak_passphrase	boolean	false
+ubiquity	apt-setup/cdrom/failed	error	
+ubiquity	pkgsel/ignore-incomplete-language-support	boolean	false
+ubiquity	partman-basicfilesystems/create_swap_failed	error	
+ubiquity	auto-install/enable	boolean	false
+libpam0g:amd64	libpam0g/restart-failed	error	
+libc6	glibc/restart-services	string	
+libc6:amd64	glibc/restart-services	string	
+ubiquity	ubiquity/install/broken_network_copy	error	
+ubiquity	partman/choose_partition	select	
+ubiquity	partman-auto-lvm/vg_exists	error	
+ubiquity	partman-partitioning/new_size_commit_failed	error	
+ubiquity	ubiquity/install/copying_error/hd_fault	error	
+ubiquity	ubiquity/install/copying_error/cd_fault	error	
+ubiquity	preseed/include	string	
+tzdata	tzdata/Zones/Europe	select	
+shim-signed	shim/secureboot_key	string	
+ubiquity	partman-swapfile/size	string	2048
+ubiquity	localechooser/shortlist/tr	select	
+ubiquity	netcfg/use_autoconfig	boolean	true
+libc6	glibc/kernel-not-supported	note	
+libc6:amd64	glibc/kernel-not-supported	note	
+ubiquity	clock-setup/utc	boolean	true
+console-setup	console-setup/codesetcode	string	guess
+ubiquity	preseed/run	string	
+ubiquity	localechooser/shortlist/sq	select	
+ubiquity	partman-partitioning/bootable_logical	boolean	false
+ubiquity	partman-crypto/options_missing	error	
+ubiquity	partman/show_free_chs	note	
+ubiquity	debian-installer/locale	select	
+libc6	glibc/kernel-too-old	error	
+libc6:amd64	glibc/kernel-too-old	error	
+ubiquity	partman-crypto/passphrase-empty	error	
+ubiquity	partman-auto-lvm/new_vg_name_exists	string	
+ubiquity	netcfg/get_netmask	string	
+ubiquity	apt-setup/multiarch	string	i386
+ubiquity	partman-basicfilesystems/fat_mountpoint	select	
+keyboard-configuration	keyboard-configuration/store_defaults_in_debconf_db	boolean	true
+ubiquity	apt-setup/use_mirror	boolean	
+ubiquity	partman-partitioning/confirm_write_new_label	boolean	false
+tzdata	tzdata/Zones/Etc	select	UTC
+ubiquity	preseed/file	string	
+ubiquity	partman-partitioning/set_flags	multiselect	
+ubiquity	tzsetup/country/PF	select	Pacific/Tahiti
+ubiquity	tzsetup/country/US	select	US/Eastern
+ubiquity	mirror/http/countries	select	GB
+ubiquity	disk-detect/cannot_find	error	
+ubiquity	partman-partitioning/set_name	string	
+ubiquity	partman-auto-lvm/guided_size	string	some number
+ubiquity	partman-auto-loop/unclean_ntfs	error	
+ubiquity	ubiquity/success_command	string	
+ubiquity	apt-setup/proposed	boolean	false
+ubiquity	netcfg/link_wait_timeout	string	3
+ubiquity	netcfg/wireless_security_type	select	wpa
+ubiquity	grub-installer/skip	boolean	false
+libpam-runtime	libpam-runtime/no_profiles_chosen	error	
+ubiquity	localechooser/shortlist/ar	select	
+ubiquity	partman-partitioning/new_partition_place	select	
+ubiquity	partman-lvm/vgdelete_confirm	boolean	true
+base-passwd	base-passwd/group-add	boolean	true
+grub-pc	grub-pc/mixed_legacy_and_grub2	boolean	true
+debconf	debconf/priority	select	high
+ubiquity	netcfg/get_pointopoint	string	
+grub-pc	grub-efi/install_devices_disks_changed	multiselect	
+ubiquity	partman-swapfile/percentage	string	10
+ubiquity	netcfg/get_domain	string	
+ubiquity	partman-crypto/keyhash	select	
+base-passwd	base-passwd/user-change-gid	boolean	true
+ubiquity	tzsetup/country/PT	select	Europe/Lisbon
+ubiquity	partman-base/devicelocked	error	
+ubiquity	partman-lvm/vgextend_parts	multiselect	
+ubiquity	ubiquity/install/broken_install	error	
+ubiquity	partman-basicfilesystems/boot_not_first_partition	boolean	
+ubiquity	tzsetup/country/MN	select	Asia/Ulaanbaatar
+ubiquity	partman-lvm/nolvm	error	
+ubiquity	partman-crypto/passphrase-mismatch	error	
+ubiquity	tzsetup/country/AU	select	Australia/Canberra
+ubiquity	grub-installer/update-grub-failed	error	
+ubiquity	localechooser/shortlist/pt	select	
+ubiquity	debian-installer/country	string	
+base-passwd	base-passwd/group-change-gid	boolean	true
+libpam-modules	libpam-modules/disable-screensaver	error	
+ubiquity	partman-lvm/lvdelete_error	error	
+ubiquity	tzsetup/country/NZ	select	Pacific/Auckland
+ubiquity	partman-auto-lvm/vg_create_error	error	
+ubiquity	grub-installer/only_debian	boolean	true
+ubiquity	tzsetup/country/CY	select	
+ubiquity	localechooser/shortlist/nl	select	
+ubiquity	partman-crypto/create/partitions	multiselect	
+ubiquity	partman-lvm/vgcreate_error	error	
+ubiquity	partman-lvm/vgcreate_name	string	
+ubiquity	partman-auto/cap-ram-percentage	string	10
+ubiquity	netcfg/dhcpv6_timeout	string	30
+iproute2	iproute2/setcaps	boolean	false
+ubiquity	partman-target/choose_method	select	
+tzdata	tzdata/Zones/US	select	
+ubiquity	partman-auto/method	string	
+ubiquity	partman-auto-crypto/erase_disks	boolean	true
+tzdata	tzdata/Zones/Indian	select	
+ubiquity	ubiquity/install/md5_check	boolean	true
+ubiquity	preseed/interactive	boolean	false
+ubiquity	driver-injection-disk/load	boolean	true
+base-passwd	base-passwd/group-remove	boolean	true
+ubiquity	ubiquity/install/filesystem-images	string	
+ubiquity	passwd/user-uid	string	
+user-setup	passwd/user-uid	string	
+ubiquity	partman-auto/ensure-min-mem	string	8192
+ubiquity	apt-setup/services-select-ubuntu	multiselect	security
+ubiquity	partman-lvm/vgreduce_nosel	error	
+libpam-modules	libpam-modules/profiles-disabled	error	
+ubiquity	partman-basicfilesystems/boot_not_ext2	boolean	
+ubiquity	partman-crypto/plain_warn_erase	boolean	false
+grub-pc	grub-pc/install_devices_failed_upgrade	boolean	true
+ubiquity	netcfg/disable_dhcp	boolean	false
+ubiquity	di-utils-shell/do-shell	note	
+ubiquity	user-setup/allow-password-empty	boolean	false
+user-setup	user-setup/allow-password-empty	boolean	false
+resolvconf	resolvconf/link-tail-to-original	boolean	false
+ubiquity	localechooser/countrylist/Europe	select	
+ubiquity	partman-lvm/lvcreate_nonamegiven	error	
+ubiquity	partman/filter_mounted	boolean	true
+ubiquity	partman-efi/no_efi	boolean	
+console-setup	console-setup/fontsize-fb47	select	8x16
+keyboard-configuration	keyboard-configuration/model	select	Generic 105-key PC
+ubiquity	localechooser/continentlist	select	
+ubiquity	partman-crypto/confirm_nochanges	boolean	false
+ubiquity	partman-auto-lvm/new_vg_name	string	
+ubiquity	ubiquity/install/broken_remove	error	
+ubiquity	partman-basicfilesystems/specify_usage	select	
+ubiquity	mirror/codename	string	
+ubiquity	preseed/load_error	error	
+resolvconf	resolvconf/reboot-recommended-after-removal	note	
+ubiquity	user-setup/force-encrypt-home	boolean	false
+user-setup	user-setup/force-encrypt-home	boolean	false
+ubiquity	preseed/include_command	string	
+ubiquity	apt-setup/local/key-error	select	Retry
+ubiquity	localechooser/countrylist/other	select	
+ubiquity	partman-auto-loop/unclean_host	error	
+ubiquity	debian-installer/language	string	
+ubiquity	apt-setup/cdrom/set-first	boolean	false
+ubiquity	localechooser/translation/no-select	note	
+ubiquity	partman-auto/autopartitioning_failed	error	
+ubiquity	mirror/ftp/proxy	string	
+ubiquity	netcfg/confirm_static	boolean	true
+ubiquity	tzsetup/country/UM	select	Pacific/Midway
+ubiquity	partman-crypto/module_package_missing	error	
+ubiquity	partman/confirm_nochanges	boolean	false
+keyboard-configuration	keyboard-configuration/switch	select	No temporary switch
+ubiquity	passwd/auto-login-backup	string	
+user-setup	passwd/auto-login-backup	string	
+ubiquity	tzsetup/country/GL	select	America/Godthab
+ubiquity	grub-installer/sataraid	boolean	true
+ubiquity	partman-lvm/vgextend_novg	error	
+ubiquity	partman-btrfs/btrfs_boot	error	
+ubiquity	partman-auto/no_recipe	error	
+ubiquity	partman-auto/desired-swap	string	
+ubiquity	mirror/ftp/hostname	string	mirror
+ubiquity	passwd/shadow	boolean	true
+user-setup	passwd/shadow	boolean	true
+ubiquity	localechooser/shortlist/es	select	
+ubiquity	apt-setup/cdrom/set-failed	boolean	true
+ubiquity	hw-detect/modprobe_error	error	
+ubiquity	partman-jfs/jfs_boot	boolean	false
+ubiquity	partman-lvm/vgdelete_novg	error	
+ubiquity	apt-setup/services-select	multiselect	security, updates
+ubiquity	localechooser/countrylist/Caribbean	select	
+ubiquity	partman-ext3/boot_not_ext2_or_ext3	boolean	
+ubiquity	localechooser/shortlist/en	select	
+ubiquity	localechooser/shortlist/bn	select	
+ubiquity	netcfg/dhcp_failed	note	
+keyboard-configuration	keyboard-configuration/ctrl_alt_bksp	boolean	false
+ubiquity	partman-lvm/vgcreate_nonamegiven	error	
+ubiquity	partman-auto/unusable_space	error	
+ubiquity	hw-detect/load_firmware	boolean	true
+ubiquity	netcfg/dhcp_hostname	string	
+ubiquity	localechooser/countrylist/Atlantic_Ocean	select	
+ubiquity	partman-lvm/vgcreate_devnameused	error	
+grub-pc	grub-pc/install_devices	multiselect	
+ubiquity	ubiquity/reboot_on_failure	boolean	true
+ubiquity	partman-auto-lvm/no_boot	boolean	
+ubiquity	partman-lvm/mainmenu	select	
+ubiquity	ubiquity/download_updates	boolean	true
+ubiquity	mirror/http/hostname	string	mirror
+ubiquity	partman-lvm/lvcreate_nofreevg	error	
+grub-pc	grub-efi/install_devices	multiselect	
+ubiquity	partman-base/partlocked	error	
+ubiquity	partman-auto/select_disk	select	
+ubiquity	partman-lvm/vgdelete_names	select	
+ubiquity	partman-crypto/tools_missing	note	
+ucf	ucf/changeprompt	select	keep_current
+ubiquity	mirror/https/countries	select	GB
+ubiquity	ubiquity/install/broken_luks_add_key	error	
+ubiquity	partman-lvm/vgcreate_parts	multiselect	
+man-db	man-db/auto-update	boolean	true
+ubiquity	partman/exception_handler	select	
+ubiquity	partman/free_space	select	
+ubiquity	netcfg/no_interfaces	error	
+ubiquity	netcfg/disable_autoconfig	boolean	false
+ubiquity	ethdetect/cannot_find	error	
+ubiquity	localechooser/shortlist/ca	select	
+grub-pc	grub-pc/install_devices_empty	boolean	false
+base-passwd	base-passwd/user-remove	boolean	true
+ubiquity	netcfg/vlan_id	string	
+ubiquity	partman-auto/resize_insufficient_space	error	
+ubiquity	partman-crypto/use_random_for_nonswap	boolean	false
+ubiquity	partman-crypto/commit_failed	error	
+base-passwd	base-passwd/user-move	boolean	true
+locales	locales/locales_to_be_generated	multiselect	en_US.UTF-8 UTF-8
+ubiquity	partman-lvm/vgreduce_parts	multiselect	
+ubiquity	partman-auto-lvm/bad_guided_size	error	
+ubiquity	apt-setup/security_path	string	/ubuntu
+ubiquity	apt-setup/service-failed	error	
+ubiquity	hw-detect/load-ide	boolean	false
+ubiquity	tzsetup/country/CD	select	Africa/Kinshasa
+ubiquity	partman-basicfilesystems/bad_mountpoint	error	
+ubiquity	hw-detect/select_modules	multiselect	
+ubiquity	partman-auto-lvm/no_such_pv	error	
+ubiquity	partman-crypto/unsafe_swap	error	
+ubiquity	netcfg/error	error	
+ubiquity	partman-auto-lvm/unusable_recipe	error	
+ubiquity	partman-partitioning/no_bootable_efi	boolean	
+ubiquity	partman-lvm/displayall	note	
+grub-pc	grub2/linux_cmdline	string	
+ubiquity	grub-installer/multipath-error	error	
+ubiquity	apt-setup/cdrom/set-double	boolean	true
+ubiquity	user-setup/password-mismatch	error	
+user-setup	user-setup/password-mismatch	error	
+ubiquity	netcfg/internal-wifireconf	select	
+console-setup	console-setup/store_defaults_in_debconf_db	boolean	true
+ubiquity	partman-crypto/install_udebs_low_mem	boolean	
+keyboard-configuration	keyboard-configuration/xkb-keymap	select	
+ubiquity	partman/default_filesystem	string	ext4
+ubiquity	clock-setup/system-time-changed	boolean	false
+ubiquity	partman-crypto/crypto_warn_erase	boolean	false
+ubiquity	partman-partitioning/confirm_new_label	boolean	false
+ubiquity	disk-detect/multipath/enable	boolean	false
+ubiquity	ethdetect/use_firewire_ethernet	boolean	false
+ubiquity	partman/show_partition_chs	note	
+ubiquity	partman/mount_style	select	uuid
+ubiquity	localechooser/shortlist/pa	select	
+ubiquity	partman-crypto/keytype	select	
+ubiquity	partman-partitioning/choose_label	select	
+ubiquity	partman-crypto/crypto_boot_not_possible	error	
+ubiquity	grub-installer/force-efi-extra-removable	boolean	false
+ubiquity	auto-install/defaultroot	string	d-i/focal/./preseed.cfg
+libc6	glibc/upgrade	boolean	true
+libc6:amd64	glibc/upgrade	boolean	true
+ubiquity	tzsetup/country/KI	select	Pacific/Tarawa
+ubiquity	ubiquity/reboot	boolean	false
+ubiquity	tzsetup/country/KZ	select	Asia/Almaty
+ubiquity	clock-setup/utc-auto	boolean	false
+man-db	man-db/install-setuid	boolean	false
+ubiquity	netcfg/no_default_route	boolean	
+shim-signed	shim/secureboot_explanation	note	
+ubiquity	apt-setup/no_mirror	boolean	false
+ubiquity	partman-lvm/lvcreate_error	error	
+ubiquity	apt-setup/security_host	string	security.ubuntu.com
+ubiquity	partman-basicmethods/method_only	boolean	
+ubiquity	netcfg/dhcp_options	select	Configure network manually
+libpam-runtime	libpam-runtime/override	boolean	false
+ubiquity	partman-lvm/vgdelete_error	error	
+ubiquity	ubiquity/minimal_install	boolean	false
+ubiquity	ubiquity/partman-failed-unmount	boolean	true
+ubiquity	localechooser/countrylist/South_America	select	
+ubiquity	partman-crypto/mainmenu	select	
+grub-pc	grub-pc/chainload_from_menu.lst	boolean	true
+ubiquity	grub-installer/password-mismatch	error	
+ubiquity	partman-crypto/init_failed	error	
+tzdata	tzdata/Zones/America	select	
+libpam-runtime	libpam-runtime/profiles	multiselect	unix, systemd, capability
+ubiquity	mirror/bad	error	
+ubiquity	netcfg/get_nameservers	string	
+ubiquity	localechooser/countrylist/Oceania	select	
+ubiquity	netcfg/wireless_adhoc_managed	select	Infrastructure (Managed) network
+ubiquity	netcfg/internal-nowifi	select	
+ubiquity	apt-setup/restricted	boolean	true
+ubiquity	partman-crypto/crypto_type	select	
+ubiquity	netcfg/wireless_essid	string	
+ubiquity	partman-basicfilesystems/create_failed	error	
+linux-base	linux-base/removing-running-kernel	boolean	true
+ubiquity	passwd/username	string	
+user-setup	passwd/username	string	
+ubiquity	grub-installer/bootdev	string	
+grub-pc	grub2/no_efi_extra_removable	boolean	false
+ubiquity	partman-crypto/create/nosel	error	
+ubiquity	preseed/url	string	
+keyboard-configuration	keyboard-configuration/modelcode	string	pc105
+libpam0g:amd64	libpam0g/restart-services	string	
+ubiquity	partman-crypto/entropy	entropy	
+dictionaries-common	dictionaries-common/default-wordlist	select	
+ubiquity	ubiquity/install/copying_error/no_space	error	
+dictionaries-common	dictionaries-common/selecting_ispell_wordlist_default	note	
+ubiquity	partman-lvm/lvcreate_exists	error	
+ubiquity	partman-crypto/crypto_root_needs_boot	error	
+ubiquity	grub-installer/multipath	boolean	true
+ubiquity	partman-partitioning/unknown_label	boolean	true
+libpam-runtime	libpam-runtime/conflicts	error	
+ubiquity	time/zone	select	
+ubiquity	ubiquity/only-show-installable-languages	boolean	false
+ubiquity	localechooser/shortlist/ru	select	
+ubiquity	localechooser/countrylist/North_America	select	
+ubiquity	mirror/http/directory	string	/ubuntu/
+ubiquity	netcfg/kill_switch_enabled	note	
+ubiquity	preseed/include/checksum	string	
+ubiquity	passwd/auto-login	boolean	false
+user-setup	passwd/auto-login	boolean	false
+tzdata	tzdata/Zones/Arctic	select	
+ubiquity	partman-partitioning/new_partition_size	string	some number
+ubiquity	partman-lvm/vgextend_names	select	
+ubiquity	partman-lvm/vgextend_nosel	error	
+ubiquity	netcfg/bad_link_wait_timeout	error	
+ca-certificates	ca-certificates/trust_new_crts	select	yes
+ubiquity	netcfg/gateway_unreachable	error	
+ubiquity	passwd/make-user	boolean	true
+user-setup	passwd/make-user	boolean	true
+ca-certificates	ca-certificates/new_crts	multiselect	
+dictionaries-common	dictionaries-common/debconf_database_corruption	error	
+ubiquity	partman-partitioning/confirm_resize	boolean	
+ubiquity	disk-detect/activate_mdadm	boolean	true
+resolvconf	resolvconf/downup-interfaces	note	
+ubiquity	preseed/boot_command	string	
+ubiquity	partman-partitioning/bad_new_size	error	
+ubiquity	mirror/ftp/directory	string	/ubuntu/
+ubiquity	partman/confirm_nooverwrite	boolean	false
+ubiquity	ubiquity/install/copying_error/cd_hd_fault	error	
+ubiquity	ubiquity/partman-rebuild-cache	boolean	true
+ubiquity	ubiquity/install/apt_error_install	error	
+ubiquity	partman-basicfilesystems/posix_filesystem_required	error	
+ubiquity	partman-lvm/help	note	
+ubiquity	localechooser/shortlist/eu	select	
+ubiquity	netcfg/enable	boolean	true
+ubiquity	debian-installer/dummy	string	
+keyboard-configuration	keyboard-configuration/unsupported_options	boolean	true
+ubiquity	partman-basicfilesystems/check_failed	boolean	
+ubiquity	partman-lvm/vgcreate_nosel	error	
+ubiquity	clock-setup/hwclock-wait	boolean	false
+dictionaries-common	dictionaries-common/ispell-autobuildhash-message	note	
+ubiquity	clock-setup/ntp-server	string	ntp.ubuntu.com
+ubiquity	localechooser/shortlist/it	select	
+ubiquity	partman-partitioning/new_size	string	some number
+debconf	debconf/frontend	select	Dialog
+ubiquity	ubiquity/install_bootloader	boolean	true
+ubiquity	netcfg/wireless_wpa	string	
+ubiquity	preseed/command_failed	error	
+ubiquity	user-setup/password-weak	boolean	
+user-setup	user-setup/password-weak	boolean	
+ubiquity	ubiquity/keep-installed	string	
+ubiquity	partman-lvm/vgextend_error	error	
+keyboard-configuration	console-setup/detect	detect-keyboard	
+dictionaries-common	dictionaries-common/old_wordlist_link	boolean	true
+ubiquity	partman-target/same_mountpoint	error	
+ubiquity	localechooser/shortlist/de	select	
+ubiquity	partman-auto/init_automatically_partition	select	
+ufw	ufw/existing_configuration	error	
+ubiquity	grub-installer/grub2_instead_of_grub_legacy	boolean	true
+ubiquity	netcfg/wpa_supplicant_failed	note	
+ubiquity	disk-detect/module_select	select	continue with no disk drive
+grub-pc	grub-pc/timeout	string	0
+ubiquity	partman-basicfilesystems/mountpoint_manual	string	
+base-passwd	base-passwd/user-change-uid	boolean	true
+libssl3:amd64	libssl3/restart-failed	error	
+ubiquity	partman-basicfilesystems/choose_label	string	
+keyboard-configuration	keyboard-configuration/variant	select	English (US)
+ubiquity	tzsetup/country/MX	select	Mexico/General
+ubiquity	debian-installer/consoledisplay	string	
+resolvconf	resolvconf/linkify-resolvconf	boolean	true
+ubiquity	preseed/retrieve_error	error	
+keyboard-configuration	keyboard-configuration/unsupported_layout	boolean	true
+ubiquity	ubiquity/force_failsafe_graphics	boolean	false
+ubiquity	localechooser/shortlist/pt_BR	select	
+grub-pc	grub-pc/install_devices_disks_changed	multiselect	
+ubiquity	partman-auto-lvm/small_guided_size	error	
+console-setup	console-setup/charmap47	select	UTF-8
+ubiquity	mirror/no-default	boolean	true
+ubiquity	netcfg/invalid_essid	error	
+ubiquity	partman-partitioning/no_bootable_biosgrub	boolean	
+ubiquity	partman-lvm/vgreduce_novg	error	
+ubiquity	user-setup/password-empty	error	
+user-setup	user-setup/password-empty	error	
+keyboard-configuration	keyboard-configuration/layout	select	English (US)
+ubiquity	localechooser/languagelist	select	en
+tzdata	tzdata/Zones/Australia	select	
+ubiquity	tzsetup/country/EC	select	America/Guayaquil
+keyboard-configuration	keyboard-configuration/layoutcode	string	us
+console-setup	console-setup/fontsize	string	8x16
+tzdata	tzdata/Zones/Africa	select	
+ubiquity	debian-installer/shell-plugin	terminal	
+ubiquity	netcfg/target_network_config	select	
+ubiquity	partman-lvm/lvdelete_nolv	error	
+ubiquity	partman-partitioning/new_partition_type	select	
+ubiquity	ubiquity/online	boolean	
+ubiquity	netcfg/vlan_failed	error	
+grub-pc	grub2/linux_cmdline_default	string	quiet splash
+libpam0g:amd64	libpam0g/xdm-needs-restart	error	
+ubiquity	partman-auto/cap-ram	string	1024
+libssl3:amd64	libssl3/restart-services	string	
+ubiquity	passwd/username-reserved	error	
+user-setup	passwd/username-reserved	error	
+ubiquity	partman-crypto/nothing_to_setup	note	
+libc6	glibc/restart-failed	error	
+libc6:amd64	glibc/restart-failed	error	
+ubiquity	hw-detect/load_media	boolean	false
+ubiquity	grub-installer/apt-install-failed	error	
+ubiquity	partman-crypto/keysize	select	
+ubiquity	localechooser/countrylist/Central_America	select	
+ubiquity	localechooser/supported-locales	multiselect	
+base-passwd	base-passwd/user-add	boolean	true
+ubiquity	passwd/user-fullname	string	
+user-setup	passwd/user-fullname	string	
+ubiquity	partman-lvm/confirm_nochanges	boolean	false
+ubiquity	ubiquity/partman-system-unformatted	boolean	
+ubiquity	partman-btrfs/btrfs_root	error	
+ubiquity	grub-installer/mounterr	error	
+ubiquity	grub-installer/grub-install-failed	error	
+ucf	ucf/conflicts_found	error	
+ubiquity	localechooser/translation/none-yet	note	
+grub-pc	grub2/unsigned_kernels	note	
+ca-certificates	ca-certificates/enable_crts	multiselect	mozilla/ACCVRAIZ1.crt, mozilla/AC_RAIZ_FNMT-RCM.crt, mozilla/AC_RAIZ_FNMT-RCM_SERVIDORES_SEGUROS.crt, mozilla/ANF_Secure_Server_Root_CA.crt, mozilla/Actalis_Authentication_Root_CA.crt, mozilla/AffirmTrust_Commercial.crt, mozilla/AffirmTrust_Networking.crt, mozilla/AffirmTrust_Premium.crt, mozilla/AffirmTrust_Premium_ECC.crt, mozilla/Amazon_Root_CA_1.crt, mozilla/Amazon_Root_CA_2.crt, mozilla/Amazon_Root_CA_3.crt, mozilla/Amazon_Root_CA_4.crt, mozilla/Atos_TrustedRoot_2011.crt, mozilla/Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068.crt, mozilla/Baltimore_CyberTrust_Root.crt, mozilla/Buypass_Class_2_Root_CA.crt, mozilla/Buypass_Class_3_Root_CA.crt, mozilla/CA_Disig_Root_R2.crt, mozilla/CFCA_EV_ROOT.crt, mozilla/COMODO_Certification_Authority.crt, mozilla/COMODO_ECC_Certification_Authority.crt, mozilla/COMODO_RSA_Certification_Authority.crt, mozilla/Certigna.crt, mozilla/Certigna_Root_CA.crt, mozilla/Certum_EC-384_CA.crt, mozilla/Certum_Trusted_Network_CA.crt, mozilla/Certum_Trusted_Network_CA_2.crt, mozilla/Certum_Trusted_Root_CA.crt, mozilla/Comodo_AAA_Services_root.crt, mozilla/Cybertrust_Global_Root.crt, mozilla/D-TRUST_Root_Class_3_CA_2_2009.crt, mozilla/D-TRUST_Root_Class_3_CA_2_EV_2009.crt, mozilla/DigiCert_Assured_ID_Root_CA.crt, mozilla/DigiCert_Assured_ID_Root_G2.crt, mozilla/DigiCert_Assured_ID_Root_G3.crt, mozilla/DigiCert_Global_Root_CA.crt, mozilla/DigiCert_Global_Root_G2.crt, mozilla/DigiCert_Global_Root_G3.crt, mozilla/DigiCert_High_Assurance_EV_Root_CA.crt, mozilla/DigiCert_Trusted_Root_G4.crt, mozilla/E-Tugra_Certification_Authority.crt, mozilla/EC-ACC.crt, mozilla/Entrust.net_Premium_2048_Secure_Server_CA.crt, mozilla/Entrust_Root_Certification_Authority.crt, mozilla/Entrust_Root_Certification_Authority_-_EC1.crt, mozilla/Entrust_Root_Certification_Authority_-_G2.crt, mozilla/Entrust_Root_Certification_Authority_-_G4.crt, mozilla/GDCA_TrustAUTH_R5_ROOT.crt, mozilla/GLOBALTRUST_2020.crt, mozilla/GTS_Root_R1.crt, mozilla/GTS_Root_R2.crt, mozilla/GTS_Root_R3.crt, mozilla/GTS_Root_R4.crt, mozilla/GlobalSign_ECC_Root_CA_-_R4.crt, mozilla/GlobalSign_ECC_Root_CA_-_R5.crt, mozilla/GlobalSign_Root_CA.crt, mozilla/GlobalSign_Root_CA_-_R2.crt, mozilla/GlobalSign_Root_CA_-_R3.crt, mozilla/GlobalSign_Root_CA_-_R6.crt, mozilla/GlobalSign_Root_E46.crt, mozilla/GlobalSign_Root_R46.crt, mozilla/Go_Daddy_Class_2_CA.crt, mozilla/Go_Daddy_Root_Certificate_Authority_-_G2.crt, mozilla/Hellenic_Academic_and_Research_Institutions_ECC_RootCA_2015.crt, mozilla/Hellenic_Academic_and_Research_Institutions_RootCA_2011.crt, mozilla/Hellenic_Academic_and_Research_Institutions_RootCA_2015.crt, mozilla/Hongkong_Post_Root_CA_1.crt, mozilla/Hongkong_Post_Root_CA_3.crt, mozilla/ISRG_Root_X1.crt, mozilla/IdenTrust_Commercial_Root_CA_1.crt, mozilla/IdenTrust_Public_Sector_Root_CA_1.crt, mozilla/Izenpe.com.crt, mozilla/Microsec_e-Szigno_Root_CA_2009.crt, mozilla/Microsoft_ECC_Root_Certificate_Authority_2017.crt, mozilla/Microsoft_RSA_Root_Certificate_Authority_2017.crt, mozilla/NAVER_Global_Root_Certification_Authority.crt, mozilla/NetLock_Arany_=Class_Gold=_Főtanúsítvány.crt, mozilla/Network_Solutions_Certificate_Authority.crt, mozilla/OISTE_WISeKey_Global_Root_GB_CA.crt, mozilla/OISTE_WISeKey_Global_Root_GC_CA.crt, mozilla/QuoVadis_Root_CA_1_G3.crt, mozilla/QuoVadis_Root_CA_2.crt, mozilla/QuoVadis_Root_CA_2_G3.crt, mozilla/QuoVadis_Root_CA_3.crt, mozilla/QuoVadis_Root_CA_3_G3.crt, mozilla/SSL.com_EV_Root_Certification_Authority_ECC.crt, mozilla/SSL.com_EV_Root_Certification_Authority_RSA_R2.crt, mozilla/SSL.com_Root_Certification_Authority_ECC.crt, mozilla/SSL.com_Root_Certification_Authority_RSA.crt, mozilla/SZAFIR_ROOT_CA2.crt, mozilla/SecureSign_RootCA11.crt, mozilla/SecureTrust_CA.crt, mozilla/Secure_Global_CA.crt, mozilla/Security_Communication_RootCA2.crt, mozilla/Security_Communication_Root_CA.crt, mozilla/Staat_der_Nederlanden_EV_Root_CA.crt, mozilla/Starfield_Class_2_CA.crt, mozilla/Starfield_Root_Certificate_Authority_-_G2.crt, mozilla/Starfield_Services_Root_Certificate_Authority_-_G2.crt, mozilla/SwissSign_Gold_CA_-_G2.crt, mozilla/SwissSign_Silver_CA_-_G2.crt, mozilla/T-TeleSec_GlobalRoot_Class_2.crt, mozilla/T-TeleSec_GlobalRoot_Class_3.crt, mozilla/TUBITAK_Kamu_SM_SSL_Kok_Sertifikasi_-_Surum_1.crt, mozilla/TWCA_Global_Root_CA.crt, mozilla/TWCA_Root_Certification_Authority.crt, mozilla/TeliaSonera_Root_CA_v1.crt, mozilla/Trustwave_Global_Certification_Authority.crt, mozilla/Trustwave_Global_ECC_P256_Certification_Authority.crt, mozilla/Trustwave_Global_ECC_P384_Certification_Authority.crt, mozilla/UCA_Extended_Validation_Root.crt, mozilla/UCA_Global_G2_Root.crt, mozilla/USERTrust_ECC_Certification_Authority.crt, mozilla/USERTrust_RSA_Certification_Authority.crt, mozilla/XRamp_Global_CA_Root.crt, mozilla/certSIGN_ROOT_CA.crt, mozilla/certSIGN_Root_CA_G2.crt, mozilla/e-Szigno_Root_CA_2017.crt, mozilla/ePKI_Root_Certification_Authority.crt, mozilla/emSign_ECC_Root_CA_-_C3.crt, mozilla/emSign_ECC_Root_CA_-_G3.crt, mozilla/emSign_Root_CA_-_C1.crt, mozilla/emSign_Root_CA_-_G1.crt
+ubiquity	apt-setup/universe	boolean	true
+keyboard-configuration	console-setup/ask_detect	boolean	false
+ubiquity	tzsetup/country/ES	select	Europe/Madrid
+ubiquity	partman-target/clear_partitions_failed	error	
+apparmor	apparmor/homedirs	string	
+tzdata	tzdata/Zones/Antarctica	select	
+dictionaries-common	dictionaries-common/invalid_debconf_value	error	
+ubiquity	passwd/root-login	boolean	false
+user-setup	passwd/root-login	boolean	false
+ubiquity	ubiquity/partition-too-small	boolean	
+ubiquity	apt-setup/overlay_components	string	main
+keyboard-configuration	console-setup/detected	note	
+cryptsetup	cryptsetup/prerm_active_mappings	boolean	true
+ubiquity	ubiquity/install/new-bootdev	string	
+ubiquity	netcfg/get_hostname	string	ubuntu
+ubiquity	partman-lvm/lvcreate_name	string	
+ubuntu-advantage-tools	ubuntu-advantage-tools/suggest_pro_pkg	note	
+ubiquity	localechooser/countrylist/Africa	select	
+dictionaries-common	dictionaries-common/default-ispell	select	
