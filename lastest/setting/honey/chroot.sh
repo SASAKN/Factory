@@ -92,10 +92,6 @@ dpkg-reconfigure -f noninteractive locales
 dpkg-reconfigure -f noninteractive resolvconf
 #NetworkManager
 dpkg-reconfigure -f noninteractive network-manager
-#keyboard-configuration
-dpkg-reconfigure -f noninteractive keyboard-configuration
-#console-setup
-dpkg-reconfigure -f noninteractive console-setup
 
 #ファイナルステップを実行
 bash /root/final.sh
