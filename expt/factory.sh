@@ -30,8 +30,7 @@ sudo cp -a ${script_dir}/setting/${setting_name}/copyfs/ ${script_dir}/chroot/ro
 sudo cp ${script_dir}/setting/${setting_name}/chroot.sh ${script_dir}/chroot/root/chroot.sh
 sudo cp ${script_dir}/setting/${setting_name}/final.sh ${script_dir}/chroot/root/final.sh
 sudo cp ${script_dir}/setting/${setting_name}/deps.list ${script_dir}/chroot/root/deps.list
-sudo cp ${script_dir}/setting/${setting_name}/de.list ${script_dir}/chroot/root/de.list
-sudo cp ${script_dir}/setting/${setting_name}/installer.list ${script_dir}/chroot/root/installer.list
+sudo cp ${script_dir}/setting/${setting_name}/package.list ${script_dir}/chroot/root/package.list
 sudo cp ${script_dir}/config.sh ${script_dir}/chroot/root/config.sh
 
 #ファイルシステムのマウント
