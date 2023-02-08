@@ -1,0 +1,1486 @@
+# Re-enter password to verify:
+ubiquity	passwd/user-password-again	password	
+user-setup	passwd/user-password-again	password	
+# Recovery key for LUKS + LVM
+ubiquity	ubiquity/recovery_key	password	
+# Administrator password to join the domain
+ubiquity	ubiquity/directory_passwd	password	
+# Crypto key for LUKS + LVM
+ubiquity	ubiquity/crypto_key	password	
+# Root password:
+ubiquity	passwd/root-password	password	
+user-setup	passwd/root-password	password	
+# Re-enter password to verify:
+ubiquity	grub-installer/password-again	password	
+# Key to secure the keystore on ZFS installations
+ubiquity	ubiquity/zfs_keystore_key	password	
+# SecureBoot key for MokPW
+ubiquity	ubiquity/secureboot_key	password	
+# for internal use; can be preseeded
+ubiquity	grub-installer/password-crypted	password	
+# Choose a password for the new user:
+ubiquity	passwd/user-password	password	
+user-setup	passwd/user-password	password	
+# Encryption passphrase:
+ubiquity	partman-crypto/passphrase	password	
+# for internal use only
+ubiquity	passwd/user-password-crypted	password	
+user-setup	passwd/user-password-crypted	password	
+# for internal use only
+ubiquity	passwd/root-password-crypted	password	
+user-setup	passwd/root-password-crypted	password	
+# Re-enter password to verify:
+ubiquity	passwd/root-password-again	password	
+user-setup	passwd/root-password-again	password	
+# Re-enter passphrase to verify:
+ubiquity	partman-crypto/passphrase-again	password	
+# GRUB password:
+ubiquity	grub-installer/password	password	
+# Passphrase for :
+ubiquity	partman-crypto/activate/passphrase-existing	password	
+# 
+# Choices: Greece, Cyprus, other
+ubiquity	localechooser/shortlist/el	select	
+# Volume group:
+# Choices: 
+ubiquity	partman-lvm/lvcreate_vgnames	select	
+# Key to function as AltGr:
+# Choices: The default for the keyboard layout, No AltGr key, Right Alt (AltGr), Right Control, Right Logo key, Menu key, Left Alt, Left Logo key, Keypad Enter key, Both Logo keys, Both Alt keys
+keyboard-configuration	keyboard-configuration/altgr	select	The default for the keyboard layout
+# Error removing 
+ubiquity	ubiquity/install/apt_error_remove	error	
+# Font for the console:
+# Choices: Fixed, Goha, GohaClassic, Terminus, TerminusBold, TerminusBoldVGA, VGA, Do not change the boot/kernel font, Let the system select a suitable font
+console-setup	console-setup/fontface47	select	Fixed
+# location
+# Choices: McMurdo, Rothera, Palmer, Mawson, Davis, Casey, Vostok, Dumont-d'Urville, Syowa
+ubiquity	tzsetup/country/AQ	select	
+# Are you sure you want to exit now?
+ubiquity	di-utils-reboot/really_reboot	boolean	false
+# for internal use; can be preseeded
+# Choices: cylinder, minimal, optimal
+ubiquity	partman/alignment	select	optimal
+# for internal use; prevent ubiquity from unmounting partitions before committing partition table changes (may cause problems)
+ubiquity	ubiquity/partman-skip-unmount	boolean	false
+# Invalid password
+shim-signed	shim/error/bad_secureboot_key	error	
+# Do you want to resume partitioning?
+ubiquity	partman-target/mount_failed	boolean	true
+# Keyfile creation failure
+ubiquity	partman-crypto/keyfile-problem	error	
+# Installation Failed
+# Choices: abort, retry, skip
+ubiquity	ubiquity/install/copying_error/md5	select	
+# Character set to support:
+# Choices: . Arabic, # Armenian, # Cyrillic - KOI8-R and KOI8-U, # Cyrillic - non-Slavic languages, . Cyrillic - non-Slavic languages (for blind users), # Cyrillic - Slavic languages (also Bosnian and Serbian Latin), . Cyrillic - Slavic languages (for blind users), . Ethiopic, # Georgian, # Greek, . Greek (for blind users), # Hebrew, # Lao, # Latin1 and Latin5 - western Europe and Turkic languages, # Latin2 - central Europe and Romanian, # Latin3 and Latin8 - Chichewa; Esperanto; Irish; Maltese and Welsh, # Latin7 - Lithuanian; Latvian; Maori and Marshallese, . Latin - Vietnamese, # Thai, . Combined - Latin; Slavic Cyrillic; Hebrew; basic Arabic, . Combined - Latin; Slavic Cyrillic; Greek, . Combined - Latin; Slavic and non-Slavic Cyrillic, Guess optimal character set
+console-setup	console-setup/codeset47	select	Guess optimal character set
+# Do you want to return to the partitioning menu?
+ubiquity	partman-ext3/bad_alignment	boolean	
+# state
+# Choices: Acre, Alagoas, Amazonas, Amapá, Bahia, Ceará, Distrito Federal, Espírito Santo, Fernando de Noronha, Goiás, Maranhão, Minas Gerais, Mato Grosso do Sul, Mato Grosso, Pará, Paraíba, Pernambuco, Piauí, Paraná, Rio de Janeiro, Rio Grande do Norte, Rondônia, Roraima, Rio Grande do Sul, Santa Catarina, Sergipe, São Paulo, Tocantins
+ubiquity	tzsetup/country/BR	select	America/Sao_Paulo
+# for internal use; specify a command to be run when user interaction is needed.
+ubiquity	ubiquity/automation_failure_command	string	
+# Install GRUB?
+ubiquity	grub-installer/grub_not_mature_on_this_platform	boolean	false
+# Enable source repositories in APT?
+ubiquity	apt-setup/enable-source-repositories	boolean	false
+# for internal use
+keyboard-configuration	keyboard-configuration/optionscode	string	
+# for internal use; can be preseeded.
+ubiquity	partman-crypto/luksformat_options	string	
+# Start PC card services?
+ubiquity	hw-detect/start_pcmcia	boolean	true
+# for internal use; automatically shutdown when the install completes.
+ubiquity	ubiquity/poweroff	boolean	false
+# Continue with partitioning?
+ubiquity	partman-partitioning/unsupported_label	boolean	false
+# Continue the installation in the selected language?
+ubiquity	localechooser/translation/warn-severe	boolean	false
+# Unable to configure GRUB
+ubiquity	grub-installer/sataraid-error	error	
+# Continue the installation in the selected language?
+ubiquity	localechooser/translation/warn-light	boolean	true
+# Invalid hostname
+ubiquity	netcfg/invalid_hostname	error	
+# Invalid logical volume or volume group name
+ubiquity	partman-lvm/badnamegiven	error	
+# Partition settings:
+# Choices: 
+ubiquity	partman/active_partition	select	
+# for internal use; can be preseeded
+ubiquity	preseed/file/checksum	string	
+# enable frame buffer console on boot
+ubiquity	debian-installer/framebuffer	boolean	true
+# Volume group name already in use
+ubiquity	partman-lvm/vgcreate_nameused	error	
+# Additional authorized services:
+ufw	ufw/allow_custom_ports	string	
+# Remove existing logical volume data?
+ubiquity	partman-lvm/device_remove_lvm	boolean	false
+# 
+# Choices: Antarctica
+ubiquity	localechooser/countrylist/Antarctica	select	
+# 
+ubiquity	partman/exception_handler_note	note	
+# for internal use; can be preseeded
+ubiquity	ubiquity/use_zfs	boolean	false
+# for internal use; can be preseeded
+ubiquity	disk-detect/ibft/enable	boolean	false
+# 
+# Choices: Afghanistan, Bahrain, Bangladesh, Bhutan, Brunei Darussalam, Cambodia, China, Hong Kong, India, Indonesia, Iran\, Islamic Republic of, Iraq, Israel, Japan, Jordan, Kazakhstan, Kuwait, Kyrgyzstan, Lao People's Democratic Republic, Lebanon, Macao, Malaysia, Mongolia, Myanmar, Nepal, North Korea, Oman, Pakistan, Palestine\, State of, Philippines, Qatar, Saudi Arabia, Singapore, South Korea, Sri Lanka, Syrian Arab Republic, Taiwan, Tajikistan, Thailand, Timor-Leste, Turkey, Turkmenistan, United Arab Emirates, Uzbekistan, Vietnam, Yemen
+ubiquity	localechooser/countrylist/Asia	select	
+# for internal use; can be preseeded
+ubiquity	partman/automount	boolean	false
+# Do you want to change the home directory of user ?
+base-passwd	base-passwd/user-change-home	boolean	true
+# Write the changes to disks?
+ubiquity	partman/confirm	boolean	false
+# for internal use; can be preseeded
+ubiquity	partman-auto/expert_recipe	string	
+# for internal use; can be preseeded
+ubiquity	partman/early_command	string	
+# zone
+# Choices: Moscow-01 - Kaliningrad, Moscow+00 - Moscow, Moscow+01 - Samara, Moscow+02 - Yekaterinburg, Moscow+03 - Omsk, Moscow+04 - Krasnoyarsk, Moscow+05 - Irkutsk, Moscow+06 - Yakutsk, Moscow+07 - Vladivostok, Moscow+08 - Magadan
+ubiquity	tzsetup/country/RU	select	Europe/Moscow
+# No DHCP client found
+ubiquity	netcfg/no_dhcp_client	error	
+# location
+# Choices: Yap, Truk, Pohnpei, Kosrae
+ubiquity	tzsetup/country/FM	select	Pacific/Ponape
+# Start ufw automatically?
+ufw	ufw/enable	boolean	false
+# Separate file system not allowed here
+ubiquity	partman-target/must_be_on_root	error	
+# for internal use; can be preseeded
+ubiquity	grub-installer/make_active	boolean	true
+# Write the changes to disks and configure LVM?
+ubiquity	partman-lvm/confirm	boolean	false
+# Error while reducing volume group
+ubiquity	partman-lvm/vgreduce_error	error	
+# Mount point for this partition:
+# Choices: / - the root file system, /boot - static files of the boot loader, /home - user home directories, /tmp - temporary files, /usr - static data, /var - variable data, /srv - data for services provided by this system, /opt - add-on application software packages, /usr/local - local hierarchy, Enter manually, Do not mount it
+ubiquity	partman-basicfilesystems/mountpoint	select	
+# 
+# Choices: China, Taiwan, Singapore, Hong Kong, other
+ubiquity	localechooser/shortlist/zh_CN	select	
+# No usable physical volumes found
+ubiquity	partman-lvm/nopartitions	error	
+# IP address:
+ubiquity	netcfg/get_ipaddress	string	
+# Invalid size
+ubiquity	partman-partitioning/bad_new_partition_size	error	
+# for internal use; can be preseeded
+ubiquity	partman-partitioning/default_label	string	
+# Downloading a file failed:
+# Choices: Retry, Change mirror, Ignore
+ubiquity	apt-setup/mirror/error	select	Retry
+# 
+# Choices: China, India, other
+ubiquity	localechooser/shortlist/bo	select	
+# Is this time zone correct?
+ubiquity	tzsetup/detected	boolean	true
+# Do you want to move the group ?
+base-passwd	base-passwd/group-move	boolean	true
+# Keep the current keyboard layout in the configuration file?
+keyboard-configuration	keyboard-configuration/unsupported_config_layout	boolean	true
+# WEP key for wireless device :
+ubiquity	netcfg/wireless_wep	string	
+# No physical volume defined in volume group
+ubiquity	partman-auto-lvm/no_pv_in_vg	error	
+# Time zone:
+# Choices: Azores, Bermuda, Canary, Cape Verde, Faroe, Jan Mayen, Madeira, Reykjavik, South Georgia, St. Helena, Stanley
+tzdata	tzdata/Zones/Atlantic	select	
+# Set the clock using NTP?
+ubiquity	clock-setup/ntp	boolean	true
+# Do you want to return to the partitioning menu?
+ubiquity	partman-basicfilesystems/no_mount_point	boolean	
+# Use non-free software?
+ubiquity	apt-setup/non-free	boolean	false
+# Line by line differences between versions
+ucf	ucf/show_diff	note	
+# Home directory encryption failed
+ubiquity	user-setup/encrypt-home-failed	error	
+user-setup	user-setup/encrypt-home-failed	error	
+# The size entered is too small
+ubiquity	partman-partitioning/small_new_size	error	
+# Go back to the menu and correct errors?
+ubiquity	partman-basicfilesystems/swap_check_failed	boolean	
+# Use dash as the default system shell (/bin/sh)?
+dash	dash/sh	boolean	true
+# Go back to the menu and correct this problem?
+ubiquity	partman/boot_not_first_partition	boolean	
+# Do you want to change the shell of user ?
+base-passwd	base-passwd/user-change-shell	boolean	true
+# for internal use only
+ubiquity	user-setup/allow-password-weak	boolean	false
+user-setup	user-setup/allow-password-weak	boolean	false
+# Use software from the "multiverse" component?
+ubiquity	apt-setup/multiverse	boolean	true
+# for internal use; specify a command to be run on unrecoverable install failure.
+ubiquity	ubiquity/failure_command	string	
+# Enter the same password again to verify you have typed it correctly.
+shim-signed	shim/secureboot_key_again	string	
+# for internal use; can be preseeded
+ubiquity	ubiquity/install_oem	boolean	true
+# Ubuntu version to install:
+# Choices: 
+ubiquity	mirror/suite	select	jammy
+# Font size:
+# Choices: 
+console-setup	console-setup/fontsize-text47	select	8x16
+# Continue without installing GRUB?
+grub-pc	grub-efi/install_devices_empty	boolean	false
+# city
+# Choices: Western (Sumatra\, Jakarta\, Java\, West and Central Kalimantan), Central (Sulawesi\, Bali\, Nusa Tenggara\, East and South Kalimantan), Eastern (Maluku\, Papua)
+ubiquity	tzsetup/country/ID	select	Asia/Jakarta
+# 
+# Choices: China, Singapore, Taiwan, Hong Kong, other
+ubiquity	localechooser/shortlist/zh_TW	select	
+# you are using pam_tally or pam_tally2 in your configuration
+libpam-modules	libpam-modules/deprecate-tally	error	
+# for internal use
+keyboard-configuration	keyboard-configuration/variantcode	string	
+# 
+# Choices: Finland, Sweden, other
+ubiquity	localechooser/shortlist/sv	select	
+# Country to base default locale settings on:
+# Choices: 
+ubiquity	localechooser/preferred-locale	select	
+# for internal use; sets a custom title on installation windows.
+ubiquity	ubiquity/custom_title_text	string	
+# Geographic area:
+# Choices: Africa, America, Antarctica, Australia, Arctic Ocean, Asia, Atlantic Ocean, Europe, Indian Ocean, Pacific Ocean, US, None of the above
+tzdata	tzdata/Areas	select	Etc
+# Update NVRAM variables to automatically boot into Debian?
+grub-pc	grub2/update_nvram	boolean	true
+# Unmount partitions that are in use?
+ubiquity	partman/unmount_active	boolean	
+# Time zone:
+# Choices: Aden, Almaty, Amman, Anadyr, Aqtau, Aqtobe, Ashgabat, Atyrau, Baghdad, Bahrain, Baku, Bangkok, Barnaul, Beirut, Bishkek, Brunei, Chita, Choibalsan, Chongqing, Colombo, Damascus, Dhaka, Dili, Dubai, Dushanbe, Famagusta, Gaza, Harbin, Hebron, Ho Chi Minh City, Hong Kong, Hovd, Irkutsk, Istanbul, Jakarta, Jayapura, Jerusalem, Kabul, Kamchatka, Karachi, Kashgar, Katmandu, Khandyga, Kolkata, Krasnoyarsk, Kuala Lumpur, Kuching, Kuwait, Macau, Magadan, Makassar, Manila, Muscat, Nicosia, Novokuznetsk, Novosibirsk, Omsk, Oral, Phnom Penh, Pontianak, Pyongyang, Qatar, Qostanay, Qyzylorda, Rangoon, Riyadh, Sakhalin, Samarkand, Seoul, Shanghai, Singapore, Srednekolymsk, Taipei, Tashkent, Tbilisi, Tehran, Tel Aviv, Thimphu, Tokyo, Tomsk, Ujung Pandang, Ulaanbaatar, Urumqi, Ust-Nera, Vientiane, Vladivostok, Yakutsk, Yangon, Yekaterinburg, Yerevan
+tzdata	tzdata/Zones/Asia	select	
+# Terminal plugin not available
+ubiquity	debian-installer/terminal-plugin-unavailable	error	
+# for internal use; can be preseeded
+ubiquity	apt-setup/overlay_directory	string	/
+# Continue with cryptsetup-initramfs removal?
+cryptsetup-initramfs	cryptsetup-initramfs/prerm_active_mappings	boolean	true
+# Install the GRUB boot loader to the master boot record?
+ubiquity	grub-installer/with_other_os	boolean	true
+# PCMCIA resource range options:
+ubiquity	hw-detect/pcmcia_resources	string	
+# Mount options:
+# Choices: 
+ubiquity	partman-basicfilesystems/mountoptions	multiselect	
+# Partitioning method:
+# Choices: 
+ubiquity	partman-auto/automatically_partition	select	
+# for internal use; can be preseeded
+ubiquity	preseed/early_command	string	
+# LVM configuration failure
+ubiquity	partman-lvm/commit_failed	error	
+# EFI partition too small
+ubiquity	partman-efi/too_small_efi	error	
+# for internal use only
+ubiquity	passwd/user-default-groups	string	adm cdrom dip lpadmin plugdev sambashare debian-tor libvirtd lxd
+user-setup	passwd/user-default-groups	string	adm cdrom dip lpadmin plugdev sambashare debian-tor libvirtd lxd
+# Initialization vector generation algorithm for this partition:
+# Choices: 
+ubiquity	partman-crypto/ivalgorithm	select	
+# Hide the GRUB timeout; for internal use
+grub-pc	grub-pc/hidden_timeout	boolean	true
+# for internal use; can be preseeded
+ubiquity	ubiquity/hide_slideshow	boolean	false
+# kFreeBSD command line:
+grub-pc	grub2/kfreebsd_cmdline	string	
+# Percentage of the file system blocks reserved for the super-user:
+ubiquity	partman-basicfilesystems/specify_reserved	string	
+# Invalid passphrase
+ubiquity	netcfg/invalid_pass	error	
+# set true to generate a list of files to skip copying.
+ubiquity	ubiquity/install/generate-blacklist	boolean	true
+# Use unrecommended JFS root file system?
+ubiquity	partman-jfs/jfs_root	boolean	false
+# Error copying bluetooth configuration
+ubiquity	ubiquity/install/broken_bluetooth_copy	error	
+# Packages to install:
+# Choices: 
+discover	discover/install_hw_packages	multiselect	
+#  is too big
+ubiquity	partman-auto-lvm/big_guided_size	error	
+# Compose key:
+# Choices: No compose key, Right Alt (AltGr), Right Control, Right Logo key, Menu key, Left Logo key, Caps Lock
+keyboard-configuration	keyboard-configuration/compose	select	No compose key
+# for internal use; can be preseeded
+ubiquity	partman-auto/expert_recipe_file	string	
+# for internal use; can be preseeded
+ubiquity	apt-setup/overlay_host	string	ppa.launchpad.net
+# Enroll a new Machine-Owner Key?
+shim-signed	shim/enable_secureboot	boolean	false
+# Logical volume size:
+ubiquity	partman-lvm/lvcreate_size	string	
+# Error configuring connection to Active Directory
+ubiquity	ubiquity/install/broken_active_directory	error	
+# Erasing data on  failed
+ubiquity	partman-crypto/plain_erase_failed	error	
+# Device for boot loader installation:
+# Choices: Enter device manually, 
+ubiquity	grub-installer/choose_bootdev	select	
+# Failed to download crypto components
+ubiquity	partman-crypto/install_udebs_failure	error	
+# Activate Serial ATA RAID devices?
+ubiquity	disk-detect/activate_dmraid	boolean	true
+# Erasing data on  failed
+ubiquity	partman-crypto/crypto_erase_failed	error	
+# for internal use; can be preseeded
+ubiquity	netcfg/dhcp_timeout	string	30
+# Error while initializing physical volume
+ubiquity	partman-lvm/pvcreate_error	error	
+# for internal use; can be preseeded
+ubiquity	tzsetup/geoip_server	string	https://geoip.ubuntu.com/lookup
+# for internal use; can be preseeded
+ubiquity	partman-ext3/lazy_itable_init	boolean	false
+# for internal use; can be preseeded
+ubiquity	preseed/late_command	string	
+# The size entered is too large
+ubiquity	partman-partitioning/big_new_size	error	
+# Malformed IP address
+ubiquity	netcfg/bad_ipaddress	error	
+# Use contrib software?
+ubiquity	apt-setup/contrib	boolean	false
+# for internal use; can be preseeded
+ubiquity	partman-auto/disk	string	
+# for internal use; can be preseeded
+ubiquity	netcfg/hostname	string	
+# Method for toggling between national and Latin mode:
+# Choices: Caps Lock, Right Alt (AltGr), Right Control, Right Shift, Right Logo key, Menu key, Alt+Shift, Control+Shift, Control+Alt, Alt+Caps Lock, Left Control+Left Shift, Left Alt, Left Control, Left Shift, Left Logo key, Scroll Lock key, No toggling
+keyboard-configuration	keyboard-configuration/toggle	select	No toggling
+# for internal use; use non-free software.
+ubiquity	ubiquity/use_nonfree	boolean	false
+# Keep current keyboard options in the configuration file?
+keyboard-configuration	keyboard-configuration/unsupported_config_options	boolean	true
+# Password input error
+shim-signed	shim/error/secureboot_key_mismatch	error	
+# Partitioning scheme:
+# Choices: 
+ubiquity	partman-auto/choose_recipe	select	
+# Restart services during package upgrades without asking?
+libc6	libraries/restart-without-asking	boolean	false
+libc6:amd64	libraries/restart-without-asking	boolean	false
+libpam0g:amd64	libraries/restart-without-asking	boolean	false
+libssl3:amd64	libraries/restart-without-asking	boolean	false
+# Writing GRUB to boot device failed - continue?
+grub-pc	grub-efi/install_devices_failed	boolean	false
+# Return to the menu to set the bootable flag?
+ubiquity	partman-ext3/boot_not_bootable	boolean	
+# Protocol for file downloads:
+# Choices: 
+ubiquity	mirror/protocol	select	http
+# Do you want system-wide readable home directories?
+adduser	adduser/homedir-permission	boolean	false
+# Installation medium on 
+ubiquity	partman/installation_medium_mounted	note	
+# for internal use; can be preseeded
+ubiquity	preseed/url/checksum	string	
+# for internal use only
+ubiquity	base-installer/kernel/linux/link_in_boot	boolean	true
+# Remove GRUB 2 from /boot/grub?
+grub-pc	grub-pc/postrm_purge_boot_grub	boolean	false
+# Volume group to reduce:
+# Choices: 
+ubiquity	partman-lvm/vgreduce_names	select	
+# Time zone:
+# Choices: Apia, Auckland, Bougainville, Chatham, Chuuk, Easter, Efate, Fakaofo, Fiji, Funafuti, Galapagos, Gambier, Guadalcanal, Guam, Honolulu, Johnston, Kanton, Kiritimati, Kosrae, Kwajalein, Majuro, Marquesas, Midway, Nauru, Niue, Norfolk, Noumea, Pago Pago, Palau, Pitcairn, Pohnpei, Pohnpei, Port Moresby, Rarotonga, Saipan, Samoa, Tahiti, Tarawa, Tongatapu, Truk, Wake, Wallis, Yap
+tzdata	tzdata/Zones/Pacific	select	
+# Help on partitioning
+ubiquity	partman-target/help	note	
+# Gateway:
+ubiquity	netcfg/get_gateway	string	
+# Architecture not supported
+ubiquity	mirror/noarch	error	
+# Scan extra installation media?
+ubiquity	apt-setup/cdrom/set-next	boolean	false
+# Authorized services:
+# Choices: CUPS, DNS, IMAPS, POP3S, SSH, CIFS (Samba), SMTP, HTTP, HTTPS
+ufw	ufw/allow_known_ports	multiselect	
+# zone
+# Choices: Port Moresby, Bougainville
+ubiquity	tzsetup/country/PG	select	
+# zone
+# Choices: Newfoundland, Atlantic, Eastern, Central, East Saskatchewan, Saskatchewan, Mountain, Pacific
+ubiquity	tzsetup/country/CA	select	Canada/Eastern
+# Primary network interface:
+# Choices: 
+ubiquity	netcfg/choose_interface	select	
+# What to do with this device:
+# Choices: 
+ubiquity	partman/storage_device	select	
+# country code or "manual" (for internal use)
+ubiquity	mirror/country	string	
+# Wireless ESSID for :
+ubiquity	netcfg/wireless_essid_again	string	
+# Do you want to return to the partitioning menu?
+ubiquity	partman-basicfilesystems/no_swap	boolean	false
+# 
+# Choices: British Indian Ocean Territory, Christmas Island, Cocos (Keeling) Islands, Comoros, French Southern Territories, Heard Island and McDonald Islands, Madagascar, Maldives, Mauritius, Mayotte, Réunion, Seychelles
+ubiquity	localechooser/countrylist/Indian_Ocean	select	
+# The resize operation is impossible
+ubiquity	partman-partitioning/impossible_resize	error	
+# kFreeBSD default command line:
+grub-pc	grub2/kfreebsd_cmdline_default	string	quiet splash
+# Unable to automatically remove LVM data
+ubiquity	partman-lvm/device_remove_lvm_span	error	
+# What do you want to do about modified configuration file ?
+# Choices: install the package maintainer's version, keep the local version currently installed, show the differences between the versions, show a side-by-side difference between the versions, show a 3-way difference between available versions, do a 3-way merge between available versions, start a new shell to examine the situation
+ucf	ucf/changeprompt_threeway	select	keep_current
+# 
+# Choices: Belgium, Canada, France, Luxembourg, Switzerland, other
+ubiquity	localechooser/shortlist/fr	select	
+# 
+# Choices: India, Sri Lanka, other
+ubiquity	localechooser/shortlist/ta	select	
+# No root file system
+ubiquity	partman-target/no_root	error	
+# 
+# Choices: Serbia, Montenegro, other
+ubiquity	localechooser/shortlist/sr	select	
+# Driver needed by your Ethernet card:
+# Choices: no ethernet card, , none of the above
+ubiquity	ethdetect/module_select	select	no ethernet card
+# for internal use; can be preseeded
+ubiquity	ethdetect/prompt_missing_firmware	boolean	true
+# Encryption for this partition:
+# Choices: 
+ubiquity	partman-crypto/cipher	select	
+# Identical labels for two file systems
+ubiquity	partman-target/same_label	error	
+# Ubuntu archive mirror:
+# Choices: 
+ubiquity	mirror/http/mirror	select	CC.archive.ubuntu.com
+# locale
+ubiquity	localechooser/help/locale	note	
+# for internal use; can be preseeded
+ubiquity	apt-setup/disable-cdrom-entries	boolean	false
+# Is this system connected to a VLAN trunk port?
+ubiquity	netcfg/use_vlan	boolean	false
+# Write the changes to disk and configure encrypted volumes?
+ubiquity	partman-crypto/confirm	boolean	false
+# Writing GRUB to boot device failed - continue?
+grub-pc	grub-pc/install_devices_failed	boolean	false
+# Encrypt your home directory?
+ubiquity	user-setup/encrypt-home	boolean	false
+user-setup	user-setup/encrypt-home	boolean	false
+# xscreensaver and xlockmore must be restarted before upgrading
+libc6	glibc/disable-screensaver	error	
+libc6:amd64	glibc/disable-screensaver	error	
+# for internal use
+grub-pc	grub-pc/kopt_extracted	boolean	false
+# Do you want to change the GECOS of user ?
+base-passwd	base-passwd/user-change-gecos	boolean	true
+# Invalid WEP key
+ubiquity	netcfg/invalid_wep	error	
+# for internal use; automatically set
+ubiquity	partman-auto/cap-ram-free-size	string	
+# Use backported software?
+ubiquity	apt-setup/backports	boolean	true
+# IPv6 unsupported on point-to-point links
+ubiquity	netcfg/no_ipv6_pointopoint	error	
+# for internal use; can be preseeded
+ubiquity	netcfg/do_not_use_netplan	boolean	false
+# Default locale for the system environment:
+# Choices: None, C.UTF-8, en_US.UTF-8
+locales	locales/default_environment_locale	select	en_US.UTF-8
+# for internal use; record partman's confirmation question
+# Choices: confirm, confirm_nochanges, confirm_nooverwrite
+ubiquity	ubiquity/partman-confirm	select	confirm
+# for internal use; can be preseeded
+ubiquity	debian-installer/add-kernel-opts	string	
+# Logical volume:
+# Choices: 
+ubiquity	partman-lvm/lvdelete_lvnames	select	
+# Additional parameters for module :
+ubiquity	hw-detect/retry_params	string	
+# HTTP proxy information (blank for none):
+ubiquity	mirror/http/proxy	string	
+# for internal use; can be preseeded
+ubiquity	ubiquity/show_shutdown_button	boolean	false
+# zone
+# Choices: Santiago, Easter Island
+ubiquity	tzsetup/country/CL	select	America/Santiago
+# No LUKS devices found
+ubiquity	partman-crypto/activate/no_luks	error	
+# Invalid username
+ubiquity	passwd/username-bad	error	
+user-setup	passwd/username-bad	error	
+# Wireless network:
+# Choices:  Enter ESSID manually
+ubiquity	netcfg/wireless_show_essids	select	
+# Use an overlay archive?
+ubiquity	apt-setup/overlay	boolean	false
+# Use weak passphrase?
+ubiquity	partman-crypto/weak_passphrase	boolean	false
+# apt configuration problem
+ubiquity	apt-setup/cdrom/failed	error	
+# for internal use; can be preseeded
+ubiquity	pkgsel/ignore-incomplete-language-support	boolean	false
+# Failed to create a swap space
+ubiquity	partman-basicfilesystems/create_swap_failed	error	
+# for internal use; can be preseeded
+ubiquity	auto-install/enable	boolean	false
+# Failure restarting some services for PAM upgrade
+libpam0g:amd64	libpam0g/restart-failed	error	
+# Services to restart for GNU libc library upgrade:
+libc6	glibc/restart-services	string	
+libc6:amd64	glibc/restart-services	string	
+# Error copying network configuration
+ubiquity	ubiquity/install/broken_network_copy	error	
+# This is an overview of your currently configured partitions and mount points. Select a partition to modify its settings (file system, mount point, etc.), a free space to create partitions, or a device to initialize its partition table.
+# Choices: 
+ubiquity	partman/choose_partition	select	
+# Volume group name already in use
+ubiquity	partman-auto-lvm/vg_exists	error	
+# Resize operation failure
+ubiquity	partman-partitioning/new_size_commit_failed	error	
+# Installation Failed
+ubiquity	ubiquity/install/copying_error/hd_fault	error	
+# Installation Failed
+ubiquity	ubiquity/install/copying_error/cd_fault	error	
+# for internal use; can be preseeded
+ubiquity	preseed/include	string	
+# Time zone:
+# Choices: Amsterdam, Andorra, Astrakhan, Athens, Belfast, Belgrade, Berlin, Bratislava, Brussels, Bucharest, Budapest, Busingen, Chisinau, Copenhagen, Dublin, Gibraltar, Guernsey, Helsinki, Isle_of_Man, Istanbul, Jersey, Kaliningrad, Kirov, Kyiv, Lisbon, Ljubljana, London, Luxembourg, Madrid, Malta, Mariehamn, Minsk, Monaco, Moscow, Nicosia, Oslo, Paris, Podgorica, Prague, Riga, Rome, Samara, San_Marino, Sarajevo, Saratov, Simferopol, Skopje, Sofia, Stockholm, Tallinn, Tirane, Tiraspol, Ulyanovsk, Uzhgorod, Vaduz, Vatican, Vienna, Vilnius, Volgograd, Warsaw, Zagreb, Zaporozhye, Zurich
+tzdata	tzdata/Zones/Europe	select	
+# Enter a password for Secure Boot. It will be asked again after a reboot.
+shim-signed	shim/secureboot_key	string	
+# Maximum size of swapfile
+ubiquity	partman-swapfile/size	string	2048
+# 
+# Choices: Cyprus, Turkey, other
+ubiquity	localechooser/shortlist/tr	select	
+# Auto-configure networking?
+ubiquity	netcfg/use_autoconfig	boolean	true
+# Kernel version not supported
+libc6	glibc/kernel-not-supported	note	
+libc6:amd64	glibc/kernel-not-supported	note	
+# Is the system clock set to UTC?
+ubiquity	clock-setup/utc	boolean	true
+# for internal use
+console-setup	console-setup/codesetcode	string	guess
+# for internal use; can be preseeded
+ubiquity	preseed/run	string	
+# 
+# Choices: North Macedonia, Albania, other
+ubiquity	localechooser/shortlist/sq	select	
+# Are you sure you want a bootable logical partition?
+ubiquity	partman-partitioning/bootable_logical	boolean	false
+# Required encryption options missing
+ubiquity	partman-crypto/options_missing	error	
+# The free space starts from  and ends at .
+ubiquity	partman/show_free_chs	note	
+# System locale:
+# Choices: 
+ubiquity	debian-installer/locale	select	
+# Kernel must be upgraded
+libc6	glibc/kernel-too-old	error	
+libc6:amd64	glibc/kernel-too-old	error	
+# Empty passphrase
+ubiquity	partman-crypto/passphrase-empty	error	
+# Name of the volume group for the new system:
+ubiquity	partman-auto-lvm/new_vg_name_exists	string	
+# Netmask:
+ubiquity	netcfg/get_netmask	string	
+# for internal use; can be preseeded
+ubiquity	apt-setup/multiarch	string	i386
+# Mount point for this partition:
+# Choices: /dos, /windows, Enter manually, Do not mount it
+ubiquity	partman-basicfilesystems/fat_mountpoint	select	
+# for internal use
+keyboard-configuration	keyboard-configuration/store_defaults_in_debconf_db	boolean	true
+# Use a network mirror?
+ubiquity	apt-setup/use_mirror	boolean	
+# Write a new empty partition table?
+ubiquity	partman-partitioning/confirm_write_new_label	boolean	false
+# Time zone:
+# Choices: GMT, GMT+0, GMT+1, GMT+10, GMT+11, GMT+12, GMT+2, GMT+3, GMT+4, GMT+5, GMT+6, GMT+7, GMT+8, GMT+9, GMT-0, GMT-1, GMT-10, GMT-11, GMT-12, GMT-13, GMT-14, GMT-2, GMT-3, GMT-4, GMT-5, GMT-6, GMT-7, GMT-8, GMT-9, GMT0, Greenwich, UCT, UTC, Universal, Zulu
+tzdata	tzdata/Zones/Etc	select	UTC
+# for internal use; can be preseeded
+ubiquity	preseed/file	string	
+# Flags for the new partition:
+# Choices: 
+ubiquity	partman-partitioning/set_flags	multiselect	
+# location
+# Choices: Tahiti (Society Islands), Marquesas Islands, Gambier Islands
+ubiquity	tzsetup/country/PF	select	Pacific/Tahiti
+# zone
+# Choices: Eastern, Central, Mountain, Pacific, Alaska, Hawaii, Arizona, East Indiana, Samoa
+ubiquity	tzsetup/country/US	select	US/Eastern
+# Ubuntu archive mirror country:
+# Choices: enter information manually, Afghanistan, Albania, Algeria, American Samoa, Andorra, Angola, Anguilla, Antarctica, Antigua and Barbuda, Argentina, Armenia, Aruba, Australia, Austria, Azerbaijan, Bahamas, Bahrain, Bangladesh, Barbados, Belarus, Belgium, Belize, Benin, Bermuda, Bhutan, Bolivia, Bonaire\, Sint Eustatius and Saba, Bosnia and Herzegovina, Botswana, Bouvet Island, Brazil, British Indian Ocean Territory, Brunei Darussalam, Bulgaria, Burkina Faso, Burundi, Cabo Verde, Cambodia, Cameroon, Canada, Cayman Islands, Central African Republic, Chad, Chile, China, Christmas Island, Cocos (Keeling) Islands, Colombia, Comoros, Congo, Congo\, The Democratic Republic of the, Cook Islands, Costa Rica, Croatia, Cuba, Curaçao, Cyprus, Czechia, Côte d'Ivoire, Denmark, Djibouti, Dominica, Dominican Republic, Ecuador, Egypt, El Salvador, Equatorial Guinea, Eritrea, Estonia, Eswatini, Ethiopia, Falkland Islands (Malvinas), Faroe Islands, Fiji, Finland, France, French Guiana, French Polynesia, French Southern Territories, Gabon, Gambia, Georgia, Germany, Ghana, Gibraltar, Greece, Greenland, Grenada, Guadeloupe, Guam, Guatemala, Guernsey, Guinea, Guinea-Bissau, Guyana, Haiti, Heard Island and McDonald Islands, Holy See (Vatican City State), Honduras, Hong Kong, Hungary, Iceland, India, Indonesia, Iran\, Islamic Republic of, Iraq, Ireland, Isle of Man, Israel, Italy, Jamaica, Japan, Jersey, Jordan, Kazakhstan, Kenya, Kiribati, Kuwait, Kyrgyzstan, Lao People's Democratic Republic, Latvia, Lebanon, Lesotho, Liberia, Libya, Liechtenstein, Lithuania, Luxembourg, Macao, Madagascar, Malawi, Malaysia, Maldives, Mali, Malta, Marshall Islands, Martinique, Mauritania, Mauritius, Mayotte, Mexico, Micronesia\, Federated States of, Moldova, Monaco, Mongolia, Montenegro, Montserrat, Morocco, Mozambique, Myanmar, Namibia, Nauru, Nepal, Netherlands, New Caledonia, New Zealand, Nicaragua, Niger, Nigeria, Niue, Norfolk Island, North Korea, North Macedonia, Northern Mariana Islands, Norway, Oman, Pakistan, Palau, Palestine\, State of, Panama, Papua New Guinea, Paraguay, Peru, Philippines, Pitcairn, Poland, Portugal, Puerto Rico, Qatar, Romania, Russian Federation, Rwanda, Réunion, Saint Barthélemy, Saint Helena\, Ascension and Tristan da Cunha, Saint Kitts and Nevis, Saint Lucia, Saint Martin (French part), Saint Pierre and Miquelon, Saint Vincent and the Grenadines, Samoa, San Marino, Sao Tome and Principe, Saudi Arabia, Senegal, Serbia, Seychelles, Sierra Leone, Singapore, Sint Maarten (Dutch part), Slovakia, Slovenia, Solomon Islands, Somalia, South Africa, South Georgia and the South Sandwich Islands, South Korea, South Sudan, Spain, Sri Lanka, Sudan, Suriname, Svalbard and Jan Mayen, Sweden, Switzerland, Syrian Arab Republic, Taiwan, Tajikistan, Tanzania, Thailand, Timor-Leste, Togo, Tokelau, Tonga, Trinidad and Tobago, Tunisia, Turkey, Turkmenistan, Turks and Caicos Islands, Tuvalu, Uganda, Ukraine, United Arab Emirates, United Kingdom, United States, United States Minor Outlying Islands, Uruguay, Uzbekistan, Vanuatu, Venezuela, Vietnam, Virgin Islands\, British, Virgin Islands\, U.S., Wallis and Futuna, Western Sahara, Yemen, Zambia, Zimbabwe, Åland Islands
+ubiquity	mirror/http/countries	select	GB
+# No partitionable media
+ubiquity	disk-detect/cannot_find	error	
+# Partition name:
+ubiquity	partman-partitioning/set_name	string	
+# Amount of volume group to use for guided partitioning:
+ubiquity	partman-auto-lvm/guided_size	string	some number
+# NTFS partition not cleanly unmounted
+ubiquity	partman-auto-loop/unclean_ntfs	error	
+# for internal use; specify a command to be run on install success.
+ubiquity	ubiquity/success_command	string	
+# Use proposed updates?
+ubiquity	apt-setup/proposed	boolean	false
+# Waiting time (in seconds) for link detection:
+ubiquity	netcfg/link_wait_timeout	string	3
+# Wireless network type for :
+# Choices: WEP/Open Network, WPA/WPA2 PSK
+ubiquity	netcfg/wireless_security_type	select	wpa
+# for internal use; can be preseeded
+ubiquity	grub-installer/skip	boolean	false
+# No PAM profiles have been selected.
+libpam-runtime	libpam-runtime/no_profiles_chosen	error	
+# 
+# Choices: Jordan, United Arab Emirates, Bahrain, Algeria, Syrian Arab Republic, Saudi Arabia, Sudan, Iraq, Kuwait, Morocco, India, Yemen, Tunisia, South Sudan, Oman, Qatar, Lebanon, Libya, Egypt, other
+ubiquity	localechooser/shortlist/ar	select	
+# Location for the new partition:
+# Choices: Beginning, End
+ubiquity	partman-partitioning/new_partition_place	select	
+# Really delete the volume group?
+ubiquity	partman-lvm/vgdelete_confirm	boolean	true
+# Do you want to add the group ?
+base-passwd	base-passwd/group-add	boolean	true
+# Finish conversion to GRUB 2 now?
+grub-pc	grub-pc/mixed_legacy_and_grub2	boolean	true
+# Ignore questions with a priority less than:
+# Choices: critical, high, medium, low
+debconf	debconf/priority	select	high
+# Point-to-point address:
+ubiquity	netcfg/get_pointopoint	string	
+# GRUB install devices:
+# Choices: 
+grub-pc	grub-efi/install_devices_disks_changed	multiselect	
+# Maximum percentage of free space to use for swapfile
+ubiquity	partman-swapfile/percentage	string	10
+# Domain name:
+ubiquity	netcfg/get_domain	string	
+# Type of encryption key hash for this partition:
+# Choices: 
+ubiquity	partman-crypto/keyhash	select	
+# Do you want to change the GID of user ?
+base-passwd	base-passwd/user-change-gid	boolean	true
+# location
+# Choices: Lisbon, Madeira Islands, Azores
+ubiquity	tzsetup/country/PT	select	Europe/Lisbon
+# Device in use
+ubiquity	partman-base/devicelocked	error	
+# Devices to add to the volume group:
+# Choices: 
+ubiquity	partman-lvm/vgextend_parts	multiselect	
+# Error while installing packages
+ubiquity	ubiquity/install/broken_install	error	
+# Go back to the menu and correct this problem?
+ubiquity	partman-basicfilesystems/boot_not_first_partition	boolean	
+# city
+# Choices: Ulaanbaatar, Hovd, Choibalsan
+ubiquity	tzsetup/country/MN	select	Asia/Ulaanbaatar
+# Logical Volume Manager not available
+ubiquity	partman-lvm/nolvm	error	
+# Passphrase input error
+ubiquity	partman-crypto/passphrase-mismatch	error	
+# state
+# Choices: Australian Capital Territory, New South Wales, Victoria, Northern Territory, Queensland, South Australia, Tasmania, Western Australia, Eyre Highway, Yancowinna County, Lord Howe Island
+ubiquity	tzsetup/country/AU	select	Australia/Canberra
+# Unable to configure GRUB
+ubiquity	grub-installer/update-grub-failed	error	
+# 
+# Choices: Brazil, Portugal, other
+ubiquity	localechooser/shortlist/pt	select	
+# for internal use; can be preseeded
+ubiquity	debian-installer/country	string	
+# Do you want to change the GID of group ?
+base-passwd	base-passwd/group-change-gid	boolean	true
+# xscreensaver and xlockmore must be restarted before upgrading
+libpam-modules	libpam-modules/disable-screensaver	error	
+# Error while deleting the logical volume
+ubiquity	partman-lvm/lvdelete_error	error	
+# location
+# Choices: Auckland, Chatham Islands
+ubiquity	tzsetup/country/NZ	select	Pacific/Auckland
+# Unexpected error while creating volume group
+ubiquity	partman-auto-lvm/vg_create_error	error	
+# Install the GRUB boot loader to the master boot record?
+ubiquity	grub-installer/only_debian	boolean	true
+# zone
+# Choices: Asia/Nicosia (Cyprus (most areas)), Asia/Famagusta (Northern Cyprus)
+ubiquity	tzsetup/country/CY	select	
+# 
+# Choices: Aruba, Belgium, Netherlands, other
+ubiquity	localechooser/shortlist/nl	select	
+# Devices to encrypt:
+# Choices: 
+ubiquity	partman-crypto/create/partitions	multiselect	
+# Error while creating volume group
+ubiquity	partman-lvm/vgcreate_error	error	
+# Volume group name:
+ubiquity	partman-lvm/vgcreate_name	string	
+# for internal use; can be preseeded
+ubiquity	partman-auto/cap-ram-percentage	string	10
+# for internal use; can be preseeded
+ubiquity	netcfg/dhcpv6_timeout	string	30
+# Allow ordinary users to run ip vrf exec using capabilities?
+iproute2	iproute2/setcaps	boolean	false
+# How to use this partition:
+# Choices: 
+ubiquity	partman-target/choose_method	select	
+# Time zone:
+# Choices: Alaska, Aleutian, Arizona, Central, Eastern, Hawaii, Starke County (Indiana), Michigan, Mountain, Pacific Ocean, Samoa
+tzdata	tzdata/Zones/US	select	
+# for internal use; can be preseeded
+ubiquity	partman-auto/method	string	
+# for internal use; can be preseeded
+ubiquity	partman-auto-crypto/erase_disks	boolean	true
+# Time zone:
+# Choices: Antananarivo, Chagos, Christmas, Cocos, Comoro, Kerguelen, Mahe, Maldives, Mauritius, Mayotte, Reunion
+tzdata	tzdata/Zones/Indian	select	
+# for internal use; set true to check for matching md5 hashes.
+ubiquity	ubiquity/install/md5_check	boolean	true
+# for internal use; can be preseeded
+ubiquity	preseed/interactive	boolean	false
+# Load drivers from internal virtual driver disk?
+ubiquity	driver-injection-disk/load	boolean	true
+# Do you want to remove the group ?
+base-passwd	base-passwd/group-remove	boolean	true
+# Only for preseeding; not translated.
+ubiquity	ubiquity/install/filesystem-images	string	
+# for internal use only
+ubiquity	passwd/user-uid	string	
+user-setup	passwd/user-uid	string	
+# for internal use; can be preseeded
+ubiquity	partman-auto/ensure-min-mem	string	8192
+# Services to use:
+# Choices: security updates (from )
+ubiquity	apt-setup/services-select-ubuntu	multiselect	security
+# No physical volumes selected
+ubiquity	partman-lvm/vgreduce_nosel	error	
+# PAM Profiles with Deprecated Modules Disabled
+libpam-modules	libpam-modules/profiles-disabled	error	
+# Go back to the menu and correct this problem?
+ubiquity	partman-basicfilesystems/boot_not_ext2	boolean	
+# Really erase the data on ?
+ubiquity	partman-crypto/plain_warn_erase	boolean	false
+# Writing GRUB to boot device failed - try again?
+grub-pc	grub-pc/install_devices_failed_upgrade	boolean	true
+# for internal use; can be preseeded (deprecated)
+ubiquity	netcfg/disable_dhcp	boolean	false
+# Interactive shell
+ubiquity	di-utils-shell/do-shell	note	
+# for internal use only
+ubiquity	user-setup/allow-password-empty	boolean	false
+user-setup	user-setup/allow-password-empty	boolean	false
+# Append original file to dynamic file?
+resolvconf	resolvconf/link-tail-to-original	boolean	false
+# 
+# Choices: Albania, Andorra, Armenia, Austria, Azerbaijan, Belarus, Belgium, Bosnia and Herzegovina, Bulgaria, Croatia, Cyprus, Czechia, Denmark, Estonia, Faroe Islands, Finland, France, Georgia, Germany, Gibraltar, Greece, Greenland, Guernsey, Holy See (Vatican City State), Hungary, Iceland, Ireland, Isle of Man, Italy, Jersey, Latvia, Liechtenstein, Lithuania, Luxembourg, Malta, Moldova, Monaco, Montenegro, Netherlands, North Macedonia, Norway, Poland, Portugal, Romania, Russian Federation, San Marino, Serbia, Slovakia, Slovenia, Spain, Svalbard and Jan Mayen, Sweden, Switzerland, Ukraine, United Kingdom, Åland Islands
+ubiquity	localechooser/countrylist/Europe	select	
+# No logical volume name entered
+ubiquity	partman-lvm/lvcreate_nonamegiven	error	
+# for internal use; can be preseeded
+ubiquity	partman/filter_mounted	boolean	true
+# Go back to the menu and resume partitioning?
+ubiquity	partman-efi/no_efi	boolean	
+# Font size:
+# Choices: 8x13, 8x14, 8x15, 8x16, 8x18
+console-setup	console-setup/fontsize-fb47	select	8x16
+# Keyboard model:
+# Choices: A4Tech KB-21, A4Tech KBS-8, A4Tech Wireless Desktop RFKB-23, Acer AirKey V, Acer C300, Acer Ferrari 4000, Acer laptop, Advance Scorpius KI, Amiga, Apple, Apple Aluminium (ANSI), Apple Aluminium (ISO), Apple Aluminium (JIS), Apple laptop, Asus laptop, Atari TT, Azona RF2300 Wireless Internet, BTC 5090, BTC 5113RF Multimedia, BTC 5126T, BTC 6301URF, BTC 9000, BTC 9000A, BTC 9001AH, BTC 9019U, BTC 9116U Mini Wireless Internet and Gaming, BenQ X-Touch, BenQ X-Touch 730, BenQ X-Touch 800, Brother Internet, Cherry B.UNLIMITED, Cherry Blue Line CyBo@rd, Cherry Blue Line CyBo@rd (alt.), Cherry CyBo@rd USB-Hub, Cherry CyMotion Expert, Cherry CyMotion Master Linux, Cherry CyMotion Master XPress, Chicony Internet, Chicony KB-9885, Chicony KU-0108, Chicony KU-0420, Chromebook, Classmate PC, Compaq Armada laptop, Compaq Easy Access, Compaq Internet (13 keys), Compaq Internet (18 keys), Compaq Internet (7 keys), Compaq Presario laptop, Compaq iPaq, Creative Desktop Wireless 7000, DTK2000, Dell, Dell 101-key PC, Dell Inspiron 6000/8000 laptop, Dell Latitude laptop, Dell Precision M laptop, Dell Precision M65 laptop, Dell SK-8125, Dell SK-8135, Dell USB Multimedia, Dexxa Wireless Desktop, Diamond 9801/9802, Do not configure keyboard; keep kernel keymap, Ennyah DKB-1008, Everex STEPnote, FL90, Fujitsu-Siemens Amilo laptop, Generic 101-key PC, Generic 102-key PC, Generic 104-key PC, Generic 104-key PC with L-shaped Enter key, Generic 105-key PC, Generic 86-key PC, Genius Comfy KB-12e, Genius Comfy KB-16M/Multimedia KWD-910, Genius Comfy KB-21e-Scroll, Genius KB-19e NB, Genius KKB-2050HS, Gyration, Happy Hacking, Happy Hacking for Mac, Hewlett-Packard Internet, Hewlett-Packard Mini 110 laptop, Hewlett-Packard NEC SK-2500 Multimedia, Hewlett-Packard Omnibook 500, Hewlett-Packard Omnibook 500 FA, Hewlett-Packard Omnibook 6000/6100, Hewlett-Packard Omnibook XE3 GC, Hewlett-Packard Omnibook XE3 GF, Hewlett-Packard Omnibook XT1000, Hewlett-Packard Pavilion ZT1100, Hewlett-Packard Pavilion dv5, Hewlett-Packard nx9020, Honeywell Euroboard, IBM Rapid Access, IBM Rapid Access II, IBM Space Saver, IBM ThinkPad 560Z/600/600E/A22E, IBM ThinkPad R60/T60/R61/T61, IBM ThinkPad Z60m/Z60t/Z61m/Z61t, Keytronic FlexPro, Kinesis, Logitech, Logitech Access, Logitech Cordless Desktop, Logitech Cordless Desktop (alt.), Logitech Cordless Desktop EX110, Logitech Cordless Desktop LX-300, Logitech Cordless Desktop Navigator, Logitech Cordless Desktop Optical, Logitech Cordless Desktop Pro (2nd alt.), Logitech Cordless Desktop iTouch, Logitech Cordless Freedom/Desktop Navigator, Logitech G15 extra keys via G15daemon, Logitech Internet, Logitech Internet 350, Logitech Internet Navigator, Logitech Ultra-X, Logitech Ultra-X Cordless Media Desktop, Logitech diNovo, Logitech diNovo Edge, Logitech iTouch, Logitech iTouch Cordless Y-RB6, Logitech iTouch Internet Navigator SE, Logitech iTouch Internet Navigator SE USB, MacBook/MacBook Pro, MacBook/MacBook Pro (intl.), Macintosh, Macintosh Old, Memorex MX1998, Memorex MX2500 EZ-Access, Memorex MX2750, Microsoft Comfort Curve 2000, Microsoft Internet, Microsoft Internet Pro (Swedish), Microsoft Natural, Microsoft Natural Elite, Microsoft Natural Ergonomic 4000, Microsoft Natural Pro OEM, Microsoft Natural Pro USB/Internet Pro, Microsoft Natural Pro/Internet Pro, Microsoft Natural Wireless Ergonomic 7000, Microsoft Office Keyboard, Microsoft Surface, Microsoft Wireless Multimedia 1.0A, NEC SK-1300, NEC SK-2500, NEC SK-6200, NEC SK-7100, Northgate OmniKey 101, OLPC, Ortek Multimedia/Internet MCK-800, PC-98, Propeller Voyager KTEZ-1000, QTronix Scorpius 98N+, SVEN Ergonomic 2500, SVEN Slim 303, Samsung SDM 4500P, Samsung SDM 4510P, Sanwa Supply SKB-KG3, Silvercrest Multimedia Wireless, SteelSeries Apex 300 (Apex RAW), Sun Type 4, Sun Type 5, Sun Type 6 (Japanese), Sun Type 6 USB (Japanese), Sun Type 6 USB (Unix), Sun Type 6/7 USB, Sun Type 6/7 USB (European), Sun Type 7 USB, Sun Type 7 USB (European), Sun Type 7 USB (Japanese)/Japanese 106-key, Sun Type 7 USB (Unix), Super Power Multimedia, Symplon PaceBook tablet, Targa Visionary 811, Toshiba Satellite S3000, Truly Ergonomic 227, Truly Ergonomic 229, Trust Direct Access, Trust Slimline, Trust Wireless Classic, TypeMatrix EZ-Reach 2020, TypeMatrix EZ-Reach 2030 PS2, TypeMatrix EZ-Reach 2030 USB, TypeMatrix EZ-Reach 2030 USB (102/105:EU mode), TypeMatrix EZ-Reach 2030 USB (106:JP mode), Unitek KB-1925, ViewSonic KU-306 Internet, Winbook Model XP5, Yahoo! Internet, eMachines m6800 laptop
+keyboard-configuration	keyboard-configuration/model	select	Generic 105-key PC
+# 
+# Choices: Africa, Antarctica, Asia, Atlantic Ocean, Caribbean, Central America, Europe, Indian Ocean, North America, Oceania, South America, other
+ubiquity	localechooser/continentlist	select	
+# Keep current partition layout and configure encrypted volumes?
+ubiquity	partman-crypto/confirm_nochanges	boolean	false
+# Name of the volume group for the new system:
+ubiquity	partman-auto-lvm/new_vg_name	string	
+# Error while removing packages
+ubiquity	ubiquity/install/broken_remove	error	
+# Typical usage of this partition:
+# Choices: 
+ubiquity	partman-basicfilesystems/specify_usage	select	
+# for internal use only
+ubiquity	mirror/codename	string	
+# Failed to process the preconfiguration file
+ubiquity	preseed/load_error	error	
+# Reboot recommended
+resolvconf	resolvconf/reboot-recommended-after-removal	note	
+# for internal use only
+ubiquity	user-setup/force-encrypt-home	boolean	false
+user-setup	user-setup/force-encrypt-home	boolean	false
+# for internal use; can be preseeded
+ubiquity	preseed/include_command	string	
+# Downloading local repository key failed:
+# Choices: Retry, Ignore
+ubiquity	apt-setup/local/key-error	select	Retry
+# 
+# Choices: Curaçao
+ubiquity	localechooser/countrylist/other	select	
+# Loop-mounted file systems already present
+ubiquity	partman-auto-loop/unclean_host	error	
+# for internal use only
+ubiquity	debian-installer/language	string	
+# Scan extra installation media?
+ubiquity	apt-setup/cdrom/set-first	boolean	false
+# Language selection no longer possible
+ubiquity	localechooser/translation/no-select	note	
+# Failed to partition the selected disk
+ubiquity	partman-auto/autopartitioning_failed	error	
+# FTP proxy information (blank for none):
+ubiquity	mirror/ftp/proxy	string	
+# Is this information correct?
+ubiquity	netcfg/confirm_static	boolean	true
+# location
+# Choices: Johnston Atoll, Midway Islands, Wake Island
+ubiquity	tzsetup/country/UM	select	Pacific/Midway
+# Encryption package installation failure
+ubiquity	partman-crypto/module_package_missing	error	
+# Continue with the installation?
+ubiquity	partman/confirm_nochanges	boolean	false
+# Method for temporarily toggling between national and Latin input:
+# Choices: No temporary switch, Both Logo keys, Right Alt (AltGr), Right Logo key, Left Alt, Left Logo key
+keyboard-configuration	keyboard-configuration/switch	select	No temporary switch
+# for internal use only
+ubiquity	passwd/auto-login-backup	string	
+user-setup	passwd/auto-login-backup	string	
+# location
+# Choices: Godthab, Danmarkshavn, Scoresbysund, Thule
+ubiquity	tzsetup/country/GL	select	America/Godthab
+# Install the GRUB boot loader to the Serial ATA RAID disk?
+ubiquity	grub-installer/sataraid	boolean	true
+# No volume group found
+ubiquity	partman-lvm/vgextend_novg	error	
+# btrfs file system not supported for /boot
+ubiquity	partman-btrfs/btrfs_boot	error	
+# Failed to partition the selected disk
+ubiquity	partman-auto/no_recipe	error	
+# for internal use; automatically set
+ubiquity	partman-auto/desired-swap	string	
+# Ubuntu archive mirror hostname:
+ubiquity	mirror/ftp/hostname	string	mirror
+# Enable shadow passwords?
+ubiquity	passwd/shadow	boolean	true
+user-setup	passwd/shadow	boolean	true
+# 
+# Choices: Argentina, Bolivia, Chile, Colombia, Costa Rica, Cuba, Ecuador, El Salvador, Spain, United States, Guatemala, Honduras, Mexico, Nicaragua, Panama, Paraguay, Peru, Puerto Rico, Dominican Republic, Uruguay, Venezuela, other
+ubiquity	localechooser/shortlist/es	select	
+# Scan extra installation media?
+ubiquity	apt-setup/cdrom/set-failed	boolean	true
+# Error while running ''
+ubiquity	hw-detect/modprobe_error	error	
+# Use unrecommended JFS /boot file system?
+ubiquity	partman-jfs/jfs_boot	boolean	false
+# No volume group found
+ubiquity	partman-lvm/vgdelete_novg	error	
+# Services to use:
+# Choices: security updates (from ), release updates, backported software
+ubiquity	apt-setup/services-select	multiselect	security, updates
+# 
+# Choices: Anguilla, Antigua and Barbuda, Aruba, Bahamas, Barbados, Bermuda, Bonaire\, Sint Eustatius and Saba, Cayman Islands, Cuba, Dominica, Dominican Republic, Grenada, Guadeloupe, Haiti, Jamaica, Martinique, Montserrat, Puerto Rico, Saint Barthélemy, Saint Kitts and Nevis, Saint Lucia, Saint Martin (French part), Saint Vincent and the Grenadines, Sint Maarten (Dutch part), Trinidad and Tobago, Turks and Caicos Islands, Virgin Islands\, British, Virgin Islands\, U.S.
+ubiquity	localechooser/countrylist/Caribbean	select	
+# Go back to the menu and correct this problem?
+ubiquity	partman-ext3/boot_not_ext2_or_ext3	boolean	
+# 
+# Choices: Antigua and Barbuda, Australia, Botswana, Canada, Hong Kong, India, Ireland, Israel, New Zealand, Nigeria, Philippines, Seychelles, Singapore, South Africa, United Kingdom, United States, Zambia, Zimbabwe, other
+ubiquity	localechooser/shortlist/en	select	
+# 
+# Choices: Bangladesh, India, other
+ubiquity	localechooser/shortlist/bn	select	
+# Network autoconfiguration failed
+ubiquity	netcfg/dhcp_failed	note	
+# Use Control+Alt+Backspace to terminate the X server?
+keyboard-configuration	keyboard-configuration/ctrl_alt_bksp	boolean	false
+# No volume group name entered
+ubiquity	partman-lvm/vgcreate_nonamegiven	error	
+# Unusable free space
+ubiquity	partman-auto/unusable_space	error	
+# Load missing firmware from removable media?
+ubiquity	hw-detect/load_firmware	boolean	true
+# DHCP hostname:
+ubiquity	netcfg/dhcp_hostname	string	
+# 
+# Choices: Bouvet Island, Falkland Islands (Malvinas), Saint Helena\, Ascension and Tristan da Cunha, South Georgia and the South Sandwich Islands
+ubiquity	localechooser/countrylist/Atlantic_Ocean	select	
+# Volume group name overlaps with device name
+ubiquity	partman-lvm/vgcreate_devnameused	error	
+# GRUB install devices:
+# Choices: 
+grub-pc	grub-pc/install_devices	multiselect	
+# for internal use; automatically reboot when the install fails.
+ubiquity	ubiquity/reboot_on_failure	boolean	true
+# Continue installation without /boot partition?
+ubiquity	partman-auto-lvm/no_boot	boolean	
+# LVM configuration action:
+# Choices: 
+ubiquity	partman-lvm/mainmenu	select	
+# for internal use; download updates while installing.
+ubiquity	ubiquity/download_updates	boolean	true
+# Ubuntu archive mirror hostname:
+ubiquity	mirror/http/hostname	string	mirror
+# No volume group found
+ubiquity	partman-lvm/lvcreate_nofreevg	error	
+# GRUB EFI system partitions:
+# Choices: 
+grub-pc	grub-efi/install_devices	multiselect	
+# Partition in use
+ubiquity	partman-base/partlocked	error	
+# Select disk to partition:
+# Choices: 
+ubiquity	partman-auto/select_disk	select	
+# Volume group to delete:
+# Choices: 
+ubiquity	partman-lvm/vgdelete_names	select	
+# Required programs missing
+ubiquity	partman-crypto/tools_missing	note	
+# What do you want to do about modified configuration file ?
+# Choices: install the package maintainer's version, keep the local version currently installed, show the differences between the versions, show a side-by-side difference between the versions, start a new shell to examine the situation
+ucf	ucf/changeprompt	select	keep_current
+# Debian archive mirror country:
+# Choices: enter information manually
+ubiquity	mirror/https/countries	select	GB
+# Error setting LUKS recovery key
+ubiquity	ubiquity/install/broken_luks_add_key	error	
+# Devices for the new volume group:
+# Choices: 
+ubiquity	partman-lvm/vgcreate_parts	multiselect	
+# for internal use; can be preseeded
+man-db	man-db/auto-update	boolean	true
+# 
+# Choices: 
+ubiquity	partman/exception_handler	select	
+# How to use this free space:
+# Choices: 
+ubiquity	partman/free_space	select	
+# No network interfaces detected
+ubiquity	netcfg/no_interfaces	error	
+# for internal use; can be preseeded
+ubiquity	netcfg/disable_autoconfig	boolean	false
+# Ethernet card not found
+ubiquity	ethdetect/cannot_find	error	
+# 
+# Choices: Andorra, Spain, France, Italy, other
+ubiquity	localechooser/shortlist/ca	select	
+# Continue without installing GRUB?
+grub-pc	grub-pc/install_devices_empty	boolean	false
+# Do you want to remove the user ?
+base-passwd	base-passwd/user-remove	boolean	true
+# VLAN ID (1-4094):
+ubiquity	netcfg/vlan_id	string	
+# Failed to create enough space for installation
+ubiquity	partman-auto/resize_insufficient_space	error	
+# Are you sure you want to use a random key?
+ubiquity	partman-crypto/use_random_for_nonswap	boolean	false
+# Configuration of encrypted volumes failed
+ubiquity	partman-crypto/commit_failed	error	
+# Do you want to move the user ?
+base-passwd	base-passwd/user-move	boolean	true
+# Locales to be generated:
+# Choices: All locales, C.UTF-8 UTF-8, aa_DJ ISO-8859-1, aa_DJ.UTF-8 UTF-8, aa_ER UTF-8, aa_ER@saaho UTF-8, aa_ET UTF-8, af_ZA ISO-8859-1, af_ZA.UTF-8 UTF-8, agr_PE UTF-8, ak_GH UTF-8, am_ET UTF-8, an_ES ISO-8859-15, an_ES.UTF-8 UTF-8, anp_IN UTF-8, ar_AE ISO-8859-6, ar_AE.UTF-8 UTF-8, ar_BH ISO-8859-6, ar_BH.UTF-8 UTF-8, ar_DZ ISO-8859-6, ar_DZ.UTF-8 UTF-8, ar_EG ISO-8859-6, ar_EG.UTF-8 UTF-8, ar_IN UTF-8, ar_IQ ISO-8859-6, ar_IQ.UTF-8 UTF-8, ar_JO ISO-8859-6, ar_JO.UTF-8 UTF-8, ar_KW ISO-8859-6, ar_KW.UTF-8 UTF-8, ar_LB ISO-8859-6, ar_LB.UTF-8 UTF-8, ar_LY ISO-8859-6, ar_LY.UTF-8 UTF-8, ar_MA ISO-8859-6, ar_MA.UTF-8 UTF-8, ar_OM ISO-8859-6, ar_OM.UTF-8 UTF-8, ar_QA ISO-8859-6, ar_QA.UTF-8 UTF-8, ar_SA ISO-8859-6, ar_SA.UTF-8 UTF-8, ar_SD ISO-8859-6, ar_SD.UTF-8 UTF-8, ar_SS UTF-8, ar_SY ISO-8859-6, ar_SY.UTF-8 UTF-8, ar_TN ISO-8859-6, ar_TN.UTF-8 UTF-8, ar_YE ISO-8859-6, ar_YE.UTF-8 UTF-8, as_IN UTF-8, ast_ES ISO-8859-15, ast_ES.UTF-8 UTF-8, ayc_PE UTF-8, az_AZ UTF-8, az_IR UTF-8, be_BY CP1251, be_BY.UTF-8 UTF-8, be_BY@latin UTF-8, bem_ZM UTF-8, ber_DZ UTF-8, ber_MA UTF-8, bg_BG CP1251, bg_BG.UTF-8 UTF-8, bhb_IN.UTF-8 UTF-8, bho_IN UTF-8, bho_NP UTF-8, bi_VU UTF-8, bn_BD UTF-8, bn_IN UTF-8, bo_CN UTF-8, bo_IN UTF-8, br_FR ISO-8859-1, br_FR.UTF-8 UTF-8, br_FR@euro ISO-8859-15, brx_IN UTF-8, bs_BA ISO-8859-2, bs_BA.UTF-8 UTF-8, byn_ER UTF-8, ca_AD ISO-8859-15, ca_AD.UTF-8 UTF-8, ca_ES ISO-8859-1, ca_ES.UTF-8 UTF-8, ca_ES@euro ISO-8859-15, ca_ES@valencia UTF-8, ca_FR ISO-8859-15, ca_FR.UTF-8 UTF-8, ca_IT ISO-8859-15, ca_IT.UTF-8 UTF-8, ce_RU UTF-8, chr_US UTF-8, ckb_IQ UTF-8, cmn_TW UTF-8, crh_UA UTF-8, cs_CZ ISO-8859-2, cs_CZ.UTF-8 UTF-8, csb_PL UTF-8, cv_RU UTF-8, cy_GB ISO-8859-14, cy_GB.UTF-8 UTF-8, da_DK ISO-8859-1, da_DK.UTF-8 UTF-8, de_AT ISO-8859-1, de_AT.UTF-8 UTF-8, de_AT@euro ISO-8859-15, de_BE ISO-8859-1, de_BE.UTF-8 UTF-8, de_BE@euro ISO-8859-15, de_CH ISO-8859-1, de_CH.UTF-8 UTF-8, de_DE ISO-8859-1, de_DE.UTF-8 UTF-8, de_DE@euro ISO-8859-15, de_IT ISO-8859-1, de_IT.UTF-8 UTF-8, de_LI.UTF-8 UTF-8, de_LU ISO-8859-1, de_LU.UTF-8 UTF-8, de_LU@euro ISO-8859-15, doi_IN UTF-8, dsb_DE UTF-8, dv_MV UTF-8, dz_BT UTF-8, el_CY ISO-8859-7, el_CY.UTF-8 UTF-8, el_GR ISO-8859-7, el_GR.UTF-8 UTF-8, el_GR@euro ISO-8859-7, en_AG UTF-8, en_AU ISO-8859-1, en_AU.UTF-8 UTF-8, en_BW ISO-8859-1, en_BW.UTF-8 UTF-8, en_CA ISO-8859-1, en_CA.UTF-8 UTF-8, en_DK ISO-8859-1, en_DK.ISO-8859-15 ISO-8859-15, en_DK.UTF-8 UTF-8, en_GB ISO-8859-1, en_GB.ISO-8859-15 ISO-8859-15, en_GB.UTF-8 UTF-8, en_HK ISO-8859-1, en_HK.UTF-8 UTF-8, en_IE ISO-8859-1, en_IE.UTF-8 UTF-8, en_IE@euro ISO-8859-15, en_IL UTF-8, en_IN UTF-8, en_NG UTF-8, en_NZ ISO-8859-1, en_NZ.UTF-8 UTF-8, en_PH ISO-8859-1, en_PH.UTF-8 UTF-8, en_SC.UTF-8 UTF-8, en_SG ISO-8859-1, en_SG.UTF-8 UTF-8, en_US ISO-8859-1, en_US.ISO-8859-15 ISO-8859-15, en_US.UTF-8 UTF-8, en_ZA ISO-8859-1, en_ZA.UTF-8 UTF-8, en_ZM UTF-8, en_ZW ISO-8859-1, en_ZW.UTF-8 UTF-8, eo UTF-8, eo_US.UTF-8 UTF-8, es_AR ISO-8859-1, es_AR.UTF-8 UTF-8, es_BO ISO-8859-1, es_BO.UTF-8 UTF-8, es_CL ISO-8859-1, es_CL.UTF-8 UTF-8, es_CO ISO-8859-1, es_CO.UTF-8 UTF-8, es_CR ISO-8859-1, es_CR.UTF-8 UTF-8, es_CU UTF-8, es_DO ISO-8859-1, es_DO.UTF-8 UTF-8, es_EC ISO-8859-1, es_EC.UTF-8 UTF-8, es_ES ISO-8859-1, es_ES.UTF-8 UTF-8, es_ES@euro ISO-8859-15, es_GT ISO-8859-1, es_GT.UTF-8 UTF-8, es_HN ISO-8859-1, es_HN.UTF-8 UTF-8, es_MX ISO-8859-1, es_MX.UTF-8 UTF-8, es_NI ISO-8859-1, es_NI.UTF-8 UTF-8, es_PA ISO-8859-1, es_PA.UTF-8 UTF-8, es_PE ISO-8859-1, es_PE.UTF-8 UTF-8, es_PR ISO-8859-1, es_PR.UTF-8 UTF-8, es_PY ISO-8859-1, es_PY.UTF-8 UTF-8, es_SV ISO-8859-1, es_SV.UTF-8 UTF-8, es_US ISO-8859-1, es_US.UTF-8 UTF-8, es_UY ISO-8859-1, es_UY.UTF-8 UTF-8, es_VE ISO-8859-1, es_VE.UTF-8 UTF-8, et_EE ISO-8859-1, et_EE.ISO-8859-15 ISO-8859-15, et_EE.UTF-8 UTF-8, eu_ES ISO-8859-1, eu_ES.UTF-8 UTF-8, eu_ES@euro ISO-8859-15, eu_FR ISO-8859-1, eu_FR.UTF-8 UTF-8, eu_FR@euro ISO-8859-15, fa_IR UTF-8, ff_SN UTF-8, fi_FI ISO-8859-1, fi_FI.UTF-8 UTF-8, fi_FI@euro ISO-8859-15, fil_PH UTF-8, fo_FO ISO-8859-1, fo_FO.UTF-8 UTF-8, fr_BE ISO-8859-1, fr_BE.UTF-8 UTF-8, fr_BE@euro ISO-8859-15, fr_CA ISO-8859-1, fr_CA.UTF-8 UTF-8, fr_CH ISO-8859-1, fr_CH.UTF-8 UTF-8, fr_FR ISO-8859-1, fr_FR.UTF-8 UTF-8, fr_FR@euro ISO-8859-15, fr_LU ISO-8859-1, fr_LU.UTF-8 UTF-8, fr_LU@euro ISO-8859-15, fur_IT UTF-8, fy_DE UTF-8, fy_NL UTF-8, ga_IE ISO-8859-1, ga_IE.UTF-8 UTF-8, ga_IE@euro ISO-8859-15, gd_GB ISO-8859-15, gd_GB.UTF-8 UTF-8, gez_ER UTF-8, gez_ER@abegede UTF-8, gez_ET UTF-8, gez_ET@abegede UTF-8, gl_ES ISO-8859-1, gl_ES.UTF-8 UTF-8, gl_ES@euro ISO-8859-15, gu_IN UTF-8, gv_GB ISO-8859-1, gv_GB.UTF-8 UTF-8, ha_NG UTF-8, hak_TW UTF-8, he_IL ISO-8859-8, he_IL.UTF-8 UTF-8, hi_IN UTF-8, hif_FJ UTF-8, hne_IN UTF-8, hr_HR ISO-8859-2, hr_HR.UTF-8 UTF-8, hsb_DE ISO-8859-2, hsb_DE.UTF-8 UTF-8, ht_HT UTF-8, hu_HU ISO-8859-2, hu_HU.UTF-8 UTF-8, hy_AM UTF-8, hy_AM.ARMSCII-8 ARMSCII-8, ia_FR UTF-8, id_ID ISO-8859-1, id_ID.UTF-8 UTF-8, ig_NG UTF-8, ik_CA UTF-8, is_IS ISO-8859-1, is_IS.UTF-8 UTF-8, it_CH ISO-8859-1, it_CH.UTF-8 UTF-8, it_IT ISO-8859-1, it_IT.UTF-8 UTF-8, it_IT@euro ISO-8859-15, iu_CA UTF-8, ja_JP.EUC-JP EUC-JP, ja_JP.UTF-8 UTF-8, ka_GE GEORGIAN-PS, ka_GE.UTF-8 UTF-8, kab_DZ UTF-8, kk_KZ PT154, kk_KZ.RK1048 RK1048, kk_KZ.UTF-8 UTF-8, kl_GL ISO-8859-1, kl_GL.UTF-8 UTF-8, km_KH UTF-8, kn_IN UTF-8, ko_KR.EUC-KR EUC-KR, ko_KR.UTF-8 UTF-8, kok_IN UTF-8, ks_IN UTF-8, ks_IN@devanagari UTF-8, ku_TR ISO-8859-9, ku_TR.UTF-8 UTF-8, kw_GB ISO-8859-1, kw_GB.UTF-8 UTF-8, ky_KG UTF-8, lb_LU UTF-8, lg_UG ISO-8859-10, lg_UG.UTF-8 UTF-8, li_BE UTF-8, li_NL UTF-8, lij_IT UTF-8, ln_CD UTF-8, lo_LA UTF-8, lt_LT ISO-8859-13, lt_LT.UTF-8 UTF-8, lv_LV ISO-8859-13, lv_LV.UTF-8 UTF-8, lzh_TW UTF-8, mag_IN UTF-8, mai_IN UTF-8, mai_NP UTF-8, mfe_MU UTF-8, mg_MG ISO-8859-15, mg_MG.UTF-8 UTF-8, mhr_RU UTF-8, mi_NZ ISO-8859-13, mi_NZ.UTF-8 UTF-8, miq_NI UTF-8, mjw_IN UTF-8, mk_MK ISO-8859-5, mk_MK.UTF-8 UTF-8, ml_IN UTF-8, mn_MN UTF-8, mni_IN UTF-8, mnw_MM UTF-8, mr_IN UTF-8, ms_MY ISO-8859-1, ms_MY.UTF-8 UTF-8, mt_MT ISO-8859-3, mt_MT.UTF-8 UTF-8, my_MM UTF-8, nan_TW UTF-8, nan_TW@latin UTF-8, nb_NO ISO-8859-1, nb_NO.UTF-8 UTF-8, nds_DE UTF-8, nds_NL UTF-8, ne_NP UTF-8, nhn_MX UTF-8, niu_NU UTF-8, niu_NZ UTF-8, nl_AW UTF-8, nl_BE ISO-8859-1, nl_BE.UTF-8 UTF-8, nl_BE@euro ISO-8859-15, nl_NL ISO-8859-1, nl_NL.UTF-8 UTF-8, nl_NL@euro ISO-8859-15, nn_NO ISO-8859-1, nn_NO.UTF-8 UTF-8, nr_ZA UTF-8, nso_ZA UTF-8, oc_FR ISO-8859-1, oc_FR.UTF-8 UTF-8, om_ET UTF-8, om_KE ISO-8859-1, om_KE.UTF-8 UTF-8, or_IN UTF-8, os_RU UTF-8, pa_IN UTF-8, pa_PK UTF-8, pap_AW UTF-8, pap_CW UTF-8, pl_PL ISO-8859-2, pl_PL.UTF-8 UTF-8, ps_AF UTF-8, pt_BR ISO-8859-1, pt_BR.UTF-8 UTF-8, pt_PT ISO-8859-1, pt_PT.UTF-8 UTF-8, pt_PT@euro ISO-8859-15, quz_PE UTF-8, raj_IN UTF-8, ro_RO ISO-8859-2, ro_RO.UTF-8 UTF-8, ru_RU ISO-8859-5, ru_RU.CP1251 CP1251, ru_RU.KOI8-R KOI8-R, ru_RU.UTF-8 UTF-8, ru_UA KOI8-U, ru_UA.UTF-8 UTF-8, rw_RW UTF-8, sa_IN UTF-8, sah_RU UTF-8, sat_IN UTF-8, sc_IT UTF-8, sd_IN UTF-8, sd_IN@devanagari UTF-8, sd_PK UTF-8, se_NO UTF-8, sgs_LT UTF-8, shn_MM UTF-8, shs_CA UTF-8, si_LK UTF-8, sid_ET UTF-8, sk_SK ISO-8859-2, sk_SK.UTF-8 UTF-8, sl_SI ISO-8859-2, sl_SI.UTF-8 UTF-8, sm_WS UTF-8, so_DJ ISO-8859-1, so_DJ.UTF-8 UTF-8, so_ET UTF-8, so_KE ISO-8859-1, so_KE.UTF-8 UTF-8, so_SO ISO-8859-1, so_SO.UTF-8 UTF-8, sq_AL ISO-8859-1, sq_AL.UTF-8 UTF-8, sq_MK UTF-8, sr_ME UTF-8, sr_RS UTF-8, sr_RS@latin UTF-8, ss_ZA UTF-8, st_ZA ISO-8859-1, st_ZA.UTF-8 UTF-8, sv_FI ISO-8859-1, sv_FI.UTF-8 UTF-8, sv_FI@euro ISO-8859-15, sv_SE ISO-8859-1, sv_SE.ISO-8859-15 ISO-8859-15, sv_SE.UTF-8 UTF-8, sw_KE UTF-8, sw_TZ UTF-8, szl_PL UTF-8, ta_IN UTF-8, ta_LK UTF-8, tcy_IN.UTF-8 UTF-8, te_IN UTF-8, tg_TJ KOI8-T, tg_TJ.UTF-8 UTF-8, th_TH TIS-620, th_TH.UTF-8 UTF-8, the_NP UTF-8, ti_ER UTF-8, ti_ET UTF-8, tig_ER UTF-8, tk_TM UTF-8, tl_PH ISO-8859-1, tl_PH.UTF-8 UTF-8, tn_ZA UTF-8, to_TO UTF-8, tpi_PG UTF-8, tr_CY ISO-8859-9, tr_CY.UTF-8 UTF-8, tr_TR ISO-8859-9, tr_TR.UTF-8 UTF-8, ts_ZA UTF-8, tt_RU UTF-8, tt_RU@iqtelif UTF-8, ug_CN UTF-8, ug_CN@latin UTF-8, uk_UA KOI8-U, uk_UA.UTF-8 UTF-8, unm_US UTF-8, ur_IN UTF-8, ur_PK UTF-8, uz_UZ ISO-8859-1, uz_UZ.UTF-8 UTF-8, uz_UZ@cyrillic UTF-8, ve_ZA UTF-8, vi_VN UTF-8, wa_BE ISO-8859-1, wa_BE.UTF-8 UTF-8, wa_BE@euro ISO-8859-15, wae_CH UTF-8, wal_ET UTF-8, wo_SN UTF-8, xh_ZA ISO-8859-1, xh_ZA.UTF-8 UTF-8, yi_US CP1255, yi_US.UTF-8 UTF-8, yo_NG UTF-8, yue_HK UTF-8, yuw_PG UTF-8, zh_CN GB2312, zh_CN.GB18030 GB18030, zh_CN.GBK GBK, zh_CN.UTF-8 UTF-8, zh_HK BIG5-HKSCS, zh_HK.UTF-8 UTF-8, zh_SG GB2312, zh_SG.GBK GBK, zh_SG.UTF-8 UTF-8, zh_TW BIG5, zh_TW.EUC-TW EUC-TW, zh_TW.UTF-8 UTF-8, zu_ZA ISO-8859-1, zu_ZA.UTF-8 UTF-8
+locales	locales/locales_to_be_generated	multiselect	en_US.UTF-8 UTF-8
+# Devices to remove from the volume group:
+# Choices: 
+ubiquity	partman-lvm/vgreduce_parts	multiselect	
+# Invalid input
+ubiquity	partman-auto-lvm/bad_guided_size	error	
+# for internal use; can be preseeded
+ubiquity	apt-setup/security_path	string	/ubuntu
+# Cannot access repository
+ubiquity	apt-setup/service-failed	error	
+# for internal use; can be preseeded
+ubiquity	hw-detect/load-ide	boolean	false
+# city
+# Choices: Kinshasa, Lubumbashi
+ubiquity	tzsetup/country/CD	select	Africa/Kinshasa
+# Invalid mount point
+ubiquity	partman-basicfilesystems/bad_mountpoint	error	
+# Modules to load:
+# Choices: 
+ubiquity	hw-detect/select_modules	multiselect	
+# Non-existing physical volume
+ubiquity	partman-auto-lvm/no_such_pv	error	
+# Unsafe swap space detected
+ubiquity	partman-crypto/unsafe_swap	error	
+# Error
+ubiquity	netcfg/error	error	
+# Failed to partition the selected disk
+ubiquity	partman-auto-lvm/unusable_recipe	error	
+# Go back to the menu and correct this problem?
+ubiquity	partman-partitioning/no_bootable_efi	boolean	
+# Current LVM configuration:
+ubiquity	partman-lvm/displayall	note	
+# Linux command line:
+grub-pc	grub2/linux_cmdline	string	
+# Unable to configure GRUB
+ubiquity	grub-installer/multipath-error	error	
+# Scan extra installation media?
+ubiquity	apt-setup/cdrom/set-double	boolean	true
+# Password input error
+ubiquity	user-setup/password-mismatch	error	
+user-setup	user-setup/password-mismatch	error	
+# 
+# Choices: Retry network autoconfiguration, Retry network autoconfiguration with a DHCP hostname, Configure network manually, Reconfigure the wireless network, Do not configure the network at this time
+ubiquity	netcfg/internal-wifireconf	select	
+# for internal use
+console-setup	console-setup/store_defaults_in_debconf_db	boolean	true
+# Proceed to install crypto components despite insufficient memory?
+ubiquity	partman-crypto/install_udebs_low_mem	boolean	
+# Keymap to use:
+# Choices: American English, Albanian, Arabic, Asturian, Bangladesh, Belarusian, Bengali, Belgian, Berber (Latin), Bosnian, Brazilian, British English, Bulgarian (BDS layout), Bulgarian (phonetic layout), Burmese, Canadian French, Canadian Multilingual, Catalan, Chinese, Croatian, Czech, Danish, Dutch, Dvorak, Dzongkha, Esperanto, Estonian, Ethiopian, Finnish, French, Georgian, German, Greek, Gujarati, Gurmukhi, Hebrew, Hindi, Hungarian, Icelandic, Irish, Italian, Japanese, Kannada, Kazakh, Khmer, Kirghiz, Korean, Kurdish (F layout), Kurdish (Q layout), Lao, Latin American, Latvian, Lithuanian, Macedonian, Malayalam, Nepali, Northern Sami, Norwegian, Persian, Philippines, Polish, Portuguese, Punjabi, Romanian, Russian, Serbian (Cyrillic), Sindhi, Sinhala, Slovak, Slovenian, Spanish, Swedish, Swiss French, Swiss German, Tajik, Tamil, Telugu, Thai, Tibetan, Turkish (F layout), Turkish (Q layout), Ukrainian, Uyghur, Vietnamese
+keyboard-configuration	keyboard-configuration/xkb-keymap	select	
+# for internal use; can be preseeded
+ubiquity	partman/default_filesystem	string	ext4
+# for internal use only
+ubiquity	clock-setup/system-time-changed	boolean	false
+# Really erase the data on ?
+ubiquity	partman-crypto/crypto_warn_erase	boolean	false
+# Create new empty partition table on this device?
+ubiquity	partman-partitioning/confirm_new_label	boolean	false
+# for internal use; can be preseeded
+ubiquity	disk-detect/multipath/enable	boolean	false
+# Do you intend to use FireWire Ethernet?
+ubiquity	ethdetect/use_firewire_ethernet	boolean	false
+# The partition starts from  and ends at .
+ubiquity	partman/show_partition_chs	note	
+# for internal use; can be preseeded
+# Choices: traditional, label, uuid
+ubiquity	partman/mount_style	select	uuid
+# 
+# Choices: Pakistan, India, other
+ubiquity	localechooser/shortlist/pa	select	
+# Type of encryption key for this partition:
+# Choices: 
+ubiquity	partman-crypto/keytype	select	
+# Partition table type:
+# Choices: 
+ubiquity	partman-partitioning/choose_label	select	
+# Encryption configuration failure
+ubiquity	partman-crypto/crypto_boot_not_possible	error	
+# Force GRUB installation to the EFI removable media path?
+ubiquity	grub-installer/force-efi-extra-removable	boolean	false
+# for internal use; can be preseeded
+ubiquity	auto-install/defaultroot	string	d-i/focal/./preseed.cfg
+# Do you want to upgrade glibc now?
+libc6	glibc/upgrade	boolean	true
+libc6:amd64	glibc/upgrade	boolean	true
+# zone
+# Choices: Tarawa (Gilbert Islands), Enderbury (Phoenix Islands), Kiritimati (Line Islands)
+ubiquity	tzsetup/country/KI	select	Pacific/Tarawa
+# for internal use; automatically reboot when the install completes.
+ubiquity	ubiquity/reboot	boolean	false
+# city
+# Choices: Almaty, Qyzylorda, Aqtobe, Atyrau, Oral
+ubiquity	tzsetup/country/KZ	select	Asia/Almaty
+# for internal use; can be preseeded
+ubiquity	clock-setup/utc-auto	boolean	false
+# Should man and mandb be installed 'setuid man'?
+man-db	man-db/install-setuid	boolean	false
+# Continue without a default route?
+ubiquity	netcfg/no_default_route	boolean	
+# Your system has UEFI Secure Boot enabled.
+shim-signed	shim/secureboot_explanation	note	
+# Continue without a network mirror?
+ubiquity	apt-setup/no_mirror	boolean	false
+# Error while creating a new logical volume
+ubiquity	partman-lvm/lvcreate_error	error	
+# for internal use; can be preseeded
+ubiquity	apt-setup/security_host	string	security.ubuntu.com
+# Go back to the menu?
+ubiquity	partman-basicmethods/method_only	boolean	
+# Network configuration method:
+# Choices: 
+ubiquity	netcfg/dhcp_options	select	Configure network manually
+# Override local changes to /etc/pam.d/common-*?
+libpam-runtime	libpam-runtime/override	boolean	false
+# Error while deleting volume group
+ubiquity	partman-lvm/vgdelete_error	error	
+# for internal use; can be preseeded
+ubiquity	ubiquity/minimal_install	boolean	false
+# Failed to unmount partitions
+ubiquity	ubiquity/partman-failed-unmount	boolean	true
+# 
+# Choices: Argentina, Bolivia, Brazil, Chile, Colombia, Ecuador, French Guiana, Guyana, Paraguay, Peru, Suriname, Uruguay, Venezuela
+ubiquity	localechooser/countrylist/South_America	select	
+# Encryption configuration actions
+# Choices: Activate existing encrypted volumes, Create encrypted volumes, Finish
+ubiquity	partman-crypto/mainmenu	select	
+# Chainload from menu.lst?
+grub-pc	grub-pc/chainload_from_menu.lst	boolean	true
+# Password input error
+ubiquity	grub-installer/password-mismatch	error	
+# Initialisation of encrypted volume failed
+ubiquity	partman-crypto/init_failed	error	
+# Time zone:
+# Choices: Adak, Anchorage, Anguilla, Antigua, Araguaina, Argentina/Buenos_Aires, Argentina/Catamarca, Argentina/Cordoba, Argentina/Jujuy, Argentina/La_Rioja, Argentina/Mendoza, Argentina/Rio_Gallegos, Argentina/Salta, Argentina/San_Juan, Argentina/San_Luis, Argentina/Tucuman, Argentina/Ushuaia, Aruba, Asuncion, Atikokan, Atka, Bahia, Bahia_Banderas, Barbados, Belem, Belize, Blanc-Sablon, Boa_Vista, Bogota, Boise, Cambridge_Bay, Campo_Grande, Cancun, Caracas, Cayenne, Cayman, Chicago, Chihuahua, Ciudad_Juarez, Coral_Harbour, Costa_Rica, Creston, Cuiaba, Curacao, Danmarkshavn, Dawson, Dawson_Creek, Denver, Detroit, Dominica, Edmonton, Eirunepe, El_Salvador, Ensenada, Fort_Nelson, Fortaleza, Glace_Bay, Godthab, Goose_Bay, Grand_Turk, Grenada, Guadeloupe, Guatemala, Guayaquil, Guyana, Halifax, Havana, Hermosillo, Indiana/Indianapolis, Indiana/Knox, Indiana/Marengo, Indiana/Petersburg, Indiana/Tell_City, Indiana/Vevay, Indiana/Vincennes, Indiana/Winamac, Inuvik, Iqaluit, Jamaica, Juneau, Kentucky/Louisville, Kentucky/Monticello, Kralendijk, La_Paz, Lima, Los_Angeles, Lower_Princes, Maceio, Managua, Manaus, Marigot, Martinique, Matamoros, Mazatlan, Menominee, Merida, Metlakatla, Mexico_City, Miquelon, Moncton, Monterrey, Montevideo, Montreal, Montserrat, Nassau, New_York, Nipigon, Nome, Noronha, North_Dakota/Beulah, North_Dakota/Center, North_Dakota/New_Salem, Nuuk, Ojinaga, Panama, Pangnirtung, Paramaribo, Phoenix, Port-au-Prince, Port_of_Spain, Porto_Acre, Porto_Velho, Puerto_Rico, Punta_Arenas, Rainy_River, Rankin_Inlet, Recife, Regina, Resolute, Rio_Branco, Santa_Isabel, Santarem, Santiago, Santo_Domingo, Sao_Paulo, Scoresbysund, Shiprock, Sitka, St_Barthelemy, St_Johns, St_Kitts, St_Lucia, St_Thomas, St_Vincent, Swift_Current, Tegucigalpa, Thule, Thunder_Bay, Tijuana, Toronto, Tortola, Vancouver, Virgin, Whitehorse, Winnipeg, Yakutat, Yellowknife
+tzdata	tzdata/Zones/America	select	
+# PAM profiles to enable:
+# Choices: Unix authentication, Register user sessions in the systemd control group hierarchy, Create home directory on login, Inheritable Capabilities Management
+libpam-runtime	libpam-runtime/profiles	multiselect	unix, systemd, capability
+# Bad archive mirror
+ubiquity	mirror/bad	error	
+# Name server addresses:
+ubiquity	netcfg/get_nameservers	string	
+# 
+# Choices: American Samoa, Australia, Cook Islands, Fiji, French Polynesia, Guam, Kiribati, Marshall Islands, Micronesia\, Federated States of, Nauru, New Caledonia, New Zealand, Niue, Norfolk Island, Northern Mariana Islands, Palau, Papua New Guinea, Pitcairn, Samoa, Solomon Islands, Tokelau, Tonga, Tuvalu, United States Minor Outlying Islands, Vanuatu, Wallis and Futuna
+ubiquity	localechooser/countrylist/Oceania	select	
+# Type of wireless network:
+# Choices: Infrastructure (Managed) network, Ad-hoc network (Peer to peer)
+ubiquity	netcfg/wireless_adhoc_managed	select	Infrastructure (Managed) network
+# 
+# Choices: Retry network autoconfiguration, Retry network autoconfiguration with a DHCP hostname, Configure network manually, Do not configure the network at this time
+ubiquity	netcfg/internal-nowifi	select	
+# Use restricted software?
+ubiquity	apt-setup/restricted	boolean	true
+# Encryption method for this partition:
+# Choices: 
+ubiquity	partman-crypto/crypto_type	select	
+# Wireless ESSID for :
+ubiquity	netcfg/wireless_essid	string	
+# Failed to create a file system
+ubiquity	partman-basicfilesystems/create_failed	error	
+# Abort kernel removal?
+linux-base	linux-base/removing-running-kernel	boolean	true
+# Username for your account:
+ubiquity	passwd/username	string	
+user-setup	passwd/username	string	
+# Device for boot loader installation:
+ubiquity	grub-installer/bootdev	string	
+# Skip extra installation to the EFI removable media path?
+grub-pc	grub2/no_efi_extra_removable	boolean	false
+# No devices selected
+ubiquity	partman-crypto/create/nosel	error	
+# Location of initial preconfiguration file:
+ubiquity	preseed/url	string	
+# for internal use
+keyboard-configuration	keyboard-configuration/modelcode	string	pc105
+# Services to restart for PAM library upgrade:
+libpam0g:amd64	libpam0g/restart-services	string	
+# The encryption key for  is now being created.
+ubiquity	partman-crypto/entropy	entropy	
+# System default wordlist:
+# Choices: , Manual symlink setting
+dictionaries-common	dictionaries-common/default-wordlist	select	
+# Installation Failed
+ubiquity	ubiquity/install/copying_error/no_space	error	
+# Default values for ispell dictionary/wordlist not set
+dictionaries-common	dictionaries-common/selecting_ispell_wordlist_default	note	
+# Error while creating a new logical volume
+ubiquity	partman-lvm/lvcreate_exists	error	
+# Encryption configuration failure
+ubiquity	partman-crypto/crypto_root_needs_boot	error	
+# Install the GRUB boot loader to the multipath device?
+ubiquity	grub-installer/multipath	boolean	true
+# Continue with partitioning?
+ubiquity	partman-partitioning/unknown_label	boolean	true
+# Incompatible PAM profiles selected.
+libpam-runtime	libpam-runtime/conflicts	error	
+# 
+# Choices: 
+ubiquity	time/zone	select	
+# for internal use; can be preseeded
+ubiquity	ubiquity/only-show-installable-languages	boolean	false
+# 
+# Choices: Russian Federation, Ukraine, other
+ubiquity	localechooser/shortlist/ru	select	
+# 
+# Choices: Canada, Mexico, Saint Pierre and Miquelon, United States
+ubiquity	localechooser/countrylist/North_America	select	
+# Ubuntu archive mirror directory:
+ubiquity	mirror/http/directory	string	/ubuntu/
+# Kill switch enabled on 
+ubiquity	netcfg/kill_switch_enabled	note	
+# for internal use; can be preseeded
+ubiquity	preseed/include/checksum	string	
+# for internal use only
+ubiquity	passwd/auto-login	boolean	false
+user-setup	passwd/auto-login	boolean	false
+# Time zone:
+# Choices: Longyearbyen
+tzdata	tzdata/Zones/Arctic	select	
+# New partition size:
+ubiquity	partman-partitioning/new_partition_size	string	some number
+# Volume group to extend:
+# Choices: 
+ubiquity	partman-lvm/vgextend_names	select	
+# No physical volumes selected
+ubiquity	partman-lvm/vgextend_nosel	error	
+# Invalid network link detection waiting time
+ubiquity	netcfg/bad_link_wait_timeout	error	
+# Trust new certificates from certificate authorities?
+# Choices: yes, no, ask
+ca-certificates	ca-certificates/trust_new_crts	select	yes
+# Unreachable gateway
+ubiquity	netcfg/gateway_unreachable	error	
+# Create a normal user account now?
+ubiquity	passwd/make-user	boolean	true
+user-setup	passwd/make-user	boolean	true
+# New certificates to activate:
+# Choices: 
+ca-certificates	ca-certificates/new_crts	multiselect	
+# Possible debconf database corruption
+dictionaries-common	dictionaries-common/debconf_database_corruption	error	
+# Write previous changes to disk and continue?
+ubiquity	partman-partitioning/confirm_resize	boolean	
+# Activate MDADM containers (Intel/DDF RAID)?
+ubiquity	disk-detect/activate_mdadm	boolean	true
+# Reboot recommended
+resolvconf	resolvconf/downup-interfaces	note	
+# for internal use; can be preseeded
+ubiquity	preseed/boot_command	string	
+# The size entered is invalid
+ubiquity	partman-partitioning/bad_new_size	error	
+# Ubuntu archive mirror directory:
+ubiquity	mirror/ftp/directory	string	/ubuntu/
+# Write the changes to disks?
+ubiquity	partman/confirm_nooverwrite	boolean	false
+# Installation Failed
+ubiquity	ubiquity/install/copying_error/cd_hd_fault	error	
+# for internal use; set when the partman cache needs to be rebuilt
+ubiquity	ubiquity/partman-rebuild-cache	boolean	true
+# Error installing 
+ubiquity	ubiquity/install/apt_error_install	error	
+# Invalid file system for this mount point
+ubiquity	partman-basicfilesystems/posix_filesystem_required	error	
+# Logical Volume Management
+ubiquity	partman-lvm/help	note	
+# 
+# Choices: Spain, France, other
+ubiquity	localechooser/shortlist/eu	select	
+# for internal use; can be preseeded
+ubiquity	netcfg/enable	boolean	true
+# Dummy template for preseeding unavailable questions
+ubiquity	debian-installer/dummy	string	
+# Keep default keyboard options ()?
+keyboard-configuration	keyboard-configuration/unsupported_options	boolean	true
+# Go back to the menu and correct errors?
+ubiquity	partman-basicfilesystems/check_failed	boolean	
+# No physical volumes selected
+ubiquity	partman-lvm/vgcreate_nosel	error	
+# Wait another 30 seconds for hwclock to set the clock?
+ubiquity	clock-setup/hwclock-wait	boolean	false
+# Problems rebuilding an  hash file ()
+dictionaries-common	dictionaries-common/ispell-autobuildhash-message	note	
+# NTP server to use:
+ubiquity	clock-setup/ntp-server	string	ntp.ubuntu.com
+# 
+# Choices: Italy, Switzerland, other
+ubiquity	localechooser/shortlist/it	select	
+# New partition size:
+ubiquity	partman-partitioning/new_size	string	some number
+# Interface to use:
+# Choices: Dialog, Readline, Gnome, Kde, Editor, Noninteractive
+debconf	debconf/frontend	select	Dialog
+# for internal use; determines whether a bootloader will be installed
+ubiquity	ubiquity/install_bootloader	boolean	true
+# WPA/WPA2 passphrase for wireless device :
+ubiquity	netcfg/wireless_wpa	string	
+# Failed to run preseeded command
+ubiquity	preseed/command_failed	error	
+# Use weak password?
+ubiquity	user-setup/password-weak	boolean	
+user-setup	user-setup/password-weak	boolean	
+# for internal use; can be preseeded
+ubiquity	ubiquity/keep-installed	string	
+# Error while extending volume group
+ubiquity	partman-lvm/vgextend_error	error	
+# Detecting your keyboard layout
+keyboard-configuration	console-setup/detect	detect-keyboard	
+# Remove obsolete /etc/dictionary link?
+dictionaries-common	dictionaries-common/old_wordlist_link	boolean	true
+# Identical mount points for two file systems
+ubiquity	partman-target/same_mountpoint	error	
+# 
+# Choices: Belgium, Germany, Italy, Liechtenstein, Luxembourg, Switzerland, Austria, other
+ubiquity	localechooser/shortlist/de	select	
+# Partitioning method:
+# Choices: 
+ubiquity	partman-auto/init_automatically_partition	select	
+# Existing configuration found
+ufw	ufw/existing_configuration	error	
+# for internal use; can be preseeded
+ubiquity	grub-installer/grub2_instead_of_grub_legacy	boolean	true
+# Failure of key exchange and association
+ubiquity	netcfg/wpa_supplicant_failed	note	
+# Driver needed for your disk drive:
+# Choices: continue with no disk drive, , none of the above
+ubiquity	disk-detect/module_select	select	continue with no disk drive
+# GRUB timeout; for internal use
+grub-pc	grub-pc/timeout	string	0
+# Mount point for this partition:
+ubiquity	partman-basicfilesystems/mountpoint_manual	string	
+# Do you want to change the UID of user ?
+base-passwd	base-passwd/user-change-uid	boolean	true
+# Failure restarting some services for OpenSSL upgrade
+libssl3:amd64	libssl3/restart-failed	error	
+# Label for the file system in this partition:
+ubiquity	partman-basicfilesystems/choose_label	string	
+# Keyboard layout:
+# Choices: English (US), English (US) - Cherokee, English (US) - English (Colemak), English (US) - English (Colemak-DH ISO), English (US) - English (Colemak-DH), English (US) - English (Dvorak), English (US) - English (Dvorak\, alt. intl.), English (US) - English (Dvorak\, intl.\, with dead keys), English (US) - English (Dvorak\, left-handed), English (US) - English (Dvorak\, right-handed), English (US) - English (Macintosh), English (US) - English (Norman), English (US) - English (US\, Symbolic), English (US) - English (US\, alt. intl.), English (US) - English (US\, euro on 5), English (US) - English (US\, intl.\, with dead keys), English (US) - English (Workman), English (US) - English (Workman\, intl.\, with dead keys), English (US) - English (classic Dvorak), English (US) - English (intl.\, with AltGr dead keys), English (US) - English (programmer Dvorak), English (US) - English (the divide/multiply toggle the layout), English (US) - Hawaiian, English (US) - Russian (US\, phonetic), English (US) - Serbo-Croatian (US)
+keyboard-configuration	keyboard-configuration/variant	select	English (US)
+# zone
+# Choices: North-West, Pacific, Sonora, Central, South-East
+ubiquity	tzsetup/country/MX	select	Mexico/General
+# for internal use only
+ubiquity	debian-installer/consoledisplay	string	
+# Prepare /etc/resolv.conf for dynamic updates?
+resolvconf	resolvconf/linkify-resolvconf	boolean	true
+# Failed to retrieve the preconfiguration file
+ubiquity	preseed/retrieve_error	error	
+# Keep default keyboard layout ()?
+keyboard-configuration	keyboard-configuration/unsupported_layout	boolean	true
+# for internal use; forces the installation to use vesa or fbdev.
+ubiquity	ubiquity/force_failsafe_graphics	boolean	false
+# 
+# Choices: Brazil, Portugal, other
+ubiquity	localechooser/shortlist/pt_BR	select	
+# GRUB install devices:
+# Choices: 
+grub-pc	grub-pc/install_devices_disks_changed	multiselect	
+#  is too small
+ubiquity	partman-auto-lvm/small_guided_size	error	
+# Encoding to use on the console:
+# Choices: ARMSCII-8, CP1251, CP1255, CP1256, GEORGIAN-ACADEMY, GEORGIAN-PS, IBM1133, ISIRI-3342, ISO-8859-1, ISO-8859-10, ISO-8859-11, ISO-8859-13, ISO-8859-14, ISO-8859-15, ISO-8859-16, ISO-8859-2, ISO-8859-3, ISO-8859-4, ISO-8859-5, ISO-8859-6, ISO-8859-7, ISO-8859-8, ISO-8859-9, KOI8-R, KOI8-U, TIS-620, UTF-8, VISCII
+console-setup	console-setup/charmap47	select	UTF-8
+# Go back and try a different mirror?
+ubiquity	mirror/no-default	boolean	true
+# Invalid ESSID
+ubiquity	netcfg/invalid_essid	error	
+# Go back to the menu and correct this problem?
+ubiquity	partman-partitioning/no_bootable_biosgrub	boolean	
+# No volume group found
+ubiquity	partman-lvm/vgreduce_novg	error	
+# Empty password
+ubiquity	user-setup/password-empty	error	
+user-setup	user-setup/password-empty	error	
+# Country of origin for the keyboard:
+# Choices: A user-defined custom Layout, Afghani, Albanian, Amharic, Arabic, Arabic (Morocco), Arabic (Syria), Armenian, Azerbaijani, Bambara, Bangla, Belarusian, Belgian, Berber (Algeria\, Latin), Bosnian, Braille, Bulgarian, Burmese, Chinese, Croatian, Czech, Danish, Dhivehi, Dutch, Dzongkha, English (Australian), English (Cameroon), English (Ghana), English (Nigeria), English (South Africa), English (UK), English (US), Esperanto, Estonian, Faroese, Filipino, Finnish, French, French (Canada), French (Democratic Republic of the Congo), French (Togo), Georgian, German, German (Austria), Greek, Hebrew, Hungarian, Icelandic, Indian, Indonesian (Javanese), Indonesian (Latin), Iraqi, Irish, Italian, Japanese, Japanese (PC-98), Kazakh, Khmer (Cambodia), Korean, Kyrgyz, Lao, Latvian, Lithuanian, Macedonian, Malay (Jawi\, Arabic Keyboard), Maltese, Maori, Moldavian, Mongolian, Montenegrin, NKo (AZERTY), Nepali, Norwegian, Persian, Polish, Portuguese, Portuguese (Brazil), Romanian, Russian, Serbian, Sinhala (phonetic), Slovak, Slovenian, Spanish, Spanish (Latin American), Swahili (Kenya), Swahili (Tanzania), Swedish, Switzerland, Taiwanese, Tajik, Thai, Tswana, Turkish, Turkmen, Ukrainian, Urdu (Pakistan), Uzbek, Vietnamese, Wolof
+keyboard-configuration	keyboard-configuration/layout	select	English (US)
+# Language:
+# Choices: 
+ubiquity	localechooser/languagelist	select	en
+# Time zone:
+# Choices: Adelaide, Brisbane, Broken Hill, Canberra, Currie, Darwin, Eucla, Hobart, Lindeman, Lord Howe, Melbourne, Perth, Sydney, Yancowinna
+tzdata	tzdata/Zones/Australia	select	
+# location
+# Choices: Guayaquil, Galapagos
+ubiquity	tzsetup/country/EC	select	America/Guayaquil
+# for internal use
+keyboard-configuration	keyboard-configuration/layoutcode	string	us
+# for internal use
+console-setup	console-setup/fontsize	string	8x16
+# Time zone:
+# Choices: Abidjan, Accra, Addis_Ababa, Algiers, Asmara, Bamako, Bangui, Banjul, Bissau, Blantyre, Brazzaville, Bujumbura, Cairo, Casablanca, Ceuta, Conakry, Dakar, Dar_es_Salaam, Djibouti, Douala, El_Aaiun, Freetown, Gaborone, Harare, Johannesburg, Juba, Kampala, Khartoum, Kigali, Kinshasa, Lagos, Libreville, Lome, Luanda, Lubumbashi, Lusaka, Malabo, Maputo, Maseru, Mbabane, Mogadishu, Monrovia, Nairobi, Ndjamena, Niamey, Nouakchott, Ouagadougou, Porto-Novo, Sao_Tome, Timbuktu, Tripoli, Tunis, Windhoek
+tzdata	tzdata/Zones/Africa	select	
+# 
+ubiquity	debian-installer/shell-plugin	terminal	
+# for internal use; can be preseeded
+# Choices: Network Manager, ifupdown (/etc/network/interfaces), No network configuration
+ubiquity	netcfg/target_network_config	select	
+# No logical volume found
+ubiquity	partman-lvm/lvdelete_nolv	error	
+# Type for the new partition:
+# Choices: Primary, Logical
+ubiquity	partman-partitioning/new_partition_type	select	
+# for internal use
+ubiquity	ubiquity/online	boolean	
+# Error setting up VLAN
+ubiquity	netcfg/vlan_failed	error	
+# Linux default command line:
+grub-pc	grub2/linux_cmdline_default	string	quiet splash
+# Display manager must be restarted manually
+libpam0g:amd64	libpam0g/xdm-needs-restart	error	
+# for internal use; can be preseeded
+ubiquity	partman-auto/cap-ram	string	1024
+# Services to restart to make them use the new libraries:
+libssl3:amd64	libssl3/restart-services	string	
+# Reserved username
+ubiquity	passwd/username-reserved	error	
+user-setup	passwd/username-reserved	error	
+# No partitions to encrypt
+ubiquity	partman-crypto/nothing_to_setup	note	
+# Failure restarting some services for GNU libc upgrade
+libc6	glibc/restart-failed	error	
+libc6:amd64	glibc/restart-failed	error	
+# Load missing drivers from removable media?
+ubiquity	hw-detect/load_media	boolean	false
+# GRUB installation failed
+ubiquity	grub-installer/apt-install-failed	error	
+# Key size for this partition:
+# Choices: 
+ubiquity	partman-crypto/keysize	select	
+# 
+# Choices: Belize, Costa Rica, El Salvador, Guatemala, Honduras, Nicaragua, Panama
+ubiquity	localechooser/countrylist/Central_America	select	
+# Additional locales:
+# Choices: 
+ubiquity	localechooser/supported-locales	multiselect	
+# Do you want to add the user ?
+base-passwd	base-passwd/user-add	boolean	true
+# Full name for the new user:
+ubiquity	passwd/user-fullname	string	
+user-setup	passwd/user-fullname	string	
+# Keep current partition layout and configure LVM?
+ubiquity	partman-lvm/confirm_nochanges	boolean	false
+# Do you want to return to the partitioner?
+ubiquity	ubiquity/partman-system-unformatted	boolean	
+# btrfs root file system not supported without separate /boot
+ubiquity	partman-btrfs/btrfs_root	error	
+# Failed to mount /target/proc
+ubiquity	grub-installer/mounterr	error	
+# Unable to install GRUB in 
+ubiquity	grub-installer/grub-install-failed	error	
+# Conflicts found in three-way merge
+ucf	ucf/conflicts_found	error	
+# Translations temporarily not available
+ubiquity	localechooser/translation/none-yet	note	
+# Cannot upgrade Secure Boot enforcement policy due to unsigned kernels
+grub-pc	grub2/unsigned_kernels	note	
+# Certificates to activate:
+# Choices: mozilla/ACCVRAIZ1.crt, mozilla/AC_RAIZ_FNMT-RCM.crt, mozilla/AC_RAIZ_FNMT-RCM_SERVIDORES_SEGUROS.crt, mozilla/ANF_Secure_Server_Root_CA.crt, mozilla/Actalis_Authentication_Root_CA.crt, mozilla/AffirmTrust_Commercial.crt, mozilla/AffirmTrust_Networking.crt, mozilla/AffirmTrust_Premium.crt, mozilla/AffirmTrust_Premium_ECC.crt, mozilla/Amazon_Root_CA_1.crt, mozilla/Amazon_Root_CA_2.crt, mozilla/Amazon_Root_CA_3.crt, mozilla/Amazon_Root_CA_4.crt, mozilla/Atos_TrustedRoot_2011.crt, mozilla/Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068.crt, mozilla/Baltimore_CyberTrust_Root.crt, mozilla/Buypass_Class_2_Root_CA.crt, mozilla/Buypass_Class_3_Root_CA.crt, mozilla/CA_Disig_Root_R2.crt, mozilla/CFCA_EV_ROOT.crt, mozilla/COMODO_Certification_Authority.crt, mozilla/COMODO_ECC_Certification_Authority.crt, mozilla/COMODO_RSA_Certification_Authority.crt, mozilla/Certigna.crt, mozilla/Certigna_Root_CA.crt, mozilla/Certum_EC-384_CA.crt, mozilla/Certum_Trusted_Network_CA.crt, mozilla/Certum_Trusted_Network_CA_2.crt, mozilla/Certum_Trusted_Root_CA.crt, mozilla/Comodo_AAA_Services_root.crt, mozilla/Cybertrust_Global_Root.crt, mozilla/D-TRUST_Root_Class_3_CA_2_2009.crt, mozilla/D-TRUST_Root_Class_3_CA_2_EV_2009.crt, mozilla/DigiCert_Assured_ID_Root_CA.crt, mozilla/DigiCert_Assured_ID_Root_G2.crt, mozilla/DigiCert_Assured_ID_Root_G3.crt, mozilla/DigiCert_Global_Root_CA.crt, mozilla/DigiCert_Global_Root_G2.crt, mozilla/DigiCert_Global_Root_G3.crt, mozilla/DigiCert_High_Assurance_EV_Root_CA.crt, mozilla/DigiCert_Trusted_Root_G4.crt, mozilla/E-Tugra_Certification_Authority.crt, mozilla/EC-ACC.crt, mozilla/Entrust.net_Premium_2048_Secure_Server_CA.crt, mozilla/Entrust_Root_Certification_Authority.crt, mozilla/Entrust_Root_Certification_Authority_-_EC1.crt, mozilla/Entrust_Root_Certification_Authority_-_G2.crt, mozilla/Entrust_Root_Certification_Authority_-_G4.crt, mozilla/GDCA_TrustAUTH_R5_ROOT.crt, mozilla/GLOBALTRUST_2020.crt, mozilla/GTS_Root_R1.crt, mozilla/GTS_Root_R2.crt, mozilla/GTS_Root_R3.crt, mozilla/GTS_Root_R4.crt, mozilla/GlobalSign_ECC_Root_CA_-_R4.crt, mozilla/GlobalSign_ECC_Root_CA_-_R5.crt, mozilla/GlobalSign_Root_CA.crt, mozilla/GlobalSign_Root_CA_-_R2.crt, mozilla/GlobalSign_Root_CA_-_R3.crt, mozilla/GlobalSign_Root_CA_-_R6.crt, mozilla/GlobalSign_Root_E46.crt, mozilla/GlobalSign_Root_R46.crt, mozilla/Go_Daddy_Class_2_CA.crt, mozilla/Go_Daddy_Root_Certificate_Authority_-_G2.crt, mozilla/Hellenic_Academic_and_Research_Institutions_ECC_RootCA_2015.crt, mozilla/Hellenic_Academic_and_Research_Institutions_RootCA_2011.crt, mozilla/Hellenic_Academic_and_Research_Institutions_RootCA_2015.crt, mozilla/Hongkong_Post_Root_CA_1.crt, mozilla/Hongkong_Post_Root_CA_3.crt, mozilla/ISRG_Root_X1.crt, mozilla/IdenTrust_Commercial_Root_CA_1.crt, mozilla/IdenTrust_Public_Sector_Root_CA_1.crt, mozilla/Izenpe.com.crt, mozilla/Microsec_e-Szigno_Root_CA_2009.crt, mozilla/Microsoft_ECC_Root_Certificate_Authority_2017.crt, mozilla/Microsoft_RSA_Root_Certificate_Authority_2017.crt, mozilla/NAVER_Global_Root_Certification_Authority.crt, mozilla/NetLock_Arany_=Class_Gold=_Főtanúsítvány.crt, mozilla/Network_Solutions_Certificate_Authority.crt, mozilla/OISTE_WISeKey_Global_Root_GB_CA.crt, mozilla/OISTE_WISeKey_Global_Root_GC_CA.crt, mozilla/QuoVadis_Root_CA_1_G3.crt, mozilla/QuoVadis_Root_CA_2.crt, mozilla/QuoVadis_Root_CA_2_G3.crt, mozilla/QuoVadis_Root_CA_3.crt, mozilla/QuoVadis_Root_CA_3_G3.crt, mozilla/SSL.com_EV_Root_Certification_Authority_ECC.crt, mozilla/SSL.com_EV_Root_Certification_Authority_RSA_R2.crt, mozilla/SSL.com_Root_Certification_Authority_ECC.crt, mozilla/SSL.com_Root_Certification_Authority_RSA.crt, mozilla/SZAFIR_ROOT_CA2.crt, mozilla/SecureSign_RootCA11.crt, mozilla/SecureTrust_CA.crt, mozilla/Secure_Global_CA.crt, mozilla/Security_Communication_RootCA2.crt, mozilla/Security_Communication_Root_CA.crt, mozilla/Staat_der_Nederlanden_EV_Root_CA.crt, mozilla/Starfield_Class_2_CA.crt, mozilla/Starfield_Root_Certificate_Authority_-_G2.crt, mozilla/Starfield_Services_Root_Certificate_Authority_-_G2.crt, mozilla/SwissSign_Gold_CA_-_G2.crt, mozilla/SwissSign_Silver_CA_-_G2.crt, mozilla/T-TeleSec_GlobalRoot_Class_2.crt, mozilla/T-TeleSec_GlobalRoot_Class_3.crt, mozilla/TUBITAK_Kamu_SM_SSL_Kok_Sertifikasi_-_Surum_1.crt, mozilla/TWCA_Global_Root_CA.crt, mozilla/TWCA_Root_Certification_Authority.crt, mozilla/TeliaSonera_Root_CA_v1.crt, mozilla/Trustwave_Global_Certification_Authority.crt, mozilla/Trustwave_Global_ECC_P256_Certification_Authority.crt, mozilla/Trustwave_Global_ECC_P384_Certification_Authority.crt, mozilla/UCA_Extended_Validation_Root.crt, mozilla/UCA_Global_G2_Root.crt, mozilla/USERTrust_ECC_Certification_Authority.crt, mozilla/USERTrust_RSA_Certification_Authority.crt, mozilla/XRamp_Global_CA_Root.crt, mozilla/certSIGN_ROOT_CA.crt, mozilla/certSIGN_Root_CA_G2.crt, mozilla/e-Szigno_Root_CA_2017.crt, mozilla/ePKI_Root_Certification_Authority.crt, mozilla/emSign_ECC_Root_CA_-_C3.crt, mozilla/emSign_ECC_Root_CA_-_G3.crt, mozilla/emSign_Root_CA_-_C1.crt, mozilla/emSign_Root_CA_-_G1.crt
+ca-certificates	ca-certificates/enable_crts	multiselect	mozilla/ACCVRAIZ1.crt, mozilla/AC_RAIZ_FNMT-RCM.crt, mozilla/AC_RAIZ_FNMT-RCM_SERVIDORES_SEGUROS.crt, mozilla/ANF_Secure_Server_Root_CA.crt, mozilla/Actalis_Authentication_Root_CA.crt, mozilla/AffirmTrust_Commercial.crt, mozilla/AffirmTrust_Networking.crt, mozilla/AffirmTrust_Premium.crt, mozilla/AffirmTrust_Premium_ECC.crt, mozilla/Amazon_Root_CA_1.crt, mozilla/Amazon_Root_CA_2.crt, mozilla/Amazon_Root_CA_3.crt, mozilla/Amazon_Root_CA_4.crt, mozilla/Atos_TrustedRoot_2011.crt, mozilla/Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068.crt, mozilla/Baltimore_CyberTrust_Root.crt, mozilla/Buypass_Class_2_Root_CA.crt, mozilla/Buypass_Class_3_Root_CA.crt, mozilla/CA_Disig_Root_R2.crt, mozilla/CFCA_EV_ROOT.crt, mozilla/COMODO_Certification_Authority.crt, mozilla/COMODO_ECC_Certification_Authority.crt, mozilla/COMODO_RSA_Certification_Authority.crt, mozilla/Certigna.crt, mozilla/Certigna_Root_CA.crt, mozilla/Certum_EC-384_CA.crt, mozilla/Certum_Trusted_Network_CA.crt, mozilla/Certum_Trusted_Network_CA_2.crt, mozilla/Certum_Trusted_Root_CA.crt, mozilla/Comodo_AAA_Services_root.crt, mozilla/Cybertrust_Global_Root.crt, mozilla/D-TRUST_Root_Class_3_CA_2_2009.crt, mozilla/D-TRUST_Root_Class_3_CA_2_EV_2009.crt, mozilla/DigiCert_Assured_ID_Root_CA.crt, mozilla/DigiCert_Assured_ID_Root_G2.crt, mozilla/DigiCert_Assured_ID_Root_G3.crt, mozilla/DigiCert_Global_Root_CA.crt, mozilla/DigiCert_Global_Root_G2.crt, mozilla/DigiCert_Global_Root_G3.crt, mozilla/DigiCert_High_Assurance_EV_Root_CA.crt, mozilla/DigiCert_Trusted_Root_G4.crt, mozilla/E-Tugra_Certification_Authority.crt, mozilla/EC-ACC.crt, mozilla/Entrust.net_Premium_2048_Secure_Server_CA.crt, mozilla/Entrust_Root_Certification_Authority.crt, mozilla/Entrust_Root_Certification_Authority_-_EC1.crt, mozilla/Entrust_Root_Certification_Authority_-_G2.crt, mozilla/Entrust_Root_Certification_Authority_-_G4.crt, mozilla/GDCA_TrustAUTH_R5_ROOT.crt, mozilla/GLOBALTRUST_2020.crt, mozilla/GTS_Root_R1.crt, mozilla/GTS_Root_R2.crt, mozilla/GTS_Root_R3.crt, mozilla/GTS_Root_R4.crt, mozilla/GlobalSign_ECC_Root_CA_-_R4.crt, mozilla/GlobalSign_ECC_Root_CA_-_R5.crt, mozilla/GlobalSign_Root_CA.crt, mozilla/GlobalSign_Root_CA_-_R2.crt, mozilla/GlobalSign_Root_CA_-_R3.crt, mozilla/GlobalSign_Root_CA_-_R6.crt, mozilla/GlobalSign_Root_E46.crt, mozilla/GlobalSign_Root_R46.crt, mozilla/Go_Daddy_Class_2_CA.crt, mozilla/Go_Daddy_Root_Certificate_Authority_-_G2.crt, mozilla/Hellenic_Academic_and_Research_Institutions_ECC_RootCA_2015.crt, mozilla/Hellenic_Academic_and_Research_Institutions_RootCA_2011.crt, mozilla/Hellenic_Academic_and_Research_Institutions_RootCA_2015.crt, mozilla/Hongkong_Post_Root_CA_1.crt, mozilla/Hongkong_Post_Root_CA_3.crt, mozilla/ISRG_Root_X1.crt, mozilla/IdenTrust_Commercial_Root_CA_1.crt, mozilla/IdenTrust_Public_Sector_Root_CA_1.crt, mozilla/Izenpe.com.crt, mozilla/Microsec_e-Szigno_Root_CA_2009.crt, mozilla/Microsoft_ECC_Root_Certificate_Authority_2017.crt, mozilla/Microsoft_RSA_Root_Certificate_Authority_2017.crt, mozilla/NAVER_Global_Root_Certification_Authority.crt, mozilla/NetLock_Arany_=Class_Gold=_Főtanúsítvány.crt, mozilla/Network_Solutions_Certificate_Authority.crt, mozilla/OISTE_WISeKey_Global_Root_GB_CA.crt, mozilla/OISTE_WISeKey_Global_Root_GC_CA.crt, mozilla/QuoVadis_Root_CA_1_G3.crt, mozilla/QuoVadis_Root_CA_2.crt, mozilla/QuoVadis_Root_CA_2_G3.crt, mozilla/QuoVadis_Root_CA_3.crt, mozilla/QuoVadis_Root_CA_3_G3.crt, mozilla/SSL.com_EV_Root_Certification_Authority_ECC.crt, mozilla/SSL.com_EV_Root_Certification_Authority_RSA_R2.crt, mozilla/SSL.com_Root_Certification_Authority_ECC.crt, mozilla/SSL.com_Root_Certification_Authority_RSA.crt, mozilla/SZAFIR_ROOT_CA2.crt, mozilla/SecureSign_RootCA11.crt, mozilla/SecureTrust_CA.crt, mozilla/Secure_Global_CA.crt, mozilla/Security_Communication_RootCA2.crt, mozilla/Security_Communication_Root_CA.crt, mozilla/Staat_der_Nederlanden_EV_Root_CA.crt, mozilla/Starfield_Class_2_CA.crt, mozilla/Starfield_Root_Certificate_Authority_-_G2.crt, mozilla/Starfield_Services_Root_Certificate_Authority_-_G2.crt, mozilla/SwissSign_Gold_CA_-_G2.crt, mozilla/SwissSign_Silver_CA_-_G2.crt, mozilla/T-TeleSec_GlobalRoot_Class_2.crt, mozilla/T-TeleSec_GlobalRoot_Class_3.crt, mozilla/TUBITAK_Kamu_SM_SSL_Kok_Sertifikasi_-_Surum_1.crt, mozilla/TWCA_Global_Root_CA.crt, mozilla/TWCA_Root_Certification_Authority.crt, mozilla/TeliaSonera_Root_CA_v1.crt, mozilla/Trustwave_Global_Certification_Authority.crt, mozilla/Trustwave_Global_ECC_P256_Certification_Authority.crt, mozilla/Trustwave_Global_ECC_P384_Certification_Authority.crt, mozilla/UCA_Extended_Validation_Root.crt, mozilla/UCA_Global_G2_Root.crt, mozilla/USERTrust_ECC_Certification_Authority.crt, mozilla/USERTrust_RSA_Certification_Authority.crt, mozilla/XRamp_Global_CA_Root.crt, mozilla/certSIGN_ROOT_CA.crt, mozilla/certSIGN_Root_CA_G2.crt, mozilla/e-Szigno_Root_CA_2017.crt, mozilla/ePKI_Root_Certification_Authority.crt, mozilla/emSign_ECC_Root_CA_-_C3.crt, mozilla/emSign_ECC_Root_CA_-_G3.crt, mozilla/emSign_Root_CA_-_C1.crt, mozilla/emSign_Root_CA_-_G1.crt
+# Use software from the "universe" component?
+ubiquity	apt-setup/universe	boolean	true
+# Detect keyboard layout?
+keyboard-configuration	console-setup/ask_detect	boolean	false
+# location
+# Choices: Madrid, Ceuta, Canary Islands
+ubiquity	tzsetup/country/ES	select	Europe/Madrid
+# Failed to remove conflicting files
+ubiquity	partman-target/clear_partitions_failed	error	
+# Additional home directory locations:
+apparmor	apparmor/homedirs	string	
+# Time zone:
+# Choices: Casey, Davis, Dumont d'Urville, Macquarie, Mawson, McMurdo (South Pole), Palmer, Rothera, Syowa, Troll, Vostok
+tzdata	tzdata/Zones/Antarctica	select	
+# Invalid configuration value for default dictionary
+dictionaries-common	dictionaries-common/invalid_debconf_value	error	
+# Allow login as root?
+ubiquity	passwd/root-login	boolean	false
+user-setup	passwd/root-login	boolean	false
+# Do you want to return to the partitioner?
+ubiquity	ubiquity/partition-too-small	boolean	
+# for internal use; can be preseeded
+ubiquity	apt-setup/overlay_components	string	main
+# Keyboard layout detection complete
+keyboard-configuration	console-setup/detected	note	
+# Continue with cryptsetup removal?
+cryptsetup	cryptsetup/prerm_active_mappings	boolean	true
+# for internal use; new boot device to try.
+ubiquity	ubiquity/install/new-bootdev	string	
+# Hostname:
+ubiquity	netcfg/get_hostname	string	ubuntu
+# Logical volume name:
+ubiquity	partman-lvm/lvcreate_name	string	
+# Ubuntu Pro support now requires ubuntu-advantage-pro
+ubuntu-advantage-tools	ubuntu-advantage-tools/suggest_pro_pkg	note	
+# 
+# Choices: Algeria, Angola, Benin, Botswana, Burkina Faso, Burundi, Cabo Verde, Cameroon, Central African Republic, Chad, Congo, Congo\, The Democratic Republic of the, Côte d'Ivoire, Djibouti, Egypt, Equatorial Guinea, Eritrea, Eswatini, Ethiopia, Gabon, Gambia, Ghana, Guinea, Guinea-Bissau, Kenya, Lesotho, Liberia, Libya, Malawi, Mali, Mauritania, Morocco, Mozambique, Namibia, Niger, Nigeria, Rwanda, Sao Tome and Principe, Senegal, Sierra Leone, Somalia, South Africa, South Sudan, Sudan, Tanzania, Togo, Tunisia, Uganda, Western Sahara, Zambia, Zimbabwe
+ubiquity	localechooser/countrylist/Africa	select	
+# System default ispell dictionary:
+# Choices: , Manual symlink setting
+dictionaries-common	dictionaries-common/default-ispell	select	
