@@ -58,7 +58,7 @@ apt-get install -y --no-install-recommends $kernel
 #================ Task Automation ================#
 
 #Install debcoonf-utils
-apt-get install -y debconf-utils
+apt-get install -y debconf-utils expect
 
 #Disable interactive terminal
 DEBIAN_FRONTEND=noninteractive
@@ -87,9 +87,14 @@ cp -f /root/file/NetworkManager.conf /etc/NetworkManager/NetworkManager.conf
 
 #Make Setting
 #Locales
+rm "/etc/locale.gen"
 dpkg-reconfigure -f noninteractive locales
 #resolvconf
-dpkg-reconfigure -f noninteractive resolvconf
+/usr/bin/expect<<EOF
+spawn dpkg-reconfigure -f readline resolvconf
+expect "updates?" { send "Yes\r" }
+expect "dynamic files?" { send "Yes\r" }
+EOF
 #NetworkManager
 dpkg-reconfigure -f noninteractive network-manager
 
