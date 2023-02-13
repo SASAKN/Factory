@@ -96,6 +96,7 @@ expect "updates?" { send "Yes\r" }
 expect "dynamic files?" { send "Yes\r" }
 EOF
 #NetworkManager
+apt-get install netplan.io
 dpkg-reconfigure -f noninteractive network-manager
 
 #ファイナルステップを実行
