@@ -1,7 +1,11 @@
 #!/bin/bash
-
 #基本的に変更しない（スクリプト保存場所の設定）
 script_dir="$(dirname "$(readlink -f "$0")")"
+
+#ログ出力
+ERR=err.log
+exec 1>>$LOG_OUT
+exec 2>>$LOG_ERR
 
 #設定をロードする。
 source ${script_dir}/config.sh
