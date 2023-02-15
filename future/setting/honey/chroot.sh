@@ -86,14 +86,17 @@ apt-get autoremove -y
 cp -f /root/file/NetworkManager.conf /etc/NetworkManager/NetworkManager.conf
 
 #Make Setting
+
 #Locales
 rm "/etc/locale.gen"
 dpkg-reconfigure -f noninteractive locales
+
 #resolvconf
 /usr/bin/expect<<EOF
 spawn dpkg-reconfigure -f readline resolvconf
 expect "updates?" { send "Yes\r" }
 EOF
+
 #NetworkManager
 apt-get install netplan.io
 dpkg-reconfigure -f noninteractive network-manager
