@@ -3,9 +3,12 @@
 script_dir="$(dirname "$(readlink -f "$0")")"
 
 #ログ出力
-ERR=err.log
-exec 1>>$LOG_OUT
-exec 2>>$LOG_ERR
+touch ${script_dir}/err.log
+touch ${script_dir}/output.log
+ERR=${script_dir}/err.log
+LOG=${script_dir}/output.log
+exec 1>>$LOG
+exec 2>>$ERR
 
 #設定をロードする。
 source ${script_dir}/config.sh
