@@ -109,11 +109,11 @@ EOF
 apt-get install netplan.io
 dpkg-reconfigure -f noninteractive network-manager
 
-#ファイナルステップを実行
+#===========Running Final Step Script===========#
 bash /root/final.sh
 apt-get update
 
-#掃除
+#===========Cleaning===========#
 truncate -s 0 /etc/machine-id
 rm /sbin/initctl
 dpkg-divert --rename --remove /sbin/initctl
