@@ -83,8 +83,15 @@ apt-get autoremove -y
 
 #Write Setting Files
 #networkmanager
-cp -f /root/file/NetworkManager.conf /etc/NetworkManager/NetworkManager.conf
+cat <<EOF > /etc/NetworkManager/NetworkManager.conf
+[main]
+rc-manager=resolvconf
+plugins=ifupdown,keyfile
+dns=dnsmasq
 
+[ifupdown]
+managed=false
+EOF
 #Make Setting
 
 #Locales
