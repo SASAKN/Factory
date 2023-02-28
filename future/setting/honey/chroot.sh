@@ -82,7 +82,7 @@ apt-get install -y $(cat /root/package.list)
 apt-get autoremove -y
 
 #===========Write Settings File===========#
-#networkmanager
+#Network Manager
 cat <<EOF > /etc/NetworkManager/NetworkManager.conf
 [main]
 rc-manager=resolvconf
@@ -92,7 +92,8 @@ dns=dnsmasq
 [ifupdown]
 managed=false
 EOF
-#Make Setting
+
+#===========Make Setting===========#
 
 #Locales
 rm "/etc/locale.gen"
