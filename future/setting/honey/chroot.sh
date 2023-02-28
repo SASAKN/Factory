@@ -1,7 +1,7 @@
 #!/bin/bash
 #===========Do not write "sudo" in this script.===========#
 
-#Start Settings
+#===========Start Setting===========#
 echo "Starting..."
 mount none -t proc /proc
 mount none -t sysfs /sys
@@ -12,13 +12,13 @@ os_aptrepo="http://jp.archive.ubuntu.com/ubuntu"
 os_codename="jammy"
 cd $HOME
 
-#Loading Config File
+#===========Read Settings===========#
 source /root/config.sh
 
-#Setting Hostname
+#===========Setting Hostname===========#
 echo $hostname > /etc/hostname
 
-#Adding Repository
+#===========Add Repository===========#
    cat <<EOF > /etc/apt/sources.list
 deb ${os_aptrepo} ${os_codename} main restricted universe multiverse
 deb-src ${os_aptrepo} ${os_codename} main restricted universe multiverse
@@ -30,43 +30,42 @@ deb ${os_aptrepo} ${os_codename}-updates main restricted universe multiverse
 deb-src ${os_aptrepo} ${os_codename}-updates main restricted universe multiverse
 EOF
 
-#Update
+#===========Update===========#
 apt-get update
-
-#Fixing Bug
+#===========Fix Bugs===========#
 chown root:root /
 
-#Install Systemd
+#===========Install Systemd===========#
 apt-get install -y libterm-readline-gnu-perl systemd-sysv
 
-#Setting Machine ID
+#===========Setting Machine-ID===========#
 dbus-uuidgen > /etc/machine-id
 ln -fs /etc/machine-id /var/lib/dbus/machine-id
 
-#Setting apt package
+#===========Dpkg setting===========#
 dpkg-divert --local --rename --add /sbin/initctl
 ln -s /bin/true /sbin/initctl
 
-#Install Deps Package
+#===========Install Deps Packages===========#
 apt-get update
 apt-get install -y $(cat /root/deps.list)
 
-#Install Kernel
+#===========Install Kernel===========#
 echo "Linuxカーネルをインストールしています。"
 apt-get install -y --no-install-recommends $kernel
 
-#================ Task Automation ================#
+#===========Task Automation===========#
 
-#Install debcoonf-utils
+#===========Install Automating Tools===========#
 apt-get install -y debconf-utils expect
 
-#Disable interactive terminal
+#===========Disable interactive environment===========#
 DEBIAN_FRONTEND=noninteractive
 
-#Setting Package Config Files
+#===========Configuration debconf===========#
 echo $(cat /root/debconf.config) | debconf-set-selections
 
-#Install installer
+#===========Install Ubiquity===========#
 apt-get install -y \
    ubiquity \
    ubiquity-casper \
@@ -74,14 +73,15 @@ apt-get install -y \
    ubiquity-slideshow-ubuntu \
    ubiquity-ubuntu-artwork
 
-#Configure Package
-#Install your operating system packages
+#===========Install Packages(Application Software)===========#
+
+#===========Install your own system packages.===========#
 apt-get install -y $(cat /root/package.list)
 
-#Package  Uninstall
+#===========Uninstall no need packages.===========#
 apt-get autoremove -y
 
-#Write Setting Files
+#===========Write Settings File===========#
 #networkmanager
 cat <<EOF > /etc/NetworkManager/NetworkManager.conf
 [main]
