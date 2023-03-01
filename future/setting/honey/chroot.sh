@@ -67,6 +67,10 @@ export PATH='/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
 #===========Configuration debconf===========#
 debconf-set-selections < /root/debconf.config
 
+#===========Configuration Ubiquity===========#
+apt install keyboard-configuration
+dpkg-reconfigure --frontend noninteractive keyboard-configuration
+
 #===========Install Ubiquity===========#
 apt-get install --yes --quiet --option Dpkg::Options::=--force-confold --option Dpkg::Options::=--force-confdef "$@" \
    ubiquity \
