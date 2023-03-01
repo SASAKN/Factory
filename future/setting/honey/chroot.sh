@@ -60,13 +60,15 @@ apt-get install -y --no-install-recommends $kernel
 apt-get install -y debconf-utils expect
 
 #===========Disable interactive environment===========#
-DEBIAN_FRONTEND=noninteractive
+export DEBIAN_FRONTEND=noninteractive
+export DEBIAN_PRIORITY=critical
+export PATH='/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
 
 #===========Configuration debconf===========#
 debconf-set-selections < /root/debconf.config
 
 #===========Install Ubiquity===========#
-apt-get install -y \
+apt-get install --yes --quiet --option Dpkg::Options::=--force-confold --option Dpkg::Options::=--force-confdef "$@" \
    ubiquity \
    ubiquity-casper \
    ubiquity-frontend-gtk \
