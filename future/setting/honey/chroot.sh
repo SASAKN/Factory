@@ -63,7 +63,7 @@ apt-get install -y debconf-utils expect
 DEBIAN_FRONTEND=noninteractive
 
 #===========Configuration debconf===========#
-echo $(cat /root/debconf.config) | debconf-set-selections
+debconf-set-selections < /root/debconf.config
 
 #===========Install Ubiquity===========#
 apt-get install -y \
