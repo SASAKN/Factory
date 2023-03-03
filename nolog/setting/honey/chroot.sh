@@ -85,7 +85,7 @@ apt-get install --yes --quiet --option Dpkg::Options::=--force-confold --option 
 #===========Install your own system packages.===========#
 apt-get install -y $(cat /root/package.list)
 
-#===========Uninstall no need packages.===========#
+#===========Uninstall unnicessary packages.===========#
 apt-get autoremove -y
 
 #===========Write Settings File===========#
