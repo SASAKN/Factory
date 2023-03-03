@@ -68,7 +68,7 @@ export PATH='/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
 debconf-set-selections < /root/debconf.config
 
 #===========Configuration Ubiquity===========#
-apt install keyboard-configuration
+apt install -y keyboard-configuration
 dpkg-reconfigure --frontend noninteractive keyboard-configuration
 dpkg-reconfigure --frontend noninteractive console-setup
 
@@ -113,7 +113,7 @@ expect "updates?" { send "Yes\r" }
 EOF
 
 #NetworkManager
-apt-get install netplan.io
+apt-get install -y netplan.io
 dpkg-reconfigure -f noninteractive network-manager
 
 #===========Running Final Step Script===========#
