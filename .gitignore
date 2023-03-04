@@ -2,3 +2,4 @@
 chroot/
 image/
 out/
+*.log
