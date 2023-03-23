@@ -50,18 +50,6 @@ ln -s /bin/true /sbin/initctl
 apt-get update
 apt-get install -y $(cat /root/deps.list)
 
-#===========User Setup===========#
-cat <<EOF > /etc/casper.conf
-# This file should go in /etc/casper.conf
-# Supported variables are:
-# USERNAME, USERFULLNAME, HOST, BUILD_SYSTEM
-export USERNAME="${username}"
-export USERFULLNAME="${userfullname}"
-export HOST="${username}"
-export BUILD_SYSTEM="Ubuntu"
-export FLAVOUR="${uusername}"
-EOF
-
 #===========Install Kernel===========#
 echo "Linuxカーネルをインストールしています。"
 apt-get install -y --no-install-recommends $kernel
@@ -93,6 +81,7 @@ apt-get install --yes --quiet --option Dpkg::Options::=--force-confold --option 
    ubiquity-ubuntu-artwork
 
 #===========Install Packages(Application Software)===========#
+
 
 #===========Install your own system packages.===========#
 apt-get install -y $(cat /root/package.list)
