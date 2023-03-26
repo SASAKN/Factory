@@ -10,6 +10,7 @@ cd ${script_dir}
 mkdir image
 mkdir out
 mkdir chroot
+mkdir files
 
 #依存関係のインストール
 source ${script_dir}/deps.sh
