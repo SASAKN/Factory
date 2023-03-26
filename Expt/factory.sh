@@ -76,12 +76,12 @@ set default="0"
 set timeout=30
 
 menuentry "${os_label1}" {
-   linux /casper/vmlinuz boot=casper nopersistent toram quiet splash ---
+   linux /casper/vmlinuz boot=casper maybe-ubiquity quiet splash ---
    initrd /casper/initrd
 }
 
 menuentry "${os_label2}" {
-   linux /casper/vmlinuz boot=casper only-ubiquity quiet splash ---
+   linux /casper/vmlinuz boot=casper maybe-ubiquity ---
    initrd /casper/initrd
 }
 

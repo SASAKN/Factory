@@ -12,8 +12,8 @@ os_name="Honey Linux"
 os_arch="amd64"
 
 #OSのインストールラベル
-os_label1="Try Honey Dev"
-os_label2="Install Honey Dev"
+os_label1="Open NKSOS boot selection screen"
+os_label2="Start in Developer Mode"
 os_label3="Check Disk"
 os_label4="Memory Test (Legacy)"
 os_label5="Memory Test(UEFI)"
