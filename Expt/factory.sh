@@ -81,7 +81,7 @@ menuentry "${os_label1}" {
 }
 
 menuentry "${os_label2}" {
-   linux /casper/vmlinuz boot=casper maybe-ubiquity ---
+   linux /casper/vmlinuz boot=casper only-ubiquity ---
    initrd /casper/initrd
 }
 
