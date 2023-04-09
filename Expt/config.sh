@@ -22,7 +22,7 @@ os_label5="Memory Test(UEFI)"
 buildid="A1"
 
 #設定の名前
-setting_name="honey"
+setting_name="nks"
 
 ###Expt
 echo "これは、実験的な実装です。"
