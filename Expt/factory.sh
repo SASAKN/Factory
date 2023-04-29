@@ -26,6 +26,7 @@ sudo debootstrap \
 #設定ファイルのコピー
 sudo cp -a ${script_dir}/setting/${setting_name}/file/ ${script_dir}/chroot/root/file/
 sudo cp -a ${script_dir}/setting/${setting_name}/copyfs/ ${script_dir}/chroot/root/copyfs/
+sudo cp -a ${script_dir}/setting/${setting_name}/deb/ ${script_dir}/chroot/root/deb/
 sudo cp -a ${script_dir}/command ${script_dir}/chroot/root/command/
 sudo cp ${script_dir}/setting/${setting_name}/chroot.sh ${script_dir}/chroot/root/chroot.sh
 sudo cp ${script_dir}/setting/${setting_name}/final.sh ${script_dir}/chroot/root/final.sh
