@@ -4,8 +4,9 @@
 #################################################################
 
 #NKSOS独自の壁紙に変更。
-
 #Install wallpaper
+cd /root/deb
+dpkg -i ./nks-wallpaper.deb
 
 #Apply Wallpaper
 cd /root/command
