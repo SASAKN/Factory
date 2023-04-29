@@ -14,4 +14,5 @@ bash ./plasma-apply-wallpaperimage /usr/share/wallpapers/nks-wallpaper/contents/
 
 #NKSOSのブートスプラッシュに変更
 
-#NKSOSのに変更
+#NKSOSのブート画面に変更
+
