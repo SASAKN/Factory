@@ -4,5 +4,8 @@
 <img src="https://img.shields.io/github/license/SASAKN/Factory?style=for-the-badge"/>
 </p>
 </a>
+<p align="center">
+<img src="https://img.shields.io/github/stars/SASAKN/Factory?style=for-the-badge"/>
+</p>
 
 
