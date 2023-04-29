@@ -1,7 +1,5 @@
-<h1>Factory</h1>
-<a href="https://github.com/SASAKN/Factory/blob/main/LICENSE">
-<img src="https://img.shields.io/github/license/SASAKN/Factory?style=for-the-badge"/>
-</a>
-<img src="https://img.shields.io/github/stars/SASAKN/Factory?style=for-the-badge"/>
+# Factory
 
-
+![Stars](https://img.shields.io/github/stars/SASAKN/Factory?style=for-the-badge)
+![License](https://img.shields.io/github/license/SASAKN/Factory?style=for-the-badge)
+![Distro](https://img.shields.io/badge/Ubuntu-2234e.svg?logo=ubuntu&style=for-the-badge)
