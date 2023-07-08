@@ -17,6 +17,7 @@ cd /root/command
 update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/nksos/nksos.plymouth 100
 
 #NKSOSのブート画面に変更
-cd /root/command
-cp 
+cd /root/file
+mv grub.txt grub
+cp grub /etc/default/grub
 update-grub
