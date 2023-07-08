@@ -13,6 +13,10 @@ cd /root/command
 bash ./plasma-apply-wallpaperimage /usr/share/wallpapers/nks-wallpaper/contents/screenshot.png
 
 #NKSOSのブートスプラッシュに変更
+cd /root/command
+update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/nksos/nksos.plymouth 100
 
 #NKSOSのブート画面に変更
-
+cd /root/command
+cp 
+update-grub
