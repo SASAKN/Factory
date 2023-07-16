@@ -3,13 +3,13 @@
 #　ここに、OS独自のファイルをコピーするなどの編集を加えてください。        #
 #################################################################
 
-#Install  Desktop Theme
+#Install Desktop Theme
 apt-get install materia-kde -y
 
-#Install Start up sounds
+#Install aplay for playing boot sound.
 apt-get install alsa-utils -y
 
-#Install Introduction movie
+#Install MPV Player for playing introduction movie.
 apt-get install mpv -y
 
 #Install wallpaper
