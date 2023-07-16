@@ -1,4 +1,0 @@
-# Directory
-
-## Directory Info
-
