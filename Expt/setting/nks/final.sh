@@ -17,6 +17,10 @@ apt-get install mpv -y
 
 #Install Software Center
 apt-get install plasma-discover -y
+
+#Install Super Tux Cart game
+apt-get install supertuxcart -y
+
 #Copy necessary files.
 cd /root/
 cp -a ./nks/ /nks
