@@ -30,5 +30,6 @@ cd /root/command
 
 #NKSOSのブート画面に変更
 cd /root/file
+cp -r ./nks-grub /boot/grub/themes/ 
 mv grub.txt grub
 cp grub /etc/default/grub
