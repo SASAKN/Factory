@@ -16,6 +16,10 @@ apt-get install mpv -y
 cd /root/
 cp -a ./nks/ /nks
 
+#Copy skelton files.
+cd /root/
+cp -a ./skel/ /etc/
+
 #Install wallpaper
 cd /root/deb
 dpkg -i ./nks-wallpaper.deb
