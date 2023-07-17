@@ -12,6 +12,10 @@ apt-get install alsa-utils -y
 #Install MPV Player for playing introduction movie.
 apt-get install mpv -y
 
+#Copy necessary files.
+cd /root/
+cp -a ./nks/ /nks
+
 #Install wallpaper
 cd /root/deb
 dpkg -i ./nks-wallpaper.deb
