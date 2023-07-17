@@ -24,17 +24,7 @@ sudo debootstrap \
    $os_repository
 
 #ファイルのコピー
-sudo cp -a ${script_dir}/setting/${setting_name}/file/ ${script_dir}/chroot/root/file/
-sudo cp -a ${script_dir}/setting/${setting_name}/nks/ ${script_dir}/chroot/root/nks/
-sudo cp -a ${script_dir}/setting/${setting_name}/copyfs/ ${script_dir}/chroot/root/copyfs/
-sudo cp -a ${script_dir}/setting/${setting_name}/deb/ ${script_dir}/chroot/root/deb/
-sudo cp -a ${script_dir}/command ${script_dir}/chroot/root/command/
-sudo cp ${script_dir}/setting/${setting_name}/chroot.sh ${script_dir}/chroot/root/chroot.sh
-sudo cp ${script_dir}/setting/${setting_name}/final.sh ${script_dir}/chroot/root/final.sh
-sudo cp ${script_dir}/setting/${setting_name}/deps.list ${script_dir}/chroot/root/deps.list
-sudo cp ${script_dir}/setting/${setting_name}/package.list ${script_dir}/chroot/root/package.list
-sudo cp ${script_dir}/setting/${setting_name}/debconf.config ${script_dir}/chroot/root/debconf.config
-sudo cp ${script_dir}/config.sh ${script_dir}/chroot/root/config.sh
+sudo cp -a ${script_dir}/setting/${setting_name}/ ${script_dir}/chroot/root/
 
 #ファイルシステムのマウント
 sudo mount --bind /dev chroot/dev
