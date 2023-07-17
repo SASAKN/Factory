@@ -25,6 +25,7 @@ sudo debootstrap \
 
 #ファイルのコピー
 sudo cp -a ${script_dir}/setting/${setting_name}/* ${script_dir}/chroot/root/
+sudo cp ${script_dir}/config.sh ${script_dir}/chroot/root/config.sh
 
 #ファイルシステムのマウント
 sudo mount --bind /dev chroot/dev
