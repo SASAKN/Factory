@@ -6,6 +6,9 @@
 #Install Desktop Theme
 apt-get install materia-kde -y
 
+#Install latte dock
+apt-get install -y latte-dock
+
 #Install aplay for playing boot sound.
 apt-get install alsa-utils -y
 
