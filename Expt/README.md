@@ -1,2 +1,3 @@
 # Factory
-Easy Build Tools
+
+A Build tools for creating linux distro.
