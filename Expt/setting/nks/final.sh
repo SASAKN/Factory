@@ -18,6 +18,9 @@ apt-get install mpv -y
 #Install Software Center
 apt-get install plasma-discover -y
 
+#Install Konsole
+apt-get install konsole -y
+
 #Install Super Tux Cart game
 apt-get install supertuxcart -y
 
