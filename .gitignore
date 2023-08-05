@@ -2,4 +2,5 @@
 chroot/
 image/
 out/
+*.icloud
 *.log
