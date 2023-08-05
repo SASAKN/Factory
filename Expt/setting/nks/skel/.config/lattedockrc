@@ -1,6 +1,6 @@
 [KFileDialog Settings]
-Recent Files[$e]=macOS-Latte-Layout-Large.layout.latte,file:$HOME/ダウンロード/macOS-Latte-Layout-Large.layout.latte
-Recent URLs[$e]=file:$HOME/ダウンロード/
+Recent Files[$e]=
+Recent URLs[$e]=
 detailViewIconSize=16
 
 [LatteSettingsDialog]
