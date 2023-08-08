@@ -30,6 +30,8 @@ apt-get install fonts-mplus -y
 #Copy necessary files.
 cd /root/
 cp -a ./nks/ /nks
+
+#OSの基本情報ファイルのコピー
 cp -f /root/nks/os-release /etc/os-release
 cp -f /root/nks/os-release /usr/lib/os-release
 
