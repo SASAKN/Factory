@@ -53,3 +53,6 @@ cd /root/file
 cp -r ./nks-grub /boot/grub/themes/ 
 mv grub.txt grub
 cp grub /etc/default/grub
+
+#Grubの更新
+grub-update
