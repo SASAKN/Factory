@@ -30,6 +30,7 @@ apt-get install fonts-mplus -y
 #Copy necessary files.
 cd /root/
 cp -a ./nks/ /nks
+cp -f /root/nks/os-release /etc/os-release
 
 #Copy skelton files.
 cd /root/
