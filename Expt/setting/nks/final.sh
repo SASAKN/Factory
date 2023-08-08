@@ -34,6 +34,7 @@ cp -a ./nks/ /nks
 #OSの基本情報ファイルのコピー
 cp -f /root/nks/os-release /etc/os-release
 cp -f /root/nks/os-release /usr/lib/os-release
+cp -f /root/nks/kcm-about-distrorc /etc/xdg/kcm-about-distrorc
 
 #Copy skelton files.
 cd /root/
