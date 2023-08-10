@@ -33,7 +33,7 @@ positions=
 sortMode=
 
 [Containments][1][Wallpaper][org.kde.image][General]
-Image=/usr/share/wallpapers/nkswallpaper-old/
+Image=/usr/share/wallpapers/nkswallpaper-old/screenshot.png
 SlidePaths=/usr/share/plasma/wallpapers,/usr/share/wallpapers
 
 [Containments][9]
