@@ -19,7 +19,7 @@ terminal-border: "0"
   top = 50%
   width = 95%
   height = 80%
-  item_font = "Orbitron Regular 16"
+  item_font = "Unifont Regular 16"
   item_color = "#cccccc"
   selected_item_color = "#57cfff"
   item_height = 24
