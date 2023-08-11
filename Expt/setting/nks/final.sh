@@ -14,7 +14,11 @@ xz -dv ./icons.tar.xz
 tar xfv ./icons.tar -C /usr/share/icons/
 
 #Tarを展開
-tar xfv icons.tar -C 
+tar xfv icons.tar -C /usr/share/icons/
+
+#Install Cursors
+cd /root/file
+tar -zxvf cursors.tar.gz
 
 #Install latte dock
 apt-get install -y latte-dock
