@@ -73,4 +73,6 @@ cp grub /etc/default/grub
 #Grubの更新
 update-grub
 
-#これぐらい？
+#SDDMの設定
+sudo sed -i 's/Current=.*/Current=nks-sddm/' /etc/sddm.conf
+
