@@ -66,7 +66,7 @@ cd /root/command
 
 #NKSOSのブート画面に変更
 cd /root/file
-cp -r ./nks-grub /boot/grub/themes/ 
+cp -r ./nks-grub /boot/grub/themes/nks-grub 
 mv grub.txt grub
 cp grub /etc/default/grub
 
@@ -75,6 +75,6 @@ update-grub
 
 #SDDMの設定
 cd /root/file
-cp -r ./nks-sddm/ /usr/share/sddm/themes/
+cp -r ./nks-sddm /usr/share/sddm/themes/nks-sddm
 sudo sed -i 's/Current=.*/Current=nks-sddm/' /etc/sddm.conf
 
