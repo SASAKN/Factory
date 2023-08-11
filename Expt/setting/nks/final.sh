@@ -15,6 +15,7 @@ tar xfv ./icons.tar -C /usr/share/icons/
 
 #Tarを展開
 tar xfv icons.tar -C 
+
 #Install latte dock
 apt-get install -y latte-dock
 
