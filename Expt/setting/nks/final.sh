@@ -10,7 +10,8 @@ apt-get install materia-kde -y
 cd /root/file
 
 #圧縮ファイルの解凍
-xz -dv ./icons.xz
+xz -dv ./icons.tar.xz
+tar xfv ./icons.tar -C /usr/share/icons/
 
 #Tarを展開
 tar xfv icons.tar -C 
