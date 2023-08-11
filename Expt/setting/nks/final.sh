@@ -74,5 +74,7 @@ cp grub /etc/default/grub
 update-grub
 
 #SDDMの設定
+cd /root/file
+cp -r ./nks-sddm/ /usr/share/sddm/themes/
 sudo sed -i 's/Current=.*/Current=nks-sddm/' /etc/sddm.conf
 
