@@ -77,4 +77,3 @@ update-grub
 cd /root/file
 cp -r ./nks-sddm /usr/share/sddm/themes/nks-sddm
 sudo sed -i 's/Current=.*/Current=nks-sddm/' /etc/sddm.conf
-
