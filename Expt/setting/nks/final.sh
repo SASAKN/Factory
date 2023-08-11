@@ -30,9 +30,7 @@ apt-get install alsa-utils -y
 apt-get install mpv -y
 
 #Install Software Center
-
 apt-get install plasma-discover -y
-add-apt-repository --remove universe -y
 
 #Install Konsole
 apt-get install konsole -y
@@ -42,6 +40,7 @@ apt-get install supertuxcart -y
 
 #install M plus fonts
 apt-get install fonts-mplus -y
+add-apt-repository --remove universe -y
 
 #Copy necessary files.
 cd /root/
@@ -77,3 +76,6 @@ update-grub
 cd /root/file
 cp -r ./nks-sddm /usr/share/sddm/themes/nks-sddm
 sudo sed -i 's/Current=.*/Current=nks-sddm/' /etc/sddm.conf
+
+#FireFoxをインストール
+source /root/file/firefox.sh
