@@ -30,7 +30,9 @@ apt-get install alsa-utils -y
 apt-get install mpv -y
 
 #Install Software Center
+add-apt-repository universe -y
 apt-get install plasma-discover -y
+add-apt-repository --remove universe -y
 
 #Install Konsole
 apt-get install konsole -y
