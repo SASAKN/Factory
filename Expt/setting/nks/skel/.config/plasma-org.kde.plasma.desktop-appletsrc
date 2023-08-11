@@ -5,13 +5,10 @@ wheel:Vertical;NoModifier=org.kde.switchdesktop
 [ActionPlugins][1]
 RightButton;NoModifier=org.kde.contextmenu
 
-[Containments][1]
-ItemGeometries-1920x965=
-ItemGeometries-1920x966=
+[Containments][20]
 ItemGeometries-800x600=
-ItemGeometries-960x966=
 ItemGeometriesHorizontal=
-activityId=ba6fe30b-8148-406b-824f-733c1c4b0fd4
+activityId=34cf80be-cb3c-41a0-a6cc-9a42f745d4c1
 formfactor=0
 immutability=1
 lastScreen=0
@@ -19,21 +16,17 @@ location=0
 plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
 
-[Containments][1][ConfigDialog]
-DialogHeight=527
+[Containments][20][ConfigDialog]
+DialogHeight=540
 DialogWidth=720
 
-[Containments][1][Configuration]
-PreloadWeight=0
-
-[Containments][1][General]
+[Containments][20][General]
 ToolBoxButtonState=topcenter
-ToolBoxButtonX=612
-positions=
-sortMode=
+ToolBoxButtonX=580
+ToolBoxButtonY=54
 
-[Containments][1][Wallpaper][org.kde.image][General]
-Image=/usr/share/wallpapers/nkswallpaper-old/screenshot.png
+[Containments][20][Wallpaper][org.kde.image][General]
+Image=file:///usr/share/wallpapers/wallpaper2/contents/images/1920x1080.png
 SlidePaths=/usr/share/plasma/wallpapers,/usr/share/wallpapers
 
 [Containments][9]
@@ -152,4 +145,4 @@ knownItems=org.kde.plasma.nightcolorcontrol,org.kde.plasma.keyboardindicator,org
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/kdedefaults,0,desktop:/directory.jsonp,0,desktop:/link-core/jquery.cycle.all.js,0,desktop:/Factory-main,0,desktop:/plasma,0,desktop:/link-core/base.js,0,desktop:/link-core,0,desktop:/myhint.desktop,0,desktop:/link-core/jquery.js,0,desktop:/l10n,0,desktop:/link-core/slideshow.js,0
+screenMapping=desktop:/link-core/jquery.js,0,desktop:/myhint.desktop,0,desktop:/plasma,0,desktop:/kdedefaults,0,desktop:/welcome.desktop,0,desktop:/link-core,0,desktop:/Factory-main,0,desktop:/link-core/slideshow.js,0,desktop:/link-core/jquery.cycle.all.js,0,desktop:/link-core/base.js,0,desktop:/l10n,0,desktop:/directory.jsonp,0

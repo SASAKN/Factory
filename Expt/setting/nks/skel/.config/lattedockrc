@@ -33,6 +33,6 @@ metaPressAndHoldEnabled=true
 mouseSensitivity=2
 screenTrackerInterval=2500
 showInfoWindow=true
-singleModeLayoutName=My Layout
+singleModeLayoutName=Default
 userConfiguredAutostart=true
 version=2
