@@ -55,4 +55,6 @@ mv grub.txt grub
 cp grub /etc/default/grub
 
 #Grubの更新
-grub-update
+update-grub
+
+#これぐらい？
