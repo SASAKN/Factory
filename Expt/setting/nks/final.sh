@@ -6,6 +6,14 @@
 #Install Desktop Theme
 apt-get install materia-kde -y
 
+#Install Icon
+cd /root/file
+
+#圧縮ファイルの解凍
+xz -dv ./icons.xz
+
+#Tarを展開
+tar xfv icons.tar -C 
 #Install latte dock
 apt-get install -y latte-dock
 
