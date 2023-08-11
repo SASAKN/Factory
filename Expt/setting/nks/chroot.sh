@@ -84,6 +84,7 @@ apt-get install --yes --quiet --option Dpkg::Options::=--force-confold --option 
 
 
 #===========Install your own system packages.===========#
+add-apt-repository universe -y
 apt-get install -y $(cat /root/package.list)
 
 #===========Uninstall unnicessary packages.===========#
