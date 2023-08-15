@@ -1,5 +1,5 @@
 #!/bin/sh
-sudo add-apt-repository ppa:mozillateam/ppa -y
+add-apt-repository ppa:mozillateam/ppa -y
 
 echo '
 Package: *
