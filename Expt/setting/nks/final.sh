@@ -18,7 +18,7 @@ tar xfv icons.tar -C /usr/share/icons/
 
 #Install Cursors
 cd /root/file
-tar -zxvf cursors.tar.gz
+tar -zxvf cursors.tar.gz -C /usr/share/icons
 
 #Install latte dock
 apt-get install -y latte-dock
