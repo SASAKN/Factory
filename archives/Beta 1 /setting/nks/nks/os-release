@@ -1,0 +1,11 @@
+PRETTY_NAME="NKSOS 1.0 (Gentoo Penguin)"
+NAME="Ubuntu"
+VERSION_ID="22.04"
+VERSION="22.04 (Jammy Jellyfish)"
+VERSION_CODENAME=jammy
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://nksteam.com"
+SUPPORT_URL="https://nksteam.com/support"
+PRIVACY_POLICY_URL="https://nksteam.com/policy.html"
+UBUNTU_CODENAME=jammy

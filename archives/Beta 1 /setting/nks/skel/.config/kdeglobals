@@ -1,0 +1,145 @@
+[$Version]
+update_info=filepicker.upd:filepicker-remove-old-previews-entry,fonts_global.upd:Fonts_Global,fonts_global_toolbar.upd:Fonts_Global_Toolbar,icons_remove_effects.upd:IconsRemoveEffects,kwin.upd:animation-speed,style_widgetstyle_default_breeze.upd:StyleWidgetStyleDefaultBreeze
+
+[ColorEffects:Disabled]
+ChangeSelectionColor=
+Color=56,56,56
+ColorAmount=0
+ColorEffect=0
+ContrastAmount=0.65
+ContrastEffect=1
+Enable=
+IntensityAmount=0.1
+IntensityEffect=2
+
+[ColorEffects:Inactive]
+ChangeSelectionColor=true
+Color=112,111,110
+ColorAmount=0.025
+ColorEffect=2
+ContrastAmount=0.1
+ContrastEffect=2
+Enable=false
+IntensityAmount=0
+IntensityEffect=0
+
+[Colors:Button]
+BackgroundAlternate=255,255,255
+BackgroundNormal=255,255,255
+DecorationFocus=26,115,232
+DecorationHover=200,222,249
+ForegroundActive=61,174,233
+ForegroundInactive=177,177,177
+ForegroundLink=96,159,240
+ForegroundNegative=244,67,54
+ForegroundNeutral=255,152,0
+ForegroundNormal=68,68,68
+ForegroundPositive=76,175,80
+ForegroundVisited=156,39,176
+
+[Colors:Complementary]
+BackgroundAlternate=255,255,255
+BackgroundNormal=242,242,242
+DecorationFocus=170,200,250
+DecorationHover=170,200,250
+ForegroundActive=246,116,0
+ForegroundInactive=175,176,179
+ForegroundLink=26,115,232
+ForegroundNegative=237,21,21
+ForegroundNeutral=201,206,59
+ForegroundNormal=68,68,68
+ForegroundPositive=17,209,22
+ForegroundVisited=156,39,176
+
+[Colors:Selection]
+BackgroundAlternate=200,222,249
+BackgroundNormal=26,115,232
+DecorationFocus=200,222,249
+DecorationHover=200,222,249
+ForegroundActive=252,252,252
+ForegroundInactive=222,238,255
+ForegroundLink=96,159,240
+ForegroundNegative=244,67,54
+ForegroundNeutral=255,152,0
+ForegroundNormal=255,255,255
+ForegroundPositive=76,175,80
+ForegroundVisited=156,39,176
+
+[Colors:Tooltip]
+BackgroundAlternate=97,97,97
+BackgroundNormal=97,97,97
+DecorationFocus=200,222,249
+DecorationHover=200,222,249
+ForegroundActive=61,174,233
+ForegroundInactive=177,177,177
+ForegroundLink=96,159,240
+ForegroundNegative=244,67,54
+ForegroundNeutral=255,152,0
+ForegroundNormal=255,255,255
+ForegroundPositive=76,175,80
+ForegroundVisited=224,100,232
+
+[Colors:View]
+BackgroundAlternate=239,240,241
+BackgroundNormal=255,255,255
+DecorationFocus=200,222,249
+DecorationHover=200,222,249
+ForegroundActive=61,174,233
+ForegroundInactive=177,177,177
+ForegroundLink=96,159,240
+ForegroundNegative=244,67,54
+ForegroundNeutral=255,152,0
+ForegroundNormal=68,68,68
+ForegroundPositive=76,175,80
+ForegroundVisited=156,39,176
+
+[Colors:Window]
+BackgroundAlternate=242,242,242
+BackgroundNormal=249,249,249
+DecorationFocus=200,222,249
+DecorationHover=200,222,249
+ForegroundActive=61,174,233
+ForegroundInactive=177,177,177
+ForegroundLink=96,159,240
+ForegroundNegative=244,67,54
+ForegroundNeutral=255,152,0
+ForegroundNormal=68,68,68
+ForegroundPositive=76,175,80
+ForegroundVisited=156,39,176
+
+[General]
+ColorSchemeHash=0d37ac7d257c7643ff5540889d5368b99875ad6b
+
+[Icons]
+Theme=Fluent-yellow
+
+[KDE]
+LookAndFeelPackage=com.github.varlesh.materia
+widgetStyle=kvantum
+
+[KFileDialog Settings]
+Allow Expansion=false
+Automatically select filename extension=true
+Breadcrumb Navigation=true
+Decoration position=2
+LocationCombo Completionmode=5
+PathCombo Completionmode=5
+Show Bookmarks=false
+Show Full Path=false
+Show Inline Previews=true
+Show Preview=false
+Show Speedbar=true
+Show hidden files=false
+Sort by=Name
+Sort directories first=true
+Sort reversed=false
+Speedbar Width=153
+View Style=DetailTree
+
+[WM]
+activeBackground=240,240,240
+activeBlend=240,240,240
+activeForeground=68,68,68
+inactiveBackground=235,235,235
+inactiveBlend=235,235,235
+inactiveForeground=139,139,139

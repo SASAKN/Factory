@@ -1,0 +1,21 @@
+38c38
+< launchers59=applications:org.kde.dolphin.desktop
+---
+> launchers59=applications:firefox.desktop,applications:org.kde.dolphin.desktop
+346c346
+< PreloadWeight=44
+---
+> PreloadWeight=39
+427,430d426
+< [Containments][17][Applets][103][Configuration][ConfigDialog]
+< DialogHeight=540
+< DialogWidth=720
+< 
+788c784
+< PreloadWeight=39
+---
+> PreloadWeight=34
+844c840
+< lastUsedActivity=34cf80be-cb3c-41a0-a6cc-9a42f745d4c1
+---
+> lastUsedActivity=ba6fe30b-8148-406b-824f-733c1c4b0fd4
