@@ -79,3 +79,11 @@ sudo sed -i 's/Current=.*/Current=nks-sddm/' /etc/sddm.conf
 
 #FireFoxをインストール
 source /root/file/firefox.sh
+
+#Pacupのインストール
+cd /root/file
+
+#シェルスクリプトのコピー
+cp ./pacup-nksos/pacup /usr/bin/pacup
+cp ./pacup-nksos/pacup /bin/pacup
+cp ./pacup-nksos/pacup /usr/local/bin/pacup
