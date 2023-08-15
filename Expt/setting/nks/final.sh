@@ -69,9 +69,6 @@ cp -r ./nks-grub /boot/grub/themes/nks-grub
 mv grub.txt grub
 cp grub /etc/default/grub
 
-#Grubの更新
-update-grub
-
 #SDDMの設定
 cd /root/file
 cp -r ./nks-sddm /usr/share/sddm/themes/nks-sddm
