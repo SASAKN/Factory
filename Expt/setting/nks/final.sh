@@ -63,6 +63,7 @@ dpkg -i ./nks-wallpaper.deb
 cd /root/command
 #update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/nksos/nksos.plymouth 100
 
+
 #SDDMの設定
 cd /root/file
 cp -r ./nks-sddm /usr/share/sddm/themes/nks-sddm

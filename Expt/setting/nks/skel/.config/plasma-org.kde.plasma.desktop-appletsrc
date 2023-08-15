@@ -26,7 +26,7 @@ ToolBoxButtonX=580
 ToolBoxButtonY=54
 
 [Containments][20][Wallpaper][org.kde.image][General]
-Image=file:///usr/share/wallpapers/wallpaper2/contents/images/1920x1080.png
+Image=file:///usr/share/wallpapers/nkswallpaper-old/contents/screenshot.png
 SlidePaths=/usr/share/plasma/wallpapers,/usr/share/wallpapers
 
 [Containments][9]
