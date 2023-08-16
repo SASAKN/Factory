@@ -84,3 +84,9 @@ cd /root/file
 cp ./pacup /usr/bin/pacup
 cp ./pacup /bin/pacup
 cp ./pacup /usr/local/bin/pacup
+
+#Unifetchのインストール
+cd /root/file
+cp ./unifetch /usr/bin/unifetch
+cp ./unifetch /bin/unifettch
+cp ./unifetch /usr/local/bin/unifetch
