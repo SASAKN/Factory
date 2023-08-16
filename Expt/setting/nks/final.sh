@@ -80,7 +80,7 @@ cp -pR ./nks-slide/* /usr/share/ubiquity-slideshow/
 #SDDMの設定
 cd /root/file
 mkdir -p /usr/share/sddm/themes
-cp -r ./nks-sddm /usr/share/sddm/themes/
+cp -r ./nks-sddm/ /usr/share/sddm/themes/
 sed -i 's/Current=.*/Current=nks-sddm/' /etc/sddm.conf
 cd /etc/
 mkdir sddm.conf.d
