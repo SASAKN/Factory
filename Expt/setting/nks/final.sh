@@ -81,6 +81,6 @@ source /root/file/firefox.sh
 
 #Pacupのインストール
 cd /root/file
-cp ./pacup-nksos/pacup /usr/bin/pacup
-cp ./pacup-nksos/pacup /bin/pacup
-cp ./pacup-nksos/pacup /usr/local/bin/pacup
+cp ./pacup /usr/bin/pacup
+cp ./pacup /bin/pacup
+cp ./pacup /usr/local/bin/pacup
