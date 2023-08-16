@@ -73,7 +73,8 @@ update-grub
 #SDDMの設定
 cd /root/file
 cp -r ./nks-sddm /usr/share/sddm/themes/nks-sddm
-sudo sed -i 's/Current=.*/Current=nks-sddm/' /etc/sddm.conf
+sed -i 's/Current=.*/Current=nks-sddm/' /etc/sddm.conf
+cp /root/file/sddm.conf /etc/sddm.conf.d/kde_settings.conf
 
 #FireFoxをインストール
 source /root/file/firefox.sh
