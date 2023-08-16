@@ -72,7 +72,7 @@ update-grub
 
 #インストールスライドの変更
 cd /root/file
-cp -r ./nks-slideshow /usr/share/ubiquity-slideshow/
+cp -r ./nks-slide /usr/share/ubiquity-slideshow/
 
 #SDDMの設定
 cd /root/file
