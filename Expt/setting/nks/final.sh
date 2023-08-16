@@ -78,7 +78,7 @@ cp -r ./nks-slide /usr/share/ubiquity-slideshow/
 cd /root/file
 cp -r ./nks-sddm /usr/share/sddm/themes/nks-sddm
 sed -i 's/Current=.*/Current=nks-sddm/' /etc/sddm.conf
-cp /root/file/sddm.conf /etc/sddm.conf.d/kde_settings.conf
+cp -f /root/file/sddm.conf /etc/sddm.conf.d/kde_settings.conf
 
 #FireFoxをインストール
 source /root/file/firefox.sh
