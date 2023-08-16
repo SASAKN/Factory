@@ -64,7 +64,10 @@ cd /root/command
 #update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/nksos/nksos.plymouth 100
 
 #Grubの設定
-cd /root/file
+cd /root/file/
+cd /usr/share/grub/themes/
+mkdir nks-grub
+cd /root/file/
 cp -r /root/file/nks-grub /usr/share/grub/themes/nks-grub
 mv /root/file/grub.txt /root/file/grub
 cp /root/file/grub /etc/default/grub
@@ -78,7 +81,10 @@ cp -r ./nks-slide /usr/share/ubiquity-slideshow/
 cd /root/file
 cp -r ./nks-sddm /usr/share/sddm/themes/nks-sddm
 sed -i 's/Current=.*/Current=nks-sddm/' /etc/sddm.conf
-cp -f /root/file/sddm.conf /etc/sddm.conf.d/kde_settings.conf
+cd /etc/
+mkdir sddm.conf.d
+cd /root/file/
+cp /root/file/sddm.conf /etc/sddm.conf.d/kde_settings.conf
 
 #FireFoxをインストール
 source /root/file/firefox.sh
