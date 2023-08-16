@@ -70,6 +70,10 @@ mv /root/file/grub.txt /root/file/grub
 cp /root/file/grub /etc/default/grub
 update-grub
 
+#インストールスライドの変更
+cd /root/file
+cp -r ./nks-slideshow /usr/share/ubiquity-slideshow/
+
 #SDDMの設定
 cd /root/file
 cp -r ./nks-sddm /usr/share/sddm/themes/nks-sddm
@@ -84,3 +88,9 @@ cd /root/file
 cp ./pacup /usr/bin/pacup
 cp ./pacup /bin/pacup
 cp ./pacup /usr/local/bin/pacup
+
+#Unifetchのインストール
+cd /root/file
+cp ./unifetch /usr/bin/unifetch
+cp ./unifetch /bin/unifettch
+cp ./unifetch /usr/local/bin/unifetch
