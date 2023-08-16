@@ -65,10 +65,10 @@ cd /root/command
 
 #Grubの設定
 cd /root/file/
-cd /usr/share/grub/themes/
-mkdir nks-grub
+cd /usr/share/grub/
+mkdir -p ./themes/nks-grub/
 cd /root/file/
-cp -r /root/file/nks-grub /usr/share/grub/themes/nks-grub
+cp -r /root/file/nks-grub /usr/share/grub/themes/
 mv /root/file/grub.txt /root/file/grub
 cp /root/file/grub /etc/default/grub
 update-grub
