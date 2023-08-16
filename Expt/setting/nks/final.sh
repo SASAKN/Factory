@@ -65,7 +65,7 @@ cd /root/command
 
 #Grubの設定
 cd /root/file
-cp -r /root/file/nks-grub/ /usr/share/grub/themes/ 
+cp -r /root/file/nks-grub /usr/share/grub/themes/nks-grub
 mv /root/file/grub.txt /root/file/grub
 cp /root/file/grub /etc/default/grub
 update-grub
