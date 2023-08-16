@@ -79,7 +79,8 @@ cp -pR ./nks-slide/* /usr/share/ubiquity-slideshow/
 
 #SDDMの設定
 cd /root/file
-cp -r ./nks-sddm /usr/share/sddm/themes/nks-sddm
+mkdir -p /usr/share/sddm/themes
+cp -r ./nks-sddm /usr/share/sddm/themes/
 sed -i 's/Current=.*/Current=nks-sddm/' /etc/sddm.conf
 cd /etc/
 mkdir sddm.conf.d
@@ -88,9 +89,9 @@ cp /root/file/sddm.conf /etc/sddm.conf.d/kde_settings.conf
 
 #Plasma グローバルテーマを作成。
 cd /usr/share/plasma/
-mkdir -p look-and-feel/com.nksteam.nksos
+mkdir -p look-and-feel
 cd /root/file
-cp -r /root/file/com.nksteam.nksos/ /usr/share/plasma/look-and-feel/com.nksteam.nksos
+cp -r /root/file/com.nksteam.nksos/ /usr/share/plasma/look-and-feel/
 
 #FireFoxをインストール
 source /root/file/firefox.sh
