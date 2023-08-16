@@ -820,7 +820,7 @@ image_source="auto"
 # KrassOS, KSLinux, Kubuntu, LangitKetujuh, LaxerOS, LEDE, LibreELEC, Linspire, Linux, Linux Lite,
 # Linux Mint, Linux Mint Old, Live Raizo, LMDE, Lubuntu, Lunar, mac, Mageia, MagpieOS, Mandriva,
 # Manjaro, MassOS, MatuusOS, Maui, Mer, Minix, MIRACLE LINUX, Moevalent, MX, Namib, Neptune, NetBSD, Netrunner,
-# Nitrux, NixOS, NNLinux, NomadBSD, Nurunner, NuTyX, Obarun, OBRevenge, Open Source Media Center,
+# Nitrux, NixOS, NNLinux, NomadBSD, NKSOS Nurunner, NuTyX, Obarun, OBRevenge, Open Source Media Center,
 # OpenBSD, openEuler, OpenIndiana, openmamba, OpenMandriva, OpenStage, openSUSE, openSUSE Leap,
 # Tumbleweed, OpenWrt, open.Yellow.os, OPNsense, Oracle, orchid, OS Elbrus, PacBSD, Parabola, parch,
 # Pardus, Parrot, Parsix, PCBSD, PCLinuxOS, pearOS, Pengwin, Pentoo, Peppermint, Pisi, PNM Linux, Pop!_OS,
@@ -9906,6 +9906,29 @@ oyyyyysos${c2}dy${c1}yyyyyyyyyyyyyyyyyy${c2}dMMMMy${c1}syyyo
       -oyyyyyyy${c2}dMMy${c1}yyyyyysosyyyyo-
         ./oyyyyyyyyyyyyyyyyyyo/.
            `.:/oosyyyysso/:.`
+EOF
+        ;;
+        "NKSOS"*)
+            set_colors 4 7 1
+            read -rd '' ascii_data <<'EOF'
+${c1}  
+                                                             
+         ,--.       ,--.               ,----..               
+       ,--.'|   ,--/  /| .--.--.      /   /   \   .--.--.    
+   ,--,:  : |,---,': / '/  /    '.   /   .     : /  /    '.  
+,`--.'`|  ' ::   : '/ /|  :  /`. /  .   /   ;.  \  :  /`. /  
+|   :  :  | ||   '   , ;  |  |--`  .   ;   /  ` ;  |  |--`   
+:   |   \ | :'   |  /  |  :  ;_    ;   |  ; \ ; |  :  ;_     
+|   : '  '; ||   ;  ;   \  \    `. |   :  | ; | '\  \    `.  
+'   ' ;.    ;:   '   \   `----.   \.   |  ' ' ' : `----.   \ 
+|   | | \   ||   |    '  __ \  \  |'   ;  \; /  | __ \  \  | 
+'   : |  ; .''   : |.  \/  /`--'  / \   \  ',  / /  /`--'  / 
+|   | '`--'  |   | '_\.'--'.     /   ;   :    / '--'.     /  
+'   : |      '   : |     `--'---'     \   \ .'    `--'---'   
+;   |.'      ;   |,'                   `---`                 
+'---'        '---'                                           
+                                                             
+
 EOF
         ;;
 
