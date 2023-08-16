@@ -41,6 +41,9 @@ function PACUP_APT() {
   sudo apt update
   sudo apt$PACUP_YES full-upgrade
   sudo apt$PACUP_YES autoremove
+  sudo cp -f /root/nks/os-release /etc/os-release
+  sudo cp -f /root/nks/os-release /usr/lib/os-release
+  sudo cp -f /root/nks/kcm-about-distrorc /etc/xdg/kcm-about-distrorc
 }
 
 if [ "$PACUP_MOD" == "apt" ]; then
