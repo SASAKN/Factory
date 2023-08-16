@@ -63,6 +63,12 @@ dpkg -i ./nks-wallpaper.deb
 cd /root/command
 #update-alternatives --install /usr/share/plymouth/themes/default.plymouth default.plymouth /usr/share/plymouth/themes/nksos/nksos.plymouth 100
 
+#Grubの設定
+cd /root/file
+cp -r /root/file/nks-grub/ /usr/share/grub/themes/ 
+mv /root/file/grub.txt /root/file/grub
+cp /root/file/grub /etc/default/grub
+update-grub
 
 #SDDMの設定
 cd /root/file
@@ -74,8 +80,6 @@ source /root/file/firefox.sh
 
 #Pacupのインストール
 cd /root/file
-
-#シェルスクリプトのコピー
 cp ./pacup-nksos/pacup /usr/bin/pacup
 cp ./pacup-nksos/pacup /bin/pacup
 cp ./pacup-nksos/pacup /usr/local/bin/pacup
