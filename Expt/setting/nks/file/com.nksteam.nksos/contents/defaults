@@ -30,3 +30,7 @@ cursorTheme=Afterglow-Recolored-Catppuccin-Sky-v2
 
 [Wallpaper]
 Image=nks-wallpaper-old
+
+[ksplashrc] [KSplash]
+Engine=KSplashQML
+Theme=com.nksteam.nksos

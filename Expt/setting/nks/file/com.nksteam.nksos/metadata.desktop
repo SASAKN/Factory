@@ -3,7 +3,7 @@ Comment=NKSOS
 
 Encoding=UTF-8
 Keywords=Desktop;Workspace;Appearance;Look and Feel;Logout;Lock;Suspend;Shutdown;Hibernate;
-Name=Materia
+Name=NKSOS
 
 Type=Service
 
@@ -13,7 +13,7 @@ X-KDE-PluginInfo-Author=SasaKen
 X-KDE-PluginInfo-Category=
 X-KDE-PluginInfo-Email=
 X-KDE-PluginInfo-License=GPLv3
-X-KDE-PluginInfo-Name=com.nksteam.sasaken.nksos
+X-KDE-PluginInfo-Name=com.nksteam.nksos
 X-KDE-PluginInfo-Version=20211226
 X-KDE-PluginInfo-Website=https://github.com/NKSTeam/plasma-global-theme-nksos
 X-KDE-fallbackPackage=org.kde.breeze.desktop
