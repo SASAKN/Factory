@@ -75,7 +75,7 @@ update-grub
 
 #インストールスライドの変更
 cd /root/file
-cp -r ./nks-slide /usr/share/ubiquity-slideshow/
+cp -pR ./nks-slide/* /usr/share/ubiquity-slideshow/
 
 #SDDMの設定
 cd /root/file
@@ -87,8 +87,8 @@ cd /root/file/
 cp /root/file/sddm.conf /etc/sddm.conf.d/kde_settings.conf
 
 #Plasma グローバルテーマを作成。
-cd /usr/share/plasma/look-and-feel
-mkdir com.nksteam.nksos
+cd /usr/share/plasma/
+mkdir -p look-and-feel/com.nksteam.nksos
 cd /root/file
 cp -r /root/file/com.nksteam.nksos/ /usr/share/plasma/look-and-feel/com.nksteam.nksos
 
