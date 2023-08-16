@@ -86,6 +86,12 @@ mkdir sddm.conf.d
 cd /root/file/
 cp /root/file/sddm.conf /etc/sddm.conf.d/kde_settings.conf
 
+#Plasma グローバルテーマを作成。
+cd /usr/share/plasma/look-and-feel
+mkdir com.nksteam.nksos
+cd /root/file
+cp -r /root/file/com.nksteam.nksos/ /usr/share/plasma/look-and-feel/com.nksteam.nksos
+
 #FireFoxをインストール
 source /root/file/firefox.sh
 
