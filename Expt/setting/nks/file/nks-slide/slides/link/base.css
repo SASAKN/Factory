@@ -153,6 +153,7 @@ html, body {
 body {
 	background: #1692b1 linear-gradient(345deg, rgba(255, 172, 0, 1), rgba(253, 255, 34, 1) 48%, rgba(65, 223, 255, 1));
 	font-size: 85%;
+	color: rgb(72, 72, 72) !important;
 	line-height: 1.6em;
 }
 	body #hilight {
