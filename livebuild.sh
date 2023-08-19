@@ -8,6 +8,8 @@ script_dir="$(dirname "$(readlink -f "$0")")"
 source ${script_dir}/config.sh
 
 #ファイルのコピー
+sudo cp -a ${script_dir}/setting/${setting_name}/* ${script_dir}/chroot/root/
+sudo cp ${script_dir}/config.sh ${script_dir}/chroot/root/config.sh
 sudo cp ${script_dir}/live.sh ${script_dir}/chroot/root/live.sh
 
 #ファイルシステムのマウント
