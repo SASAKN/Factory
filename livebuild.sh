@@ -7,27 +7,8 @@ script_dir="$(dirname "$(readlink -f "$0")")"
 #設定をロードする。
 source ${script_dir}/config.sh
 
-#必要なディレクトリー作成
-cd ${script_dir}
-mkdir image
-mkdir out
-mkdir chroot
-
-#依存関係のインストール
-source ${script_dir}/deps.sh
-
-#ベースを作る
-cd ${script_dir}
-sudo debootstrap \
-   --arch=$os_arch \
-   --variant=minbase \
-   $os_codename \
-   chroot \
-   $os_repository
-
 #ファイルのコピー
-sudo cp -a ${script_dir}/setting/${setting_name}/* ${script_dir}/chroot/root/
-sudo cp ${script_dir}/config.sh ${script_dir}/chroot/root/config.sh
+sudo cp ${script_dir}/live.sh ${script_dir}/chroot/root/live.sh
 
 #ファイルシステムのマウント
 sudo mount --bind /dev chroot/dev
@@ -35,7 +16,7 @@ sudo mount --bind /run chroot/run
 
 #スクリプト実行
 cd ${script_dir}
-sudo chroot chroot bash /root/chroot.sh
+sudo chroot chroot bash /root/live.sh
 
 #マウントを解除
 sudo umount chroot/dev
