@@ -56,7 +56,12 @@ cd /root/
 cp -a ./skel/ /etc/
 
 #Install wallpaper
+cd /usr/share/wallpapers
+mkdir nkswallpaper-old
+mkdir nks-wallpaper
 cd /root/file
+cp -r ./nkswallpaper-old /usr/share/wallpapers/
+cp -r ./nks-wallpaper /usr/share/wallpapers/ 
 
 #NKSOSのブートスプラッシュに変更
 cd /root/command
