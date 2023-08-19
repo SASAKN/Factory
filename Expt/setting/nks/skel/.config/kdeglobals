@@ -108,7 +108,7 @@ ForegroundPositive=76,175,80
 ForegroundVisited=156,39,176
 
 [General]
-ColorSchemeHash=0d37ac7d257c7643ff5540889d5368b99875ad6b
+ColorScheme=MateriaLight
 
 [Icons]
 Theme=Fluent-yellow

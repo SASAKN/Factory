@@ -56,8 +56,7 @@ cd /root/
 cp -a ./skel/ /etc/
 
 #Install wallpaper
-cd /root/deb
-dpkg -i ./nks-wallpaper.deb
+cd /root/file
 
 #NKSOSのブートスプラッシュに変更
 cd /root/command
