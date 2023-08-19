@@ -114,7 +114,7 @@ ColorScheme=MateriaLight
 Theme=Fluent-yellow
 
 [KDE]
-LookAndFeelPackage=com.github.varlesh.materia
+LookAndFeelPackage=com.nksteam.nksos
 widgetStyle=kvantum
 
 [KFileDialog Settings]
