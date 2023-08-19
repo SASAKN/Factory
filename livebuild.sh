@@ -1,4 +1,6 @@
 #!/bin/bash
+###Live Build System
+echo "これは、Live Buildをするため、負荷がかかりませんが、構成が大幅に変わる時には、使えません。"
 #基本的に変更しない（スクリプト保存場所の設定）
 script_dir="$(dirname "$(readlink -f "$0")")"
 
