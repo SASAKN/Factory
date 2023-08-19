@@ -26,7 +26,7 @@ ToolBoxButtonX=580
 ToolBoxButtonY=54
 
 [Containments][20][Wallpaper][org.kde.image][General]
-Image=file:///usr/share/wallpapers/nkswallpaper-old/
+Image=file:///usr/share/wallpapers/wallpaper-old/
 
 [Containments][9]
 activityId=
