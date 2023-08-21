@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Path to a marker file indicating the system has been booted before
+marker_file="${home}/.firstboot"
+
+# Check if the marker file exists
+if [ -f "$marker_file" ]; then
+    echo "Not the first boot."
+else
+    echo "First boot."
+    # Create the marker file
+    touch "$marker_file"
+fi
