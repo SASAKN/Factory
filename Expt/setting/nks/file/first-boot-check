@@ -3,11 +3,27 @@
 # Path to a marker file indicating the system has been booted before
 marker_file="${home}/.firstboot"
 
-# Check if the marker file exists
-if [ -f "$marker_file" ]; then
-    echo "Not the first boot."
+function live_check(){
+    if dpkg -l | grep -q "ubiquity"; then
+    echo "Ubiquity is installed."
+    echo "ライブ環境です。"
+    exit
 else
-    echo "First boot."
-    # Create the marker file
-    touch "$marker_file"
+    echo "Ubiquityがありません。"
+    echo "ライブ環境では、ありません"
+    echo "初回起動かどうかチェックします"
+    first_boot_check
 fi
+}
+
+# Check if the marker file exists
+function first_boot_check(){
+    if [ -f "$marker_file" ]; then
+        echo "Not the first boot."
+    else
+        echo "First boot."
+        # Create the marker file
+        touch "$marker_file"
+    fi
+}
+

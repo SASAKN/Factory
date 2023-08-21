@@ -2,7 +2,8 @@
 
 ##SetupLive
 #NKSOSのライブ環境を正しくするために使われます。
-if dpkg -l | grep -q "ubiquity"; then
+function live_check(){
+    if dpkg -l | grep -q "ubiquity"; then
     echo "Ubiquity is installed."
     echo "ライブ環境です。"
     #グローバルテーマを反映
@@ -14,4 +15,19 @@ if dpkg -l | grep -q "ubiquity"; then
 else
     echo "Ubiquityがありません。"
     echo "ライブ環境では、ありません"
+    echo "初回起動かどうかチェックします"
+    first_boot_check
 fi
+}
+
+function first_boot_check (){
+    marker_file = "${home}/.firstboot";
+    if [ -f "$marker_file" ]; then
+        echo "Not the first boot."
+        echo "初回起動では、ありません。"
+        echo "実行しません。"
+    else
+        echo "First boot."
+        echo ""
+    fi
+}
