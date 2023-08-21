@@ -1,0 +1,17 @@
+#/bin/bash
+
+##SetupLive
+#NKSOSのライブ環境を正しくするために使われます。
+if dpkg -l | grep -q "ubiquity"; then
+    echo "Ubiquity is installed."
+    echo "ライブ環境です。"
+    #グローバルテーマを反映
+    plasma-apply-lookandfeel -a com.nksteam.nksos
+    #Plasmaテーマの反映
+    plasma-apply-desktoptheme Materia-Color
+    #壁紙を反映
+    plasma-apply-wallpaperimage /usr/share/wallpapers/nkswallpaper-old/contents/screenshot.png
+else
+    echo "Ubiquityがありません。"
+    echo "ライブ環境では、ありません"
+fi
