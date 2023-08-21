@@ -103,11 +103,19 @@ source /root/file/firefox.sh
 #Pacupのインストール
 cd /root/file
 cp ./pacup /usr/bin/pacup
-cp ./pacup /bin/pacup
 cp ./pacup /usr/local/bin/pacup
 
 #Unifetchのインストール
 cd /root/file
 cp ./unifetch /usr/bin/unifetch
-cp ./unifetch /bin/unifettch
 cp ./unifetch /usr/local/bin/unifetch
+
+# NKSOS特有のコマンドをインストール
+
+#初回起動チェックコマンド
+cd /root/file
+cp ./first-boot-check /usr/bin/first-boot-check
+
+#ライブ環境チェックコマンド
+cd /root/file
+cp ./setup-live /usr/bin/setup-live
