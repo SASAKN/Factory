@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=SetupLive
+Comment=SetupLive
+Exec=/usr/bin/setup-live
+InitialPreference=1
+StartupNotify=false
+Terminal=false
+Type=Application
+StartupWMClass=latte-dock
+X-DBUS-ServiceName=org.kde.lattedock
+X-DBUS-StartupType=unique
+X-KDE-PluginInfo-Author=SasaKen
+X-KDE-PluginInfo-Email=kenta@nksteam.com
+X-KDE-PluginInfo-Version=0.10.8
