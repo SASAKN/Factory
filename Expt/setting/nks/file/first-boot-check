@@ -20,10 +20,12 @@ fi
 function first_boot_check(){
     if [ -f "$marker_file" ]; then
         echo "Not the first boot."
+        return 0
     else
         echo "First boot."
         # Create the marker file
         touch "$marker_file"
+        return 1
     fi
 }
 
