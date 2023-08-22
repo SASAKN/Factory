@@ -37,7 +37,6 @@ function first_boot_check (){
         plasma-apply-desktoptheme Materia-Color
         #壁紙を反映
         plasma-apply-wallpaperimage /usr/share/wallpapers/nkswallpaper-old/contents/screenshot.png
-
     fi
 }
 
