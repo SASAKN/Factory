@@ -115,7 +115,9 @@ cp ./unifetch /usr/local/bin/unifetch
 #初回起動チェックコマンド
 cd /root/file
 cp ./first-boot-check /usr/bin/first-boot-check
+chmod +x /usr/bin/first-boot-check
 
 #ライブ環境チェックコマンド
 cd /root/file
 cp ./setup-live /usr/bin/setup-live
+chmod +x /usr/bin/setup-live
