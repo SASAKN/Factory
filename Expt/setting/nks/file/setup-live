@@ -40,3 +40,5 @@ function first_boot_check (){
 
     fi
 }
+
+live_check

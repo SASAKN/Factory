@@ -29,3 +29,6 @@ function first_boot_check(){
     fi
 }
 
+#関数を実行
+live_check
+
